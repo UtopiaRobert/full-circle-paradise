@@ -4,11 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#334325">
-  <meta name="description" content="Water sources, storage, drainage, capture and reuse strategies at Full Circle Farm.">
-  <title>Water · Full Circle Paradise</title>
+  <meta name="description" content="The Full Circle Paradise water atlas: watershed, rainfall, wells, storage, rainwater, greywater, soil, swales, Lion Creek and the later water-cycle work of former resident Alpha Lo.">
+  <title>Water Atlas · Full Circle Paradise</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="water-additions.css">
+  <link rel="stylesheet" href="gallery.css">
   <script src="site.js" defer></script>
+  <script src="gallery-data.js" defer></script>
+  <script src="gallery.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -32,28 +36,424 @@
   </nav>
 </header>
 
-<main id="main" class="chapter-page">
-<header class="chapter-hero"><div><p class="chapter-label">Chapter 04 · Slow, spread, store and reuse</p><h1>Water</h1><p class="lede">Water security depends less on finding a new source than on connecting the sources, tanks, roofs, soils and daily uses that already exist.</p></div><figure><img src="images/p015.webp" alt="Galvanized water tank on higher ground"><figcaption>High storage can provide gravity-fed resilience</figcaption></figure></header>
-<section class="water-path" aria-label="Water system sequence"><div><span>01</span><strong>Well & city backup</strong></div><b>→</b><div><span>02</span><strong>Storage tanks</strong></div><b>→</b><div><span>03</span><strong>Homes & garden</strong></div><b>→</b><div><span>04</span><strong>Greywater & soil</strong></div></section>
-<section class="article-grid">
-  <article class="prose longform">
-    <h2>Existing sources</h2><p class="dropcap">The farm’s primary supply is a productive well, with municipal water available as backup. Two large galvanized tanks sit on the northern rise. Their elevation gives them value beyond storage: with the right connections, they can provide water when pumps or power are unavailable.</p>
-    <h2>The problem is fragmented flow</h2><p>Roofs shed winter rain without consistently capturing it. Laundry and bathing water leave the useful cycle too quickly. Hard clay soil creates surface runoff, while neglected leaks waste high-quality water before it reaches plants.</p>
-    <aside class="margin-note"><strong>Core principle</strong><br>Make each gallon perform more than one useful function before it leaves the site.</aside>
-    <h2>Priority sequence</h2><ol class="numbered-notes"><li>Repair leaks and clearly label controls.</li><li>Connect and routinely exercise high-level storage.</li><li>Capture roof water near the point of use.</li><li>Route suitable greywater to perennial plantings.</li><li>Use mulch, basins and contour to hold water in soil.</li><li>Keep the creek corridor open enough for safe flow while protecting habitat.</li></ol>
-  </article>
-  <aside class="visual-column">
-    <figure class="polaroid tilt-right"><img src="images/p016.webp" alt="Small solar-powered well house" data-lightbox><figcaption>Solar-powered pumping at the well house</figcaption></figure>
-    <figure class="map-frame"><img src="images/p109.webp" alt="Hand-drawn final water map" data-lightbox><figcaption>The final water layer links supply, storage, buildings, gardens and drainage</figcaption></figure>
-  </aside>
-</section>
-<section class="paper-section"><header class="section-heading"><p class="kicker">Highest leverage</p><h2>Begin with the water that already touches a roof or drain</h2></header><div class="chapter-grid mini"><article><h3>Rainwater</h3><p>Small distributed tanks reduce the distance water must travel.</p></article><article><h3>Greywater</h3><p>Branch drains can irrigate perennial trees without complex treatment.</p></article><article><h3>Soil storage</h3><p>Mulch and organic matter turn the landscape itself into a reservoir.</p></article></div></section>
+<main id="main" class="chapter-page water-atlas">
+  <header class="chapter-hero water-hero">
+    <div>
+      <p class="chapter-label">Chapter 04 · A field atlas of flow</p>
+      <h1>Water</h1>
+      <p class="lede">At Full Circle Paradise, water arrives as winter rain, well water and municipal backup. The design challenge was to slow it, store it safely, use it more than once, and return it to soil and vegetation before it left the land.</p>
+      <p class="hero-source"><a href="documents/full-circle-paradise-workbook.pdf#page=64" target="_blank" rel="noopener">Begin with the 2022 workbook water survey, pp. 64–68</a></p>
+    </div>
+    <figure>
+      <img src="images/people-first/full/water-tank-team.webp" alt="Community members working together to move a large wooden water tank" style="object-position:center 45%;">
+      <figcaption>Water systems were built and maintained through shared labor</figcaption>
+    </figure>
+  </header>
+
+  <section class="water-opening paper-section" aria-labelledby="water-opening-title">
+    <nav class="water-subnav" aria-label="Water page sections">
+      <a href="#watershed">Watershed</a>
+      <a href="#sources">Sources</a>
+      <a href="#rain">Rain</a>
+      <a href="#greywater">Greywater</a>
+      <a href="#soil">Soil &amp; swales</a>
+      <a href="#creek">Lion Creek</a>
+      <a href="#final-plan">Final plan</a>
+      <a href="#alpha-lo">Alpha Lo</a>
+      <a href="#field-notes">Field notes</a>
+    </nav>
+
+    <header class="section-heading">
+      <p class="kicker">The central design question</p>
+      <h2 id="water-opening-title">How can every gallon do more work?</h2>
+      <p>The workbook describes a developed but fragmented system: abundant winter runoff, a productive well, expensive municipal backup, two large tanks, many small dwellings, seasonal creek flow, clay-rich soils and greywater that often returned to the ground without being directed.</p>
+    </header>
+
+    <div class="water-facts" aria-label="Key water facts from the workbook">
+      <div><strong>5 acres</strong><span>Approximate site area</span></div>
+      <div><strong>19–20 in</strong><span>Annual rainfall recorded</span></div>
+      <div><strong>≈2.7M gal</strong><span>Rain falling on site annually</span></div>
+      <div><strong>2 × 10,000 gal</strong><span>Existing hilltop tanks</span></div>
+      <div><strong>6 in</strong><span>Extreme 24-hour event used</span></div>
+      <div><strong>814,572 gal</strong><span>Rain in that event</span></div>
+    </div>
+
+    <aside class="archive-note">
+      <strong>Archival accuracy note.</strong> The workbook was assembled from interviews, observations and design exercises, and some figures vary between sections. It records the well as roughly 160–250 feet deep and its output as 20–60 gallons per minute. This page preserves the range rather than choosing one value without later documentation.
+    </aside>
+  </section>
+
+  <section id="watershed" class="water-section water-light" aria-labelledby="watershed-title">
+    <header class="section-heading">
+      <p class="kicker">01 · Read the landscape first</p>
+      <h2 id="watershed-title">From northern rise to Lion Creek</h2>
+      <p>The workbook identifies the property within the San Antonio Creek watershed, tributary to the Ventura River system. Across the farm, rain generally moves south toward Lion Creek, collecting on compacted roads and soaking more readily where mulch, roots and earthworks slow it.</p>
+    </header>
+
+    <div class="map-story-grid">
+      <figure class="water-map-card wide">
+        <a href="images/water-atlas/water-flow-map-full.png" target="_blank" rel="noopener" aria-label="Open the site water flow map at full resolution">
+          <img src="images/water-atlas/water-flow-map-preview.webp" alt="Hand-drawn map showing water flow across Full Circle Farm">
+        </a>
+        <figcaption><strong>Existing site water flow</strong> Blue arrows show rain and runoff moving toward Lion Creek, while the well, city line and storage are mapped as separate sources. <a href="documents/full-circle-paradise-workbook.pdf#page=67" target="_blank" rel="noopener">Workbook pp. 67–68</a></figcaption>
+      </figure>
+
+      <div class="flow-reading">
+        <article><span>High ground</span><h3>Northern rise</h3><p>The two galvanized tanks occupy the highest developed ground, creating the possibility of gravity-fed emergency supply.</p></article>
+        <article><span>Working middle</span><h3>Homes, gardens and roads</h3><p>Most daily water use occurs through the central dwellings, bathhouse, kitchens, garden and orchard areas. Compacted surfaces can pool water before it drains south.</p></article>
+        <article><span>Low edge</span><h3>Lion Creek</h3><p>The creek corridor is the seasonal receiving edge: wet, shaded, biologically rich and capable of rising dramatically during winter storms.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="sources" class="water-section water-paper" aria-labelledby="sources-title">
+    <header class="section-heading">
+      <p class="kicker">02 · Planned redundancy</p>
+      <h2 id="sources-title">Three supply paths, each with a different role</h2>
+      <p>The design did not depend on a single source. It treated the well as the everyday supply, municipal water as an expensive backup, and the hilltop tanks as emergency storage that needed safer operation.</p>
+    </header>
+
+    <div class="source-path" aria-label="Water source sequence">
+      <article>
+        <span class="source-number">01</span>
+        <h3>Solar-powered well</h3>
+        <p>The primary farm supply. The workbook records a solar pump and a distribution line serving kitchens, bathing, laundry, gardens and orchards.</p>
+        <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=16" target="_blank" rel="noopener">Well house · workbook p. 16</a>
+      </article>
+      <b aria-hidden="true">+</b>
+      <article>
+        <span class="source-number">02</span>
+        <h3>Municipal backup</h3>
+        <p>A high-pressure city connection could be opened when the well was insufficient, during equipment failure, severe dryness or fire risk.</p>
+        <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=64" target="_blank" rel="noopener">Water survey · workbook p. 64</a>
+      </article>
+      <b aria-hidden="true">+</b>
+      <article>
+        <span class="source-number">03</span>
+        <h3>Hilltop storage</h3>
+        <p>Two 10,000-gallon tanks provided substantial reserve capacity, but the workbook records accidental draining, missing screens and unsafe untreated water.</p>
+        <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=15" target="_blank" rel="noopener">Tank record · workbook pp. 15, 88–89</a>
+      </article>
+    </div>
+
+    <div class="water-photo-pair">
+      <figure>
+        <img src="images/water-atlas/well-house.webp" alt="Solar panels at the well house" data-lightbox>
+        <figcaption><strong>The well house</strong> Solar pumping made the farm’s main supply less dependent on grid power.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/water-atlas/water-tank-original.webp" alt="Large galvanized water tank on the northern rise" data-lightbox>
+        <figcaption><strong>Storage above the site</strong> Elevation added resilience, but safe storage required screens, controls, inspection and treatment appropriate to the intended use.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="rain" class="water-section water-light" aria-labelledby="rain-title">
+    <header class="section-heading">
+      <p class="kicker">03 · The water already falling here</p>
+      <h2 id="rain-title">A dry climate can still receive millions of gallons</h2>
+      <p>The apparent paradox of Southern California water is that a modest annual rainfall becomes an enormous volume when multiplied across five acres—and can arrive in short, erosive bursts.</p>
+    </header>
+
+    <div class="rain-math-grid">
+      <article class="rain-card annual">
+        <p class="rain-label">Average year</p>
+        <strong>≈2.7 million gallons</strong>
+        <p>Using the workbook’s 217,800-square-foot site area and 20 inches of annual rain.</p>
+      </article>
+      <article class="rain-card storm">
+        <p class="rain-label">Six-inch event</p>
+        <strong>814,572 gallons</strong>
+        <p>The workbook’s design storm: enough water to expose every weak drainage path and compacted surface.</p>
+      </article>
+      <article class="rain-card roof">
+        <p class="rain-label">1,000-square-foot roof</p>
+        <strong>3,740 gallons</strong>
+        <p>At six inches of rainfall—the calculation used in the workbook’s roof-catchment example.</p>
+      </article>
+    </div>
+
+    <aside class="calculation-note">
+      <strong>Reading the workbook calculation.</strong>
+      <p>The roof example is sometimes easy to misread as an annual yield. Its 3,740-gallon result corresponds to six inches of rain on a 1,000-square-foot roof. At 20 inches, the same roof would receive about 12,467 gallons before first-flush, evaporation and collection losses.</p>
+    </aside>
+
+    <div class="rain-priorities">
+      <article><span>Catch</span><h3>Roofs</h3><p>The house, barn, greenhouse and cabin roofs were identified as practical catchment surfaces close to use.</p></article>
+      <article><span>Slow</span><h3>Road runoff</h3><p>Compacted roads created pooling and fast surface movement. Small diversions, basins and repaired grading could turn nuisance flow into infiltration.</p></article>
+      <article><span>Sink</span><h3>Mulched soil</h3><p>Orchards and gardens already demonstrated that roots, mulch and organic matter could soften the effect of clay-rich soil.</p></article>
+      <article><span>Store</span><h3>Distributed tanks</h3><p>The final plan proposed 2,500-gallon tanks at larger roofs and 1,000-gallon tanks at smaller structures.</p></article>
+    </div>
+  </section>
+
+  <section id="greywater" class="water-section water-paper" aria-labelledby="greywater-title">
+    <header class="section-heading">
+      <p class="kicker">04 · Use water more than once</p>
+      <h2 id="greywater-title">From drains to perennial plantings</h2>
+      <p>With many small dwellings, kitchens, showers and washing machines, greywater was already returning to the land—but often in a single wet spot. The design proposed branch drains and valves that could spread suitable water across trees and garden beds.</p>
+    </header>
+
+    <div class="greywater-layout">
+      <figure class="water-photo-tall">
+        <img src="images/water-atlas/bathhouse.webp" alt="Bathhouse and laundry area at Full Circle Farm" data-lightbox>
+        <figcaption><strong>The bathhouse and laundry</strong> A concentrated place where shower, sink and washing-machine water could be redirected toward nearby perennial beds. <a href="documents/full-circle-paradise-workbook.pdf#page=83" target="_blank" rel="noopener">Workbook pp. 83–84</a></figcaption>
+      </figure>
+
+      <div class="greywater-network" aria-label="Proposed greywater network">
+        <div class="grey-source"><strong>Indoor kitchen</strong><span>Existing discharge to a garden bed</span></div>
+        <div class="grey-arrow">→</div>
+        <div class="grey-destination"><strong>Branch drain</strong><span>Extend the irrigated area</span></div>
+
+        <div class="grey-source"><strong>Bathhouse shower &amp; sink</strong><span>Water formerly sent toward septic or one wet patch</span></div>
+        <div class="grey-arrow">→</div>
+        <div class="grey-destination"><strong>Cabin flower beds</strong><span>Spread flow among perennial plantings</span></div>
+
+        <div class="grey-source"><strong>Washing machines</strong><span>Pumps capable of reaching farther beds</span></div>
+        <div class="grey-arrow">→</div>
+        <div class="grey-destination"><strong>Persimmons &amp; orchard</strong><span>Match regular discharge to thirsty established trees</span></div>
+
+        <div class="grey-source"><strong>Small dwellings</strong><span>Cabins, trailers, tiny homes and domes</span></div>
+        <div class="grey-arrow">→</div>
+        <div class="grey-destination"><strong>Local gardens</strong><span>Keep water near the place it is used</span></div>
+      </div>
+    </div>
+
+    <aside class="safety-note">
+      <strong>Design intent, not plumbing instruction.</strong> Greywater systems must match current health, plumbing and environmental rules; avoid contact with edible portions of crops; use compatible household products; prevent ponding and human exposure; and preserve a safe route to sewer or septic when needed.
+    </aside>
+  </section>
+
+  <section id="soil" class="water-section water-light" aria-labelledby="soil-title">
+    <header class="section-heading">
+      <p class="kicker">05 · The largest reservoir is underfoot</p>
+      <h2 id="soil-title">Mulch, roots, basins and swales</h2>
+      <p>The workbook repeatedly describes clay-rich or hydrophobic soil, rapid runoff on compacted surfaces, and improved absorption where the land had been mulched and planted. The proposed water system therefore treated soil structure as infrastructure.</p>
+    </header>
+
+    <div class="soil-water-grid">
+      <article class="soil-principle">
+        <span>Surface</span>
+        <h3>Protect the soil</h3>
+        <p>Mulch reduces crusting and evaporation while giving rain time to enter the ground.</p>
+      </article>
+      <article class="soil-principle">
+        <span>Shape</span>
+        <h3>Create level opportunities</h3>
+        <p>Swales, eyebrow basins and sunken beds interrupt downhill movement and concentrate infiltration around roots.</p>
+      </article>
+      <article class="soil-principle">
+        <span>Biology</span>
+        <h3>Keep living roots</h3>
+        <p>Perennial vegetation creates channels, shades soil and cycles water back through the living landscape.</p>
+      </article>
+      <article class="soil-principle">
+        <span>Feedback</span>
+        <h3>Observe after storms</h3>
+        <p>Pooling, erosion, vigorous growth and dry patches reveal where the next small intervention belongs.</p>
+      </article>
+    </div>
+
+    <div class="persimmon-feature">
+      <figure>
+        <img src="images/water-atlas/persimmon-hill.webp" alt="Persimmon Hill with established trees and earthworks" data-lightbox>
+        <figcaption><strong>Persimmon Hill</strong> The workbook records earlier contour earthworks that intercepted runoff from uphill neighbors. The thriving persimmons were treated as evidence that the intervention worked.</figcaption>
+      </figure>
+      <article>
+        <p class="kicker">A working precedent</p>
+        <h3>Build on what already succeeds</h3>
+        <p>Rather than beginning with a completely new theory, the final plan expanded a pattern already visible on site: slow water above a tree, let it soak into the root zone, and repeat the idea at smaller scales with eyebrow swales and basins.</p>
+        <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=89" target="_blank" rel="noopener">Swales and Persimmon Hill · workbook p. 89</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="creek" class="water-section creek-section" aria-labelledby="creek-title">
+    <div class="creek-overlay">
+      <p class="kicker">06 · The wet edge</p>
+      <h2 id="creek-title">Lion Creek is not a drainage ditch</h2>
+      <p>The southern creek corridor was mapped as Zone 5: seasonally flowing, densely vegetated, shaded and difficult to enter. During heavy rain it could rise more than ten feet. The design recognized it as wildlife habitat and flood space rather than a place to force into tidy productivity.</p>
+      <div class="creek-actions">
+        <span>Protect habitat</span>
+        <span>Keep a safe flow path</span>
+        <span>Observe flood height</span>
+        <span>Remove hazards selectively</span>
+      </div>
+      <p class="creek-source"><a href="documents/full-circle-paradise-workbook.pdf#page=61" target="_blank" rel="noopener">Microclimate notes pp. 61–62</a> · <a href="documents/full-circle-paradise-workbook.pdf#page=89" target="_blank" rel="noopener">Final water plan p. 89</a></p>
+    </div>
+    <img src="images/water-atlas/lion-creek-edge.webp" alt="Dense vegetation along the Lion Creek edge" data-lightbox>
+  </section>
+
+  <section id="final-plan" class="water-section water-paper" aria-labelledby="final-plan-title">
+    <header class="section-heading">
+      <p class="kicker">07 · Connect the separate pieces</p>
+      <h2 id="final-plan-title">The final water plan</h2>
+      <p>The 2022 proposal linked existing supply and storage with four new pathways: roof catchment, distributed greywater, ponds and expanded earthworks.</p>
+    </header>
+
+    <figure class="featured-water-map">
+      <a href="images/water-atlas/final-water-map-full.png" target="_blank" rel="noopener" aria-label="Open the final water map at maximum resolution">
+        <img src="images/water-atlas/final-water-map-preview.webp" alt="Final hand-drawn water design map for Full Circle Farm">
+      </a>
+      <figcaption><strong>Final Water Map</strong> Select the map to open the original extracted image at its maximum embedded resolution. <a href="documents/full-circle-paradise-workbook.pdf#page=88" target="_blank" rel="noopener">Workbook pp. 88–89</a></figcaption>
+    </figure>
+
+    <ol class="final-water-list">
+      <li><span>01</span><div><strong>Municipal water</strong><p>Retain as an emergency and seasonal backup.</p></div></li>
+      <li><span>02</span><div><strong>Well water</strong><p>Continue as the principal everyday supply.</p></div></li>
+      <li><span>03</span><div><strong>Hilltop tanks</strong><p>Correct controls, screening, inspection and water-quality problems before relying on stored water.</p></div></li>
+      <li><span>04</span><div><strong>Roof catchment</strong><p>Add tanks at the house, barn, greenhouse and cabin.</p></div></li>
+      <li><span>05</span><div><strong>Greywater</strong><p>Spread suitable household discharge among perennial beds and orchard trees.</p></div></li>
+      <li><span>06</span><div><strong>Septic</strong><p>Keep blackwater and non-diverted wastewater in the appropriate treatment path.</p></div></li>
+      <li><span>07</span><div><strong>Ponds</strong><p>Complete two excavated pond sites while addressing liners, evaporation and water source.</p></div></li>
+      <li><span>08</span><div><strong>Swales &amp; basins</strong><p>Extend successful contour work with smaller tree-scale infiltration features.</p></div></li>
+      <li><span>09</span><div><strong>Lion Creek</strong><p>Preserve the seasonal wetland and accommodate floodwater safely.</p></div></li>
+    </ol>
+  </section>
+
+  <section id="alpha-lo" class="water-section alpha-section" aria-labelledby="alpha-title">
+    <div class="alpha-photo-wrap">
+      <figure>
+        <img src="images/water-atlas/alpha-robert-full-circle-2021.webp" alt="Robert Redecker and Alpha Lo harvesting pomegranates at Full Circle Paradise in 2021" data-lightbox>
+        <figcaption>Robert Redecker and Alpha Lo harvesting pomegranates at Full Circle Paradise, October 2021.</figcaption>
+      </figure>
+    </div>
+
+    <article class="alpha-copy">
+      <p class="kicker">The story continued beyond the workbook</p>
+      <h2 id="alpha-title">From farm resident to water-cycle researcher</h2>
+      <p>Alpha Lo lived at Full Circle Paradise and shared in the daily life of the farm. He and Robert remained close friends: Robert later visited him at Lost Valley Community in Oregon; they traveled together through Mexico and Guatemala; and they reunited in Portugal in 2024.</p>
+      <p>Through the <strong>Climate Water Project</strong>, Alpha’s later public work investigates how ecology and climate interact through the water cycle. His essays and conversations explore groundwater, landscape hydration, vegetation, rainfall recycling, nature-based restoration, and the connected cycle of drought, fire and flood.</p>
+
+      <div class="alpha-links">
+        <a href="https://substack.com/@climatewaterproject" target="_blank" rel="noopener">
+          <span>Newsletter</span><strong>Climate Water Project</strong><small>Alpha’s Substack archive and current writing</small>
+        </a>
+        <a href="https://podcasts.apple.com/us/podcast/climate-water-project/id1651730827" target="_blank" rel="noopener">
+          <span>Podcast</span><strong>Climate Water Project</strong><small>Interviews on rain, groundwater and landscape restoration</small>
+        </a>
+        <a href="https://turningseason.com/episode37/" target="_blank" rel="noopener">
+          <span>Conversation</span><strong>Restoring the Water Web</strong><small>Drought, fire, flood and practical regenerative water work</small>
+        </a>
+        <a href="https://wilderutopia.com/ecojustice-radio/the-climate-water-project-rehydrating-the-earth-with-alpha-lo/" target="_blank" rel="noopener">
+          <span>Interview</span><strong>Rehydrating the Earth</strong><small>The small water cycle, soils, forests and groundwater</small>
+        </a>
+      </div>
+
+      <aside class="alpha-note">
+        <strong>Why include later work here?</strong> The 2022 workbook documents one farm-scale attempt to catch, slow and reuse water. Alpha’s later work opens the same questions at watershed, bioregional and climate scales. The connection is interpretive and personal; the Climate Water Project was not part of the original PDC workbook.
+      </aside>
+    </article>
+  </section>
+
+  <section id="field-notes" class="water-section water-light" aria-labelledby="field-notes-title">
+    <header class="section-heading">
+      <p class="kicker">08 · Open the notebook</p>
+      <h2 id="field-notes-title">Water field notes</h2>
+      <p>These short entries preserve useful details, contradictions and design lessons from across the workbook. Open any note for its source pages.</p>
+    </header>
+
+    <div class="water-notes">
+      <details>
+        <summary><span>01</span> A five-acre site receives more rain than it appears</summary>
+        <div><p>At about 20 inches annually, the workbook calculates roughly 2.7 million gallons falling on the property. The limiting factor is not only rainfall quantity, but timing, infiltration, safe storage and summer demand.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=65" target="_blank" rel="noopener">Workbook pp. 65–66</a></div>
+      </details>
+      <details>
+        <summary><span>02</span> The well record is inconsistent</summary>
+        <div><p>Different sections list depths from 160 to 250 feet and outputs from 20 to 60 gallons per minute. The discrepancy is itself valuable: future system work should begin with verified pump, casing, static-water and production records.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=16" target="_blank" rel="noopener">Workbook pp. 16, 39, 64, 68, 88</a></div>
+      </details>
+      <details>
+        <summary><span>03</span> Large storage can still fail operationally</summary>
+        <div><p>Two 10,000-gallon tanks sound secure, yet the workbook records open spigots draining them, missing insect screens and illness after untreated tank water was supplied to the house. Capacity without management is not resilience.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=15" target="_blank" rel="noopener">Workbook pp. 15, 88–89</a></div>
+      </details>
+      <details>
+        <summary><span>04</span> Municipal water was valuable precisely because it was rarely used</summary>
+        <div><p>The city line served as a redundant path during high summer demand, fire danger or well failure. Its cost and treatment made it less desirable for everyday irrigation, but useful as backup.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=64" target="_blank" rel="noopener">Workbook pp. 64, 68, 88</a></div>
+      </details>
+      <details>
+        <summary><span>05</span> Roof size determines the scale of distributed storage</summary>
+        <div><p>The final plan paired larger house and barn roofs with proposed 2,500-gallon tanks, and smaller greenhouse and cabin roofs with 1,000-gallon tanks. Storage was placed near collection and use.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=89" target="_blank" rel="noopener">Workbook p. 89</a></div>
+      </details>
+      <details>
+        <summary><span>06</span> Greywater was already part of farm life</summary>
+        <div><p>Kitchen, laundry, reverse-osmosis and small-dwelling water already reached soil in several places. The design intervention was not to invent reuse, but to make it deliberate, distributed and safer.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=64" target="_blank" rel="noopener">Workbook pp. 64–65, 83–84, 89</a></div>
+      </details>
+      <details>
+        <summary><span>07</span> Clay soil is both constraint and storage opportunity</summary>
+        <div><p>The workbook describes slow absorption and road pooling, but also notes that extensive mulch and vegetation improved infiltration. The same soil that sheds water when compacted can hold substantial moisture when protected and biologically active.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=68" target="_blank" rel="noopener">Workbook pp. 68, 76–78, 104</a></div>
+      </details>
+      <details>
+        <summary><span>08</span> Persimmon Hill supplied on-site evidence</summary>
+        <div><p>Earlier hillside earthworks intercepted runoff and supported thriving persimmons. The final design proposed repeating the pattern through smaller eyebrow swales around trees.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=89" target="_blank" rel="noopener">Workbook p. 89</a></div>
+      </details>
+      <details>
+        <summary><span>09</span> Ponds were unfinished infrastructure</summary>
+        <div><p>Two basins had already been excavated, but liners and completion costs stopped the project. The final plan imagined water, fish, fruit trees, shade and community seating around them—while acknowledging evaporation and supply constraints.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=89" target="_blank" rel="noopener">Workbook pp. 89, 92</a></div>
+      </details>
+      <details>
+        <summary><span>10</span> Lion Creek combines flood function and habitat</summary>
+        <div><p>The creek can rise dramatically in winter, then dry during summer. Its dense vegetation, frogs, moist soil and wildlife value argue for careful access and selective maintenance rather than wholesale clearing.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=61" target="_blank" rel="noopener">Workbook pp. 61–62, 68, 89</a></div>
+      </details>
+      <details>
+        <summary><span>11</span> Water improvements were phased over years</summary>
+        <div><p>Pond work began in Year 1, greywater branching and filling ponds appeared in Year 2, broad roof harvesting in Year 3, and selective creek access in Year 4. The sequence recognized labor, money and learning limits.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=101" target="_blank" rel="noopener">Workbook p. 101</a></div>
+      </details>
+      <details>
+        <summary><span>12</span> Water design was explicitly an Earth Care practice</summary>
+        <div><p>The final narrative links uncertain groundwater, climate-appropriate crops, perennial planting, rain harvest, greywater basins, swales and sunken beds. Water was not treated as a separate utility but as a relationship among soil, vegetation and community.</p><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=104" target="_blank" rel="noopener">Workbook pp. 103–104</a></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="water-section implementation-section" aria-labelledby="implementation-title">
+    <header class="section-heading">
+      <p class="kicker">09 · From drawing to sequence</p>
+      <h2 id="implementation-title">A practical order of work</h2>
+      <p>The original five-year plan mixed water projects with vegetation, animals, energy and community systems. Read as a water sequence, it suggests a useful progression from stopping waste to building landscape-scale resilience.</p>
+    </header>
+
+    <ol class="water-timeline">
+      <li><span>Now</span><div><h3>Verify and repair</h3><p>Document the well, inspect tanks, repair leaks, label valves, install screens and decide which stored water is safe for which uses.</p></div></li>
+      <li><span>Year 1</span><div><h3>Finish the interrupted work</h3><p>Reassess the excavated ponds, liners, shade and realistic filling strategy before investing further.</p></div></li>
+      <li><span>Year 2</span><div><h3>Distribute greywater</h3><p>Use branch drains and valves to serve perennial plantings near kitchens, dwellings, bathhouse and laundry.</p></div></li>
+      <li><span>Year 3</span><div><h3>Catch roof water</h3><p>Add appropriately sized tanks, first-flush protection, screened inlets, overflows and planted infiltration areas.</p></div></li>
+      <li><span>Year 4+</span><div><h3>Work at landscape scale</h3><p>Expand basins and contour features based on storm observations, while protecting Lion Creek’s flood and habitat functions.</p></div></li>
+    </ol>
+
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=101" target="_blank" rel="noopener">Original five-year phase plan · workbook p. 101</a></p>
+  </section>
+
+  <section class="water-source-note" aria-labelledby="source-note-title">
+    <div>
+      <p class="kicker">Source &amp; lineage</p>
+      <h2 id="source-note-title">A Quail Springs PDC design, completed in 2022</h2>
+      <p>This page is grounded in Robert Redecker’s 112-page Full Circle Farm design workbook, completed through the Quail Springs Online Permaculture Design Course in 2022. Page references link observations and proposals back to their original context. Later reflections and Alpha Lo’s public work are clearly separated from the historical workbook record.</p>
+    </div>
+    <a class="primary-button" href="documents/full-circle-paradise-workbook.pdf" target="_blank" rel="noopener">Read the complete workbook</a>
+  </section>
+
+  <section class="fieldstation-gallery paper-section" data-fieldstation-gallery="water" aria-labelledby="water-gallery-title">
+    <header class="fieldstation-gallery__header">
+      <div>
+        <p class="kicker">Water archive</p>
+        <h2 id="water-gallery-title">Browse the water systems</h2>
+        <p>Wells, tanks, slopes, greywater, drainage and the creek corridor as they appeared during the 2022 design study.</p>
+      </div>
+      <button class="fieldstation-gallery__browse" type="button" data-gallery-open>Browse <span data-gallery-count>more</span> photographs</button>
+    </header>
+    <div class="fieldstation-gallery__grid" data-gallery-preview aria-live="polite"></div>
+    <p class="fieldstation-gallery__hint">Select any photograph to open the full-screen gallery. Use the arrow keys or the on-screen controls to continue.</p>
+  </section>
 </main>
-<nav class="chapter-nav" aria-label="Chapter navigation"><a class="previous" href="climate.html"><span>Previous</span>Climate & Ecology</a><a class="next" href="food.html"><span>Next</span>Food & Soil</a></nav>
+
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  <a class="previous" href="climate.html"><span>Previous</span>Climate &amp; Ecology</a>
+  <a class="next" href="food.html"><span>Next</span>Food &amp; Soil</a>
+</nav>
 <footer class="site-footer">
   <div><strong>Full Circle Paradise</strong><br><span>A permaculture design for Full Circle Farm</span></div>
-  <div>Upper Ojai, California<br>Quail Springs PDC · Spring 2022</div>
+  <div>Upper Ojai, California<br>Quail Springs PDC · 2022</div>
   <a href="documents/full-circle-paradise-workbook.pdf">Read the original workbook</a>
 </footer>
 <div class="lightbox" hidden aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt=""><p></p></div>
-</body></html>
+</body>
+</html>

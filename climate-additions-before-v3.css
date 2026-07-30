@@ -1,0 +1,874 @@
+/* =========================================================
+   CLIMATE & ECOLOGY ATLAS
+   Page-scoped additions for climate.html
+   ========================================================= */
+
+.climate-atlas-page {
+  --climate-blue: #667f82;
+  --climate-blue-soft: #d9e3df;
+  --climate-sun: #b88643;
+  --climate-fire: #9b5843;
+  --climate-creek: #5d7d79;
+  --climate-frost: #788794;
+  --climate-leaf: #67754e;
+}
+
+.climate-hero > div {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(184, 134, 67, .12), transparent 24%),
+    linear-gradient(135deg, rgba(255,255,255,.26), transparent 42%),
+    var(--paper-light);
+}
+
+.climate-hero h1::after {
+  content: "sun · shade · fire · water · habitat";
+  display: block;
+  margin-top: .75rem;
+  color: var(--moss);
+  font: .83rem/1.4 var(--hand);
+  letter-spacing: .03em;
+}
+
+.climate-opening,
+.climate-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.climate-opening::before,
+.climate-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 8% 13%, rgba(106, 91, 55, .045) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 82% 77%, rgba(106, 91, 55, .035) 0 1px, transparent 1.4px);
+  background-size: 10px 10px, 14px 14px;
+}
+
+.climate-paper {
+  padding: 5rem clamp(1.4rem, 5vw, 5rem);
+  border-top: 1px solid var(--line-soft);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.13), transparent 19%),
+    var(--paper-light);
+}
+
+.climate-paper:nth-of-type(even) {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.14), transparent 20%),
+    rgba(238, 225, 194, .58);
+}
+
+.climate-opening .section-heading,
+.climate-section .section-heading {
+  max-width: 850px;
+  margin-inline: auto;
+}
+
+.climate-atlas-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .55rem;
+  max-width: 980px;
+  margin: 2.2rem auto 2.8rem;
+}
+
+.climate-atlas-nav a {
+  padding: .48rem .8rem;
+  border: 1px solid rgba(79, 91, 55, .28);
+  border-radius: 999px;
+  background: rgba(255,255,255,.27);
+  color: var(--forest-dark);
+  text-decoration: none;
+  font: .72rem/1.2 var(--sans);
+}
+
+.climate-atlas-nav a:hover {
+  border-color: var(--terracotta);
+  background: rgba(255,255,255,.55);
+}
+
+.climate-facts {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  max-width: 1120px;
+  margin: 0 auto 2rem;
+  border-block: 1px solid var(--line);
+}
+
+.climate-facts > div {
+  min-width: 0;
+  padding: 1.25rem .65rem 1.15rem;
+  text-align: center;
+  border-left: 1px solid var(--line-soft);
+}
+
+.climate-facts > div:first-child { border-left: 0; }
+.climate-facts strong {
+  display: block;
+  color: var(--forest-dark);
+  font: 600 clamp(1.35rem, 2.25vw, 2.05rem)/1 var(--display);
+}
+.climate-facts span {
+  display: block;
+  margin-top: .45rem;
+  color: var(--ink-soft);
+  font: .64rem/1.3 var(--sans);
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+.climate-archive-note {
+  max-width: 930px;
+  margin: 0 auto;
+}
+.climate-archive-note a {
+  display: inline-block;
+  margin-left: .35rem;
+  white-space: nowrap;
+}
+
+/* Rainfall */
+.rainfall-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  max-width: 1120px;
+  margin: 3rem auto 1.5rem;
+  align-items: stretch;
+}
+
+.rainfall-chart {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: end;
+  min-height: 340px;
+  padding: 1.5rem 1rem .85rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 4px;
+  background:
+    repeating-linear-gradient(to top, rgba(94, 125, 121, .11) 0 1px, transparent 1px 74px),
+    rgba(255,255,255,.25);
+}
+
+.rain-month {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  align-items: end;
+  justify-items: center;
+  min-width: 0;
+  height: 100%;
+  padding-inline: .18rem;
+}
+.rain-month .rain-bar {
+  align-self: end;
+  width: min(34px, 78%);
+  height: max(3px, calc(var(--rain) * 74px));
+  border-radius: 13px 13px 2px 2px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.18), transparent),
+    var(--climate-blue);
+  box-shadow: inset 0 0 0 1px rgba(46, 71, 72, .12);
+}
+.rain-month.dry .rain-bar {
+  height: 3px;
+  opacity: .38;
+}
+.rain-month strong {
+  margin-top: .4rem;
+  color: var(--forest-dark);
+  font: 600 .78rem/1 var(--sans);
+}
+.rain-month small {
+  margin-top: .35rem;
+  color: var(--ink-soft);
+  font: .65rem/1 var(--sans);
+}
+
+.season-notes {
+  display: grid;
+  gap: .8rem;
+}
+.season-notes article {
+  padding: 1.1rem 1.2rem 1rem;
+  border-left: 4px solid var(--climate-blue);
+  background: rgba(255,255,255,.3);
+}
+.season-notes article:nth-child(2) { border-left-color: var(--climate-leaf); }
+.season-notes article:nth-child(3) { border-left-color: var(--climate-sun); }
+.season-notes article:nth-child(4) { border-left-color: var(--climate-fire); }
+.season-notes span,
+.temperature-card > span,
+.microclimate-card div > span,
+.plant-habitat {
+  color: var(--terracotta);
+  font: .64rem/1.2 var(--sans);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.season-notes h3 {
+  margin: .15rem 0 .25rem;
+  font-size: 1.3rem;
+}
+.season-notes p { margin: 0; font-size: .93rem; line-height: 1.45; }
+
+/* Temperature */
+.temperature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 1120px;
+  margin: 3rem auto 2rem;
+}
+.temperature-card {
+  position: relative;
+  min-height: 190px;
+  padding: 1.5rem 1.3rem 1.25rem;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+}
+.temperature-card::after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  bottom: -38px;
+  width: 115px;
+  height: 115px;
+  border: 18px solid rgba(184, 134, 67, .1);
+  border-radius: 50%;
+}
+.temperature-card.hot::after { border-color: rgba(155, 88, 67, .11); }
+.temperature-card.cool::after,
+.temperature-card.frost::after { border-color: rgba(102, 127, 130, .11); }
+.temperature-card strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: .7rem 0 .6rem;
+  color: var(--forest-dark);
+  font: 600 clamp(1.55rem, 2.5vw, 2.35rem)/1 var(--display);
+}
+.temperature-card p { position: relative; z-index: 1; margin: 0; line-height: 1.48; }
+
+.frost-window {
+  display: grid;
+  grid-template-columns: minmax(150px, auto) 1fr minmax(150px, auto);
+  align-items: center;
+  max-width: 950px;
+  margin: 2.5rem auto;
+}
+.frost-marker {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(94, 125, 121, .38);
+  background: rgba(217, 227, 223, .46);
+}
+.frost-marker strong {
+  display: block;
+  font: 600 1.45rem/1 var(--display);
+}
+.frost-marker span {
+  display: block;
+  margin-top: .35rem;
+  color: var(--ink-soft);
+  font: .63rem/1.35 var(--sans);
+  text-transform: uppercase;
+}
+.growing-line {
+  position: relative;
+  height: 5px;
+  background: var(--climate-leaf);
+}
+.growing-line::before,
+.growing-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--climate-leaf);
+  transform: translateY(-50%);
+}
+.growing-line::before { left: 0; }
+.growing-line::after { right: 0; }
+.growing-line span {
+  position: absolute;
+  left: 50%;
+  bottom: .8rem;
+  width: max-content;
+  max-width: 95%;
+  padding: .25rem .6rem;
+  background: var(--paper-light);
+  color: var(--forest-dark);
+  font: .68rem/1.2 var(--sans);
+  transform: translateX(-50%);
+}
+
+.extreme-note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  max-width: 850px;
+  margin: 0 auto 1.4rem;
+}
+.extreme-note-grid aside {
+  padding: .85rem 1rem;
+  text-align: center;
+  border-top: 2px solid var(--terracotta);
+  background: rgba(255,255,255,.22);
+}
+.extreme-note-grid strong { display: block; font: 600 1.35rem/1 var(--display); }
+.extreme-note-grid span { display: block; margin-top: .3rem; font: .66rem/1.3 var(--sans); }
+
+.design-reading-note,
+.historical-fire-note,
+.plant-caution {
+  max-width: 920px;
+  margin: 1.5rem auto;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--climate-blue);
+  background: rgba(217, 227, 223, .38);
+}
+.historical-fire-note { border-left-color: var(--climate-fire); background: rgba(155, 88, 67, .08); }
+.plant-caution { border-left-color: var(--terracotta); background: rgba(154, 102, 72, .08); }
+
+/* Maps and sectors */
+.sector-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(330px, .84fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  max-width: 1170px;
+  margin: 3rem auto 0;
+  align-items: start;
+}
+
+.atlas-map {
+  margin: 0;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.24);
+}
+.atlas-map > a {
+  display: block;
+  padding: clamp(.6rem, 1.5vw, 1.1rem);
+  background: rgba(229, 214, 177, .4);
+}
+.atlas-map img {
+  width: 100%;
+  height: auto;
+  max-height: 770px;
+  object-fit: contain;
+  background: #eee4ce;
+}
+.atlas-map figcaption {
+  display: block;
+  padding: 1rem 1.15rem 1.15rem;
+  border-top: 1px solid var(--line-soft);
+  background: rgba(248, 241, 223, .82);
+  line-height: 1.5;
+}
+.atlas-map figcaption strong { display: block; font: 600 1.15rem/1.2 var(--display); }
+.atlas-map figcaption a { display: inline-block; margin: .45rem .7rem 0 0; font: .66rem/1.2 var(--sans); }
+
+.sector-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+}
+.sector-cards article {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+}
+.sector-cards article > span {
+  float: right;
+  margin-left: .5rem;
+  color: var(--climate-blue);
+  font: 1.45rem/1 var(--display);
+}
+.sector-cards h3 { margin: 0 0 .3rem; font-size: 1.15rem; }
+.sector-cards p { margin: 0; font-size: .88rem; line-height: 1.45; }
+
+.microclimate-map-feature {
+  max-width: 960px;
+  margin: 3rem auto;
+}
+.microclimate-map-feature img { max-height: 690px; }
+
+.microclimate-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.microclimate-card {
+  display: grid;
+  grid-template-columns: minmax(150px, 40%) minmax(0, 60%);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+}
+.microclimate-card:nth-child(1),
+.microclimate-card:nth-child(2) { grid-column: span 6; }
+.microclimate-card:nth-child(3),
+.microclimate-card:nth-child(4),
+.microclimate-card:nth-child(5) { grid-column: span 4; grid-template-columns: 1fr; }
+.microclimate-card figure { margin: 0; min-height: 210px; }
+.microclimate-card figure img { width: 100%; height: 100%; min-height: 210px; object-fit: cover; }
+.microclimate-card div { padding: 1.25rem; }
+.microclimate-card h3 { margin: .2rem 0 .45rem; font-size: 1.4rem; }
+.microclimate-card p { margin: 0; line-height: 1.48; }
+.microclimate-card.shade-card { border-top: 4px solid #8d8574; }
+.microclimate-card.garden-card { border-top: 4px solid #6d8a61; }
+.microclimate-card.hill-card { border-top: 4px solid #7b6b8a; }
+.microclimate-card.dry-card { border-top: 4px solid #c09b52; }
+.microclimate-card.creek-card { border-top: 4px solid #5d7d79; }
+
+/* Fire */
+.fire-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+  gap: 2rem;
+  max-width: 1130px;
+  margin: 3rem auto 0;
+  align-items: start;
+}
+.fire-principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .9rem;
+}
+.fire-principles article {
+  position: relative;
+  min-width: 0;
+  padding: 1.2rem 1.1rem 1rem 3.4rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+}
+.fire-principles article > span {
+  position: absolute;
+  left: 1rem;
+  top: 1.1rem;
+  color: var(--climate-fire);
+  font: 600 1rem/1 var(--display);
+}
+.fire-principles h3 { margin: 0 0 .35rem; font-size: 1.22rem; }
+.fire-principles p { margin: 0; line-height: 1.45; font-size: .9rem; }
+.fire-photo,
+.ecology-photo,
+.alpha-climate-layout figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.28);
+}
+.fire-photo img { width: 100%; height: 470px; object-fit: cover; }
+.fire-photo figcaption,
+.ecology-photo figcaption,
+.alpha-climate-layout figcaption {
+  display: block;
+  padding: 1rem 1.1rem 1.15rem;
+  border-top: 1px solid var(--line-soft);
+  background: rgba(248, 241, 223, .82);
+  line-height: 1.48;
+}
+.fire-photo figcaption strong,
+.ecology-photo figcaption strong,
+.alpha-climate-layout figcaption strong { display: block; font: 600 1.08rem/1.2 var(--display); }
+
+/* Ecology */
+.food-web {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  max-width: 920px;
+  margin: 3rem auto;
+}
+.food-node {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .45rem;
+  padding: 1.2rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.3);
+}
+.food-node span {
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  background: rgba(103, 117, 78, .13);
+  font: .75rem/1.2 var(--sans);
+}
+.food-node.predators span { background: rgba(154, 102, 72, .13); }
+.food-arrow { color: var(--terracotta); font: 2rem/1 var(--display); }
+.food-web > p {
+  grid-column: 1 / -1;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: .92rem;
+}
+
+.ecology-layout {
+  display: grid;
+  grid-template-columns: minmax(230px, .78fr) minmax(300px, 1.1fr) minmax(230px, .78fr);
+  gap: 1rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.bird-list,
+.pioneer-list {
+  padding: 1.3rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.25);
+}
+.bird-list h3,
+.pioneer-list h3 { margin-top: 0; font-size: 1.3rem; }
+.bird-list ul,
+.pioneer-list ul { margin: 0; padding: 0; list-style: none; }
+.bird-list li {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: .4rem;
+  padding: .45rem 0;
+  border-top: 1px dashed var(--line-soft);
+}
+.bird-list li:first-child { border-top: 0; }
+.bird-list li span { color: var(--terracotta); font: .72rem/1.7 var(--sans); }
+.pioneer-list li {
+  display: inline-block;
+  margin: 0 .25rem .45rem 0;
+  padding: .3rem .55rem;
+  border: 1px solid rgba(103, 117, 78, .24);
+  border-radius: 999px;
+  font: .7rem/1.2 var(--sans);
+}
+.pioneer-list p { margin-bottom: 0; font-size: .9rem; line-height: 1.5; }
+.ecology-photo { display: flex; flex-direction: column; }
+.ecology-photo img { width: 100%; height: 100%; min-height: 370px; object-fit: cover; }
+
+/* Useful plants */
+.useful-plant-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .8rem;
+  max-width: 1180px;
+  margin: 3rem auto 1.2rem;
+}
+.useful-plant-grid article {
+  min-width: 0;
+  padding: 1.25rem 1.05rem 1.1rem;
+  border-top: 4px solid var(--climate-leaf);
+  border-inline: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.27);
+}
+.useful-plant-grid article:nth-child(2) { border-top-color: #7b6b8a; }
+.useful-plant-grid article:nth-child(3) { border-top-color: #9c947b; }
+.useful-plant-grid article:nth-child(4) { border-top-color: var(--climate-creek); }
+.useful-plant-grid article:nth-child(5) { border-top-color: var(--terracotta); }
+.useful-plant-grid h3 { margin: .35rem 0 .45rem; font-size: 1.35rem; }
+.useful-plant-grid p { margin: 0; font-size: .9rem; line-height: 1.48; }
+
+.plant-context-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.plant-context-grid aside {
+  padding: 1rem;
+  border: 1px dashed var(--line);
+  background: rgba(255,255,255,.2);
+}
+.plant-context-grid strong { font: 600 1.05rem/1.2 var(--display); }
+.plant-context-grid p { margin: .25rem 0 0; font-size: .9rem; line-height: 1.45; }
+
+/* Alpha */
+.alpha-climate-layout {
+  display: grid;
+  grid-template-columns: minmax(310px, .9fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  max-width: 1080px;
+  margin: 3rem auto 0;
+  align-items: center;
+}
+.alpha-climate-layout figure img { width: 100%; height: 430px; object-fit: cover; }
+.alpha-reading > p { margin-top: 0; font-size: 1.06rem; }
+.reading-links { display: grid; gap: .65rem; margin-top: 1.3rem; }
+.reading-links a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .9rem 1rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+  text-decoration: none;
+}
+.reading-links strong { font: 600 1.05rem/1.2 var(--display); }
+.reading-links span { align-self: center; font: .68rem/1.2 var(--sans); white-space: nowrap; }
+
+/* Closing response */
+.response-path {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 1120px;
+  margin: 3rem auto 0;
+  padding: 0;
+  list-style: none;
+}
+.response-path li {
+  min-width: 0;
+  padding: 1.2rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+}
+.response-path li > span {
+  display: block;
+  color: var(--terracotta);
+  font: .64rem/1.2 var(--sans);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.response-path strong {
+  display: block;
+  margin: .25rem 0 .45rem;
+  font: 600 1.35rem/1.15 var(--display);
+}
+.response-path p { margin: 0; line-height: 1.48; }
+
+.source-centered { text-align: center; margin: 1.8rem auto 0; }
+.source-centered .source-link { font: .7rem/1.2 var(--sans); }
+
+@media (max-width: 1050px) {
+  .climate-facts { grid-template-columns: repeat(3, 1fr); }
+  .climate-facts > div:nth-child(4) { border-left: 0; }
+  .climate-facts > div:nth-child(-n+3) { border-bottom: 1px solid var(--line-soft); }
+  .temperature-grid { grid-template-columns: repeat(2, 1fr); }
+  .useful-plant-grid { grid-template-columns: repeat(3, 1fr); }
+  .useful-plant-grid article:nth-child(4),
+  .useful-plant-grid article:nth-child(5) { grid-column: span 1; }
+  .sector-layout,
+  .fire-layout { grid-template-columns: 1fr; }
+  .fire-photo { max-width: 660px; margin-inline: auto; }
+  .fire-photo img { height: 420px; }
+}
+
+@media (max-width: 820px) {
+  .climate-paper { padding-block: 4rem; }
+  .rainfall-layout,
+  .alpha-climate-layout { grid-template-columns: 1fr; }
+  .rainfall-chart { min-height: 300px; }
+  .rain-month .rain-bar { height: max(3px, calc(var(--rain) * 62px)); }
+  .sector-cards { grid-template-columns: repeat(3, 1fr); }
+  .microclimate-card:nth-child(n) { grid-column: span 6; grid-template-columns: 1fr; }
+  .microclimate-card:nth-child(5) { grid-column: 4 / span 6; }
+  .ecology-layout { grid-template-columns: 1fr 1fr; }
+  .ecology-photo { grid-column: 1 / -1; grid-row: 1; }
+  .ecology-photo img { height: 390px; min-height: 0; }
+  .useful-plant-grid { grid-template-columns: repeat(2, 1fr); }
+  .useful-plant-grid article:nth-child(5) { grid-column: 1 / -1; }
+  .response-path { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 650px) {
+  .climate-hero h1::after { font-size: .72rem; }
+  .climate-atlas-nav { justify-content: flex-start; }
+  .climate-facts { grid-template-columns: repeat(2, 1fr); }
+  .climate-facts > div:nth-child(n) { border-left: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+  .climate-facts > div:nth-child(odd) { border-left: 0; }
+  .climate-facts > div:nth-last-child(-n+2) { border-bottom: 0; }
+  .rainfall-chart {
+    grid-template-columns: repeat(6, 1fr);
+    min-height: auto;
+    row-gap: 1rem;
+    background: rgba(255,255,255,.25);
+  }
+  .rain-month { height: 190px; }
+  .rain-month .rain-bar { height: max(3px, calc(var(--rain) * 42px)); }
+  .temperature-grid,
+  .sector-cards,
+  .fire-principles,
+  .extreme-note-grid,
+  .plant-context-grid { grid-template-columns: 1fr; }
+  .frost-window { grid-template-columns: 1fr; gap: .4rem; }
+  .growing-line { height: 58px; width: 5px; margin-inline: auto; }
+  .growing-line::before,
+  .growing-line::after { left: 50%; right: auto; transform: translate(-50%, -50%); }
+  .growing-line::before { top: 0; }
+  .growing-line::after { top: 100%; }
+  .growing-line span { left: 1.1rem; bottom: 50%; transform: translateY(50%); max-width: 210px; }
+  .microclimate-grid { grid-template-columns: 1fr; }
+  .microclimate-card:nth-child(n) { grid-column: 1; }
+  .microclimate-card figure img { height: 250px; }
+  .food-web { grid-template-columns: 1fr; }
+  .food-arrow { transform: rotate(90deg); justify-self: center; }
+  .ecology-layout { grid-template-columns: 1fr; }
+  .ecology-photo { grid-column: 1; }
+  .useful-plant-grid,
+  .response-path { grid-template-columns: 1fr; }
+  .useful-plant-grid article:nth-child(5) { grid-column: 1; }
+  .reading-links a { display: block; }
+  .reading-links span { display: block; margin-top: .25rem; white-space: normal; }
+  .alpha-climate-layout figure img { height: 340px; }
+}
+
+@media (max-width: 430px) {
+  .climate-paper { padding-inline: 1.05rem; }
+  .rainfall-chart { padding-inline: .4rem; }
+  .rain-month strong { font-size: .66rem; }
+  .rain-month small { font-size: .59rem; }
+  .atlas-map > a { padding: .4rem; }
+  .atlas-map figcaption { padding-inline: .85rem; }
+  .microclimate-card div { padding: 1rem; }
+}
+
+
+/* === Climate atlas v2 refinements === */
+
+.climate-hero figure img {
+  width: 100%;
+  min-height: 420px;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+.rainfall-layout {
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
+  align-items: center;
+}
+
+.rainfall-chart {
+  max-width: 760px;
+  min-height: 250px;
+  margin-inline: auto;
+  padding: 1rem .9rem .75rem;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.45), rgba(255,255,255,.18)),
+    repeating-linear-gradient(to top, rgba(93, 125, 121, .10) 0 1px, transparent 1px 52px),
+    rgba(236, 229, 209, .72);
+}
+
+.rain-month .rain-bar {
+  width: min(28px, 74%);
+  height: max(3px, calc(var(--rain) * 52px));
+  box-shadow: inset 0 0 0 1px rgba(46, 71, 72, .10), 0 6px 10px rgba(0,0,0,.05);
+}
+.rain-month:nth-child(1) .rain-bar,
+.rain-month:nth-child(2) .rain-bar,
+.rain-month:nth-child(11) .rain-bar,
+.rain-month:nth-child(12) .rain-bar {
+  background: linear-gradient(180deg, rgba(255,255,255,.18), transparent), #6d8fa2;
+}
+.rain-month:nth-child(3) .rain-bar,
+.rain-month:nth-child(4) .rain-bar {
+  background: linear-gradient(180deg, rgba(255,255,255,.18), transparent), #7e9a6a;
+}
+.rain-month:nth-child(5) .rain-bar,
+.rain-month:nth-child(9) .rain-bar {
+  background: linear-gradient(180deg, rgba(255,255,255,.18), transparent), #b58c4d;
+}
+.rain-month:nth-child(10) .rain-bar {
+  background: linear-gradient(180deg, rgba(255,255,255,.18), transparent), #a96d56;
+}
+.rain-month.dry .rain-bar,
+.rain-month:nth-child(6) .rain-bar,
+.rain-month:nth-child(7) .rain-bar,
+.rain-month:nth-child(8) .rain-bar {
+  background: linear-gradient(180deg, rgba(255,255,255,.14), transparent), #ccbfa5;
+}
+.rain-month strong { font-size: .73rem; }
+.rain-month small { letter-spacing: .02em; }
+
+.fire-layout {
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, .9fr);
+}
+.fire-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+  object-position: center 32%;
+}
+
+.thomas-section {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.14), transparent 18%),
+    rgba(240, 226, 201, .68);
+}
+.thomas-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  max-width: 1120px;
+  margin: 3rem auto 0;
+  align-items: start;
+}
+.thomas-story {
+  padding: 1.4rem 1.35rem;
+  border-left: 4px solid var(--climate-fire);
+  background: rgba(255,255,255,.34);
+}
+.thomas-story p {
+  margin: 0 0 1rem;
+  line-height: 1.65;
+}
+.thomas-story p:last-child { margin-bottom: 0; }
+.thomas-facts {
+  padding: 1.2rem 1.2rem 1rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.3);
+}
+.thomas-facts h3 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+.thomas-facts ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+.thomas-facts li {
+  margin: 0 0 .75rem;
+  line-height: 1.5;
+}
+.thomas-note {
+  margin: .8rem 0 0;
+  color: var(--ink-soft);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 1050px) {
+  .thomas-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 820px) {
+  .rainfall-chart { min-height: 220px; }
+  .rain-month .rain-bar { height: max(3px, calc(var(--rain) * 46px)); }
+}
+
+@media (max-width: 650px) {
+  .climate-hero figure img { min-height: 300px; }
+  .rainfall-chart {
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 1rem;
+  }
+  .rain-month { height: 165px; }
+  .rain-month .rain-bar { height: max(3px, calc(var(--rain) * 34px)); }
+  .fire-photo img { min-height: 360px; }
+}

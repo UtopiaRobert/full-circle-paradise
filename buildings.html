@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#334325">
-  <meta name="description" content="Buildings, shared infrastructure, natural construction and energy systems at Full Circle Farm.">
-  <title>Buildings &amp; Energy · Full Circle Paradise</title>
+  <meta name="description" content="A buildings and energy atlas for Full Circle Farm in Upper Ojai: dwellings, shared infrastructure, natural construction, repair culture, wood heat and the 2022 solar transition plan.">
+  <title>Buildings &amp; Energy Atlas · Full Circle Paradise</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="buildings-additions.css">
+  <link rel="stylesheet" href="gallery.css">
   <script src="site.js" defer></script>
+  <script src="gallery-data.js" defer></script>
+  <script src="gallery.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <a class="wordmark" href="index.html" aria-label="Full Circle Paradise home">
     <span>Full Circle Paradise</span>
@@ -32,28 +37,260 @@
   </nav>
 </header>
 
-<main id="main" class="chapter-page">
-<header class="chapter-hero"><div><p class="chapter-label">Chapter 06 · Shelter, tools and shared infrastructure</p><h1>Buildings & Energy</h1><p class="lede">The farm’s built environment is informal, inventive and deeply tied to the community’s ability to maintain and adapt it.</p></div><figure><img src="images/p025.webp" alt="A small wood cabin beneath mature trees"><figcaption>Small dwellings gain comfort from shade and outdoor space</figcaption></figure></header>
-<section class="article-grid">
-  <article class="prose longform">
-    <h2>A village rather than a single house</h2><p class="dropcap">Full Circle Farm combines a main house with cabins, trailers, tents, work buildings and shared facilities. This distributed pattern allows privacy without giving up communal kitchens, bathrooms, tools and gathering spaces.</p>
-    <h2>Natural building as proof</h2><p>The small earth dome is more than an object of curiosity. Its thermal mass, local material palette and survival through wildfire show what low-impact construction can contribute in a hot, fire-prone landscape.</p>
-    <h2>Energy begins with climate</h2><p>Before adding equipment, the design prioritizes shade, ventilation, insulation and reduced demand. Wood heat makes use of a local maintenance product, while solar electricity can offset expensive grid power and strengthen emergency resilience.</p>
-    <h2>Shared capacity</h2><p>The workshop, tractor and tool collection are among the farm’s most important assets. A repaired hinge, sharpened blade or functioning pump may create more value than a new feature added elsewhere.</p>
-  </article>
-  <aside class="visual-column">
-    <figure class="polaroid tilt-left"><img src="images/p026.webp" alt="Natural earth dome" data-lightbox><figcaption>The earth dome: compact, sculptural and fire resilient</figcaption></figure>
-    <figure class="polaroid tilt-right"><img src="images/p030.webp" alt="Shared workshop interior" data-lightbox><figcaption>A community becomes more resilient when repair is close at hand</figcaption></figure>
-    <figure class="polaroid"><img src="images/p031.webp" alt="Shared laundry and bathhouse" data-lightbox><figcaption>Shared utilities reduce duplication and create reuse opportunities</figcaption></figure>
-  </aside>
-</section>
-<section class="paper-section"><header class="section-heading"><p class="kicker">Design priorities</p><h2>Improve what serves many people</h2></header><div class="priority-list"><div><span>01</span><h3>Community room roof</h3><p>Complete structural work so the building can safely support solar panels.</p></div><div><span>02</span><h3>Workshop organization</h3><p>Make commonly used tools visible, maintained and easy to return.</p></div><div><span>03</span><h3>Shade and cooling</h3><p>Use trees, trellises and exterior shade before relying on mechanical cooling.</p></div><div><span>04</span><h3>Greywater-ready utilities</h3><p>Connect laundry and bathing infrastructure to productive perennial landscapes.</p></div></div></section>
+<main id="main" class="chapter-page buildings-atlas-page">
+  <header class="chapter-hero buildings-hero">
+    <div>
+      <p class="chapter-label">Chapter 06 · Buildings &amp; energy atlas</p>
+      <h1>Buildings &amp; Energy</h1>
+      <p class="lede">Full Circle Farm grew as a small village: one main house, many modest dwellings, shared workshops and utilities, and a long habit of repairing, adapting and building with what was available.</p>
+    </div>
+    <figure>
+      <img src="images/people-first/full/buildings-cob-oven-team.webp" alt="Three community builders smiling beside a handmade cob oven" style="object-position:center 48%;">
+      <figcaption>Building together was part of everyday community life</figcaption>
+    </figure>
+  </header>
+
+  <section class="buildings-opening paper-section" id="overview" aria-labelledby="buildings-overview-title">
+    <header class="section-heading">
+      <p class="kicker">A built landscape assembled over decades</p>
+      <h2 id="buildings-overview-title">The farm was never a single-house homestead</h2>
+      <p>By 2022, about twenty people lived among cabins, trailers, motorhomes, tents, domes and shared buildings on 5.5 acres. The design did not call for a wave of new construction. Its central question was how to strengthen and better connect what already served the community.</p>
+    </header>
+
+    <nav class="buildings-atlas-nav" aria-label="Buildings and energy atlas contents">
+      <a href="#village">Village of dwellings</a>
+      <a href="#shared">Shared infrastructure</a>
+      <a href="#materials">Natural building</a>
+      <a href="#energy">Energy systems</a>
+      <a href="#zone-one">Zone 1 relationships</a>
+      <a href="#phasing">Implementation</a>
+    </nav>
+
+    <div class="buildings-facts" aria-label="Buildings and energy facts recorded in the 2022 workbook">
+      <div><strong>~20</strong><span>residents</span></div>
+      <div><strong>5.5 acres</strong><span>shared site</span></div>
+      <div><strong>30</strong><span>solar panels proposed</span></div>
+      <div><strong>40 years</strong><span>age of the barn</span></div>
+      <div><strong>$1,000/mo</strong><span>implementation budget</span></div>
+      <div><strong>1 village</strong><span>many dwelling types</span></div>
+    </div>
+
+    <aside class="archive-note buildings-archive-note">
+      <strong>Archive note.</strong> The workbook uses slightly different dwelling counts in different sections as buildings, tents and vehicles were grouped in different ways. This page preserves the overall pattern rather than forcing a false single total: more than a dozen small dwellings shared a central house, workshop, barn, bathhouse and gathering spaces.
+      <a href="documents/full-circle-paradise-workbook.pdf#page=40" target="_blank" rel="noopener">Workbook pp. 40, 49–50, 82–84</a>
+    </aside>
+  </section>
+
+  <section class="buildings-section buildings-paper" id="village" aria-labelledby="village-title">
+    <header class="section-heading">
+      <p class="kicker">01 · A village of small dwellings</p>
+      <h2 id="village-title">Privacy at the edges, community at the center</h2>
+      <p>Living spaces ranged from conventional rooms and cabins to converted trailers, motorhomes, tents and earthen domes. Most were small; comfort depended as much on shade, decks, gardens and nearby shared facilities as on interior floor area.</p>
+    </header>
+
+    <div class="dwelling-grid">
+      <article class="dwelling-card wide">
+        <figure><img src="images/buildings-atlas/studio-cabin.webp" alt="Small studio cabin with a wooden deck beneath trees"></figure>
+        <div><span>Studio cabin</span><h3>A room extended outdoors</h3><p>A single-room cabin gained usable living space from its deck, tree cover and relationship to the paths and shared center.</p></div>
+      </article>
+      <article class="dwelling-card">
+        <figure><img src="images/buildings-atlas/tiny-home.webp" alt="Tiny home converted from a cargo trailer"></figure>
+        <div><span>Converted trailer</span><h3>Tiny home</h3><p>Reuse allowed an existing vehicle shell to become a dwelling without constructing an entirely new building.</p></div>
+      </article>
+      <article class="dwelling-card">
+        <figure><img src="images/buildings-atlas/large-cabin.webp" alt="Larger cabin surrounded by vegetation"></figure>
+        <div><span>Larger cabin</span><h3>Housing and income</h3><p>The workbook records a basic kitchen, three small rooms and rental income supporting the wider community.</p></div>
+      </article>
+      <article class="dwelling-card">
+        <figure><img src="images/buildings-atlas/earthdome.webp" alt="Small rounded earthen dome dwelling with an arched doorway"></figure>
+        <div><span>Earthen shelter</span><h3>Earthdome</h3><p>Compact, sculptural and unusually fire resistant, the dome demonstrated a very different relationship between shelter and local climate.</p></div>
+      </article>
+      <article class="dwelling-card">
+        <figure><img src="images/buildings-atlas/garden-shed.webp" alt="Shaded open garden shed filled with tools and supplies"></figure>
+        <div><span>Working edge</span><h3>Garden shed</h3><p>A shaded place for tools, pots and day-to-day materials mattered because it sat close to where those things were used.</p></div>
+      </article>
+    </div>
+
+    <div class="village-reading-grid">
+      <aside><strong>Opportunity</strong><p>Small dwellings reduce private material demand while shared kitchens, baths, tools and gathering spaces avoid unnecessary duplication.</p></aside>
+      <aside><strong>Constraint</strong><p>The workbook describes much of the settlement as incremental and informal, with buildings placed over decades rather than according to one coordinated plan.</p></aside>
+      <aside><strong>Design response</strong><p>Improve paths, shade, utilities and shared structures before adding more dwellings. In 2022, the only clearly identified new building need was protected storage or a garage for the tractor.</p></aside>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=23" target="_blank" rel="noopener">Site photographs and structure survey, workbook pp. 23–35, 49–50</a></p>
+  </section>
+
+  <section class="buildings-section buildings-paper" id="shared" aria-labelledby="shared-title">
+    <header class="section-heading">
+      <p class="kicker">02 · Shared infrastructure</p>
+      <h2 id="shared-title">The most valuable buildings were the ones everyone used</h2>
+      <p>The workshop, meeting room, bathhouse, laundry and gym were not secondary amenities. They were the connective tissue that allowed many small households to operate as one community.</p>
+    </header>
+
+    <div class="shared-grid">
+      <article>
+        <figure><img src="images/archive-v3/full/054-2e8cb5bd-8d02-4d86-a252-049b7fcc2d37.jpg" alt="Two people painting a handmade farm sign beside the workshop"></figure>
+        <div><span>Repair</span><h3>Workshop</h3><p>Directly across from the house, the workshop saw constant use for maintaining buildings, vehicles, water systems and farm equipment.</p></div>
+      </article>
+      <article>
+        <figure><img src="images/archive-v3/full/010-35328311-10212606023530337-2234397061468389376-n.jpg" alt="Residents and friends gathered in a shared interior space"></figure>
+        <div><span>Gather</span><h3>Meeting room and stage</h3><p>A former dirt-floor dance space was being finished with a concrete floor, doors, walls and plaster for meetings, events and performances.</p></div>
+      </article>
+      <article>
+        <figure><img src="images/buildings-atlas/laundry-bathhouse.webp" alt="Shared laundry and bathhouse with washing machines beneath a metal roof"></figure>
+        <div><span>Share utilities</span><h3>Bathhouse and laundry</h3><p>Washing machines, dryers, clotheslines, a shower, bath and toilet concentrated services while creating major greywater opportunities.</p></div>
+      </article>
+      <article>
+        <figure><img src="images/archive-v3/full/003-29cd096a-740e-45ed-8f3f-8b80ecf51fd3.jpg" alt="A smiling work party holding sculptural chairs built from shared materials"></figure>
+        <div><span>Reuse</span><h3>Open-air gym</h3><p>Leftover construction material and donated equipment became a frequently used community facility with very little new consumption.</p></div>
+      </article>
+    </div>
+
+    <div class="tools-layout">
+      <figure><img src="images/buildings-atlas/tractor.webp" alt="Green tractor with backhoe and orange chipper attachment"><figcaption><strong>Tractor and chipper</strong> Earthworks, hauling, brush management and mulch production increased the community’s capacity to maintain the whole site.</figcaption></figure>
+      <figure><img src="images/story-atlas/bob-goddard-truck.webp" alt="Bob Goddard standing beside the orange farm truck"><figcaption><strong>Farm truck</strong> Mulch, lumber and supply runs connected the rural property to materials and services in town.</figcaption></figure>
+      <div class="tools-note"><span>Shared capacity</span><h3>Ownership was less important than access</h3><p>The farm shared tools, vehicles and work spaces. That made repair culture a form of energy conservation: extending the life of existing things avoided the cost, materials and embodied energy of replacement.</p></div>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=29" target="_blank" rel="noopener">Shared facilities and equipment, workbook pp. 29–35, 83–84</a></p>
+  </section>
+
+  <section class="buildings-section buildings-paper" id="materials" aria-labelledby="materials-title">
+    <header class="section-heading">
+      <p class="kicker">03 · Regional materials and natural building</p>
+      <h2 id="materials-title">Build with what the place can support</h2>
+      <p>The regional buildings survey looked beyond conventional timber framing toward traditions and materials adapted to heat, dryness, wildfire and local availability.</p>
+    </header>
+
+    <div class="materials-layout">
+      <figure class="earthdome-feature">
+        <img src="images/buildings-atlas/earthdome.webp" alt="Earthen dome at Full Circle Farm surrounded by reeds and trees">
+        <figcaption><strong>A small proof of concept</strong> The workbook describes the earthdome as strong enough to survive the 2017 wildfire that destroyed nearby structures.</figcaption>
+      </figure>
+      <div class="materials-notes">
+        <article><span>Traditional precedent</span><h3>Willow and adobe</h3><p>The workbook names Chumash use of willow and adobe as regional traditions grounded in locally available materials.</p></article>
+        <article><span>Modern possibilities</span><h3>Cob, earthbag and earthship</h3><p>Earthen walls, earthbag domes and reclaimed-material construction were identified as possible alternatives to standard stick framing.</p></article>
+        <article><span>Climate function</span><h3>Mass and fire resistance</h3><p>Earthen construction offers thermal mass and fewer combustible wall materials—valuable qualities in a hot, fire-prone region.</p></article>
+        <article><span>Real constraint</span><h3>Codes and industry</h3><p>The workbook notes that building codes and established material industries can make natural construction more difficult to permit and normalize.</p></article>
+      </div>
+    </div>
+
+    <aside class="materials-caution"><strong>Historical design survey.</strong> These ideas reflect the 2022 workbook. Any future natural building project would require site-specific structural, fire, moisture and permitting review.</aside>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=79" target="_blank" rel="noopener">Regional buildings survey, workbook pp. 79–80</a></p>
+  </section>
+
+  <section class="buildings-section buildings-paper" id="energy" aria-labelledby="energy-title">
+    <header class="section-heading">
+      <p class="kicker">04 · Energy systems</p>
+      <h2 id="energy-title">Reduce demand, use local heat, then add solar</h2>
+      <p>The 2022 energy plan combined passive comfort, wood heat, shared infrastructure and a proposed transition away from expensive grid electricity.</p>
+    </header>
+
+    <div class="energy-path" aria-label="Energy strategy described in the workbook">
+      <div><span>01</span><strong>Shade first</strong><p>Trees and exterior shade reduce summer heat before machines are considered.</p></div>
+      <b aria-hidden="true">→</b>
+      <div><span>02</span><strong>Local wood heat</strong><p>Many dwellings used wood stoves supplied by tree maintenance and locally available firewood.</p></div>
+      <b aria-hidden="true">→</b>
+      <div><span>03</span><strong>Share equipment</strong><p>Community rooms, laundry and workshops concentrate appliances and tools.</p></div>
+      <b aria-hidden="true">→</b>
+      <div><span>04</span><strong>Solar electricity</strong><p>A reinforced workshop/community-room roof was planned to carry thirty panels.</p></div>
+    </div>
+
+    <div class="energy-layout">
+      <figure class="solar-feature"><img src="images/buildings-atlas/solar-well-house.webp" alt="Small well house with solar panels in a field"><figcaption><strong>Solar was already working at a smaller scale</strong> The well pump had its own photovoltaic array and supplied the farm’s primary water source, with city water as backup.</figcaption></figure>
+      <div class="energy-cards">
+        <article><span>Existing in 2022</span><h3>Grid electricity</h3><p>The community still relied on expensive grid power for most electrical needs.</p></article>
+        <article><span>Existing in 2022</span><h3>Wood stoves</h3><p>Wood heat was common because pruning, tree removal and regional sources made fuel accessible.</p></article>
+        <article><span>Existing in 2022</span><h3>No air conditioning</h3><p>Residents relied on shade and adaptation despite summers described as intensely hot.</p></article>
+        <article><span>Proposed</span><h3>Rocket heaters and more shade</h3><p>Efficient masonry heaters and additional shade were identified as future improvements for shared spaces.</p></article>
+      </div>
+    </div>
+
+    <aside class="solar-archive-note"><strong>Plan, not verified completion.</strong> The workbook proposed reinforcing the workshop/community-room roof for thirty solar panels and described “full solar” as a Year 2 goal. This page records that 2022 plan without claiming that installation was completed.</aside>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=49" target="_blank" rel="noopener">Client outcomes and energy plan, workbook pp. 49–50, 83, 101–102</a></p>
+  </section>
+
+  <section class="buildings-section buildings-paper" id="zone-one" aria-labelledby="zone-one-title">
+    <header class="section-heading">
+      <p class="kicker">05 · Zone 1 relationships</p>
+      <h2 id="zone-one-title">The built center was organized by daily movement</h2>
+      <p>The house, workshop, meeting room, bathhouse, barn, kiva and surrounding dwellings formed one enlarged Zone 1. Their value came from relative location: kitchens near meetings, workshop near repair needs, laundry near clotheslines, and shared paths crossing throughout the day.</p>
+    </header>
+
+    <div class="zone-one-layout">
+      <figure class="buildings-map">
+        <a href="images/buildings-atlas/zone-1-design-full.jpeg" target="_blank" rel="noopener" aria-label="Open the Zone 1 design map at full resolution">
+          <img src="images/buildings-atlas/zone-1-design-preview.webp" alt="Hand-drawn Zone 1 design map showing the house, workshop, meeting room, bathhouse, barn, cabins, paths and water systems">
+        </a>
+        <figcaption><strong>Zone 1 design map</strong> The map documents the densest network of structures, movement and shared services. <a href="images/buildings-atlas/zone-1-design-full.jpeg" target="_blank" rel="noopener">Open full resolution</a> <a href="documents/full-circle-paradise-workbook.pdf#page=82" target="_blank" rel="noopener">Workbook pp. 82–85</a></figcaption>
+      </figure>
+
+      <div class="zone-one-cards">
+        <article><span>01</span><h3>Main house</h3><p>Two kitchens, shared meals, meetings, four residents and the most heavily used indoor community room.</p></article>
+        <article><span>02</span><h3>Workshop</h3><p>Repair center and the proposed structural base for the larger solar array.</p></article>
+        <article><span>03</span><h3>Meeting room</h3><p>Dance floor, stage, events and a future dedicated space for community governance.</p></article>
+        <article><span>04</span><h3>Bathhouse</h3><p>Shower, bath, toilet, laundry, clotheslines and a major greywater connection to nearby gardens.</p></article>
+        <article><span>05</span><h3>Kiva</h3><p>A sacred and social gathering place needing renewed shade after surrounding trees were removed.</p></article>
+        <article><span>06</span><h3>Barn</h3><p>Long-term storage proposed for later conversion into art and office space with a cob floor and rainwater tanks.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="buildings-section buildings-paper" id="phasing" aria-labelledby="phasing-title">
+    <header class="section-heading">
+      <p class="kicker">06 · Implementation and stewardship</p>
+      <h2 id="phasing-title">Finish, reinforce and maintain before expanding</h2>
+      <p>The strongest building strategy in the workbook was incremental. Work was phased according to shared benefit, limited funds and the condition of existing structures.</p>
+    </header>
+
+    <ol class="building-timeline">
+      <li><span>First</span><strong>Finish the community room</strong><p>Complete walls, plaster, doors and structural reinforcement so the space can support meetings, events and the proposed solar roof.</p></li>
+      <li><span>Then</span><strong>Install the solar array</strong><p>Use the large shared roof rather than scattering small systems across many dwellings.</p></li>
+      <li><span>Ongoing</span><strong>Improve utilities</strong><p>Connect bathhouse, laundry and dwelling greywater to productive beds while improving path lighting and clothesline use.</p></li>
+      <li><span>Later</span><strong>Renew the barn</strong><p>Repair the roof, add a poured earthen floor, create art and office space, and pair the roof with rainwater storage.</p></li>
+      <li><span>As needed</span><strong>Protect equipment</strong><p>Add appropriate storage or a tractor garage rather than constructing more housing.</p></li>
+      <li><span>Always</span><strong>Maintain the village</strong><p>Roof work, shade, fire clearance, tool care and small repairs preserve more value than neglected expansion.</p></li>
+    </ol>
+
+    <div class="barn-layout">
+      <figure><img src="images/archive-v3/full/004-2e8cb5bd-8d02-4d86-a252-049b7fcc2d37.jpg" alt="Two people painting a handmade sign beside the working barn"><figcaption><strong>The forty-year barn</strong> A working storage building with a roof needing repair, imagined as a future community art and office space.</figcaption></figure>
+      <div class="closing-principles">
+        <article><span>Use what exists</span><p>The farm’s buildings already represented decades of material and labor.</p></article>
+        <article><span>Stack functions</span><p>A roof could provide shade, gathering space, solar electricity and rainwater catchment.</p></article>
+        <article><span>Share before duplicating</span><p>Tools, kitchens, baths, vehicles and community rooms made small private dwellings practical.</p></article>
+        <article><span>Design for repair</span><p>Visible systems and accessible work spaces make long-term stewardship possible.</p></article>
+      </div>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=101" target="_blank" rel="noopener">Five-year implementation plan, workbook pp. 101–102</a></p>
+  </section>
+
+  <section class="fieldstation-gallery paper-section" data-fieldstation-gallery="buildings" aria-labelledby="buildings-gallery-title">
+    <header class="fieldstation-gallery__header">
+      <div>
+        <p class="kicker">Built landscape archive</p>
+        <h2 id="buildings-gallery-title">Browse dwellings and shared infrastructure</h2>
+        <p>The main house, cabins, workshops, utilities, natural buildings, vehicles and structures assembled over decades.</p>
+      </div>
+      <button class="fieldstation-gallery__browse" type="button" data-gallery-open>Browse <span data-gallery-count>more</span> photographs</button>
+    </header>
+    <div class="fieldstation-gallery__grid" data-gallery-preview aria-live="polite"></div>
+    <p class="fieldstation-gallery__hint">Select any photograph to open the full-screen gallery. Use the arrow keys or the on-screen controls to continue.</p>
+  </section>
 </main>
-<nav class="chapter-nav" aria-label="Chapter navigation"><a class="previous" href="food.html"><span>Previous</span>Food &amp; Soil</a><a class="next" href="social.html"><span>Next</span>Social Permaculture</a></nav>
+
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  <a class="previous" href="food.html"><span>Previous</span>Food &amp; Soil</a>
+  <a class="next" href="social.html"><span>Next</span>Social Permaculture</a>
+</nav>
+
 <footer class="site-footer">
   <div><strong>Full Circle Paradise</strong><br><span>A permaculture design for Full Circle Farm</span></div>
   <div>Upper Ojai, California<br>Quail Springs PDC · Spring 2022</div>
   <a href="documents/full-circle-paradise-workbook.pdf">Read the original workbook</a>
 </footer>
-<div class="lightbox" hidden aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt=""><p></p></div>
-</body></html>
+
+<div class="lightbox" hidden aria-hidden="true">
+  <button type="button" aria-label="Close image">×</button>
+  <img alt="">
+  <p></p>
+</div>
+</body>
+</html>

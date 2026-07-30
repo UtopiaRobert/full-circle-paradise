@@ -4,11 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#334325">
-  <meta name="description" content="The land, community, history and design intentions of Full Circle Farm.">
-  <title>The Farm · Full Circle Paradise</title>
+  <meta name="description" content="The story of Full Circle Paradise: Bob Goddard, Jaya, four decades of community life, the Thomas Fire, the 2022 design study and the continuing lineage into Boulder Gardens and Fieldstation.">
+  <title>The Story · Full Circle Paradise</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="story-additions.css">
+  <link rel="stylesheet" href="gallery.css">
   <script src="site.js" defer></script>
+  <script src="gallery-data.js" defer></script>
+  <script src="gallery.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -32,35 +36,266 @@
   </nav>
 </header>
 
-<main id="main" class="chapter-page">
-<header class="chapter-hero">
-  <div><p class="chapter-label">Chapter 01 · Place, people and purpose</p><h1>The Farm</h1><p class="lede">A cultivated oasis in Upper Ojai, shaped by more than three decades of community life.</p></div>
-  <figure><img src="images/p010.webp" alt="The main house surrounded by shade and garden plantings"><figcaption>The shared heart of the farm</figcaption></figure>
-</header>
-<section class="fact-ribbon" aria-label="Site facts"><div><strong>5.5</strong><span>acres</span></div><div><strong>Upper Ojai</strong><span>Ventura County</span></div><div><strong>20+</strong><span>adult community</span></div><div><strong>2022</strong><span>design snapshot</span></div></section>
-<section class="article-grid">
-  <article class="prose longform">
-    <h2>A place with a long memory</h2>
-    <p class="dropcap">Full Circle Farm lies about six miles east of Ojai, where the broad valley narrows beneath the Los Padres mountains. Lion Creek follows the lower southern edge. Homes, gardens and workshops occupy the gentler ground above it.</p>
-    <p>The site was not a blank canvas. By 2022 it already held mature fruit trees, a productive garden, cabins, workshops, trailers, an earth dome, water tanks, animal systems and gathering spaces. The design therefore began with respect for what was already working.</p>
-    <h2>Community at the center</h2>
-    <p>The main house is the social center: a place for shared meals, meetings and everyday exchange. Some residents earn income away from the property; others contribute regular hours to gardening, repair, cooking, cleaning and land care.</p>
-    <aside class="margin-note"><strong>Design posture</strong><br>Observe before intervening. Repair weak connections before adding new complexity.</aside>
-    <h2>Three ethics, lived locally</h2>
-    <div class="ethics-list"><div><span>Earth care</span><p>Conserve water, restore soil, protect habitat and prepare for wildfire.</p></div><div><span>People care</span><p>Support dignified housing, useful work, shared spaces and mutual care.</p></div><div><span>Fair share</span><p>Share tools, skills, vehicles, food and harvests within and beyond the farm.</p></div></div>
-  </article>
-  <aside class="visual-column">
-    <figure class="polaroid tilt-left"><img src="images/p007.webp" alt="Aerial map of Full Circle Farm" data-lightbox><figcaption>The farm within the Upper Ojai valley</figcaption></figure>
-    <figure class="polaroid tilt-right"><img src="images/p029.webp" alt="Community room and outdoor stage"><figcaption>A place for gatherings, music and shared work</figcaption></figure>
-    <blockquote class="hand-quote">“The strongest asset was not any one structure or garden. It was the community’s ability to share labor, knowledge and tools.”</blockquote>
-  </aside>
-</section>
+<main id="main" class="chapter-page story-page story-atlas-page">
+  <header class="chapter-hero story-hero">
+    <div>
+      <p class="chapter-label">Chapter 01 · Place, people and memory</p>
+      <h1>The Story of<br>Full Circle Paradise</h1>
+      <p class="lede">Four decades of land, community, experiment, and return</p>
+    </div>
+    <figure>
+      <img src="images/story-atlas/bob-goddard-truck.webp" alt="Bob Goddard standing beside an orange vintage pickup truck beneath the trees at Full Circle Farm">
+      <figcaption>Bob Goddard at Full Circle Farm</figcaption>
+    </figure>
+  </header>
+
+  <section class="fact-ribbon story-facts" aria-label="Story milestones">
+    <div><strong>Nearly 40 years</strong><span>community history</span></div>
+    <div><strong>5.5 acres</strong><span>Upper Ojai</span></div>
+    <div><strong>2017</strong><span>Thomas Fire</span></div>
+    <div><strong>2022</strong><span>design archive</span></div>
+  </section>
+
+  <section class="story-opening paper-section" aria-labelledby="opening-title">
+    <div class="opening-copy prose longform">
+      <p class="kicker">A living archive</p>
+      <h2 id="opening-title">The Story of Full Circle Paradise</h2>
+      <p class="dropcap">Full Circle Farm in Upper Ojai was never simply a farm. It was a home, a gathering place, a school, a social experiment, and a landscape shaped by many hands over many years.</p>
+      <p>In this archive, I call it <strong>Full Circle Paradise</strong>—not because it was perfect, but because it held a rare concentration of beauty, possibility, human effort, and living memory. Its gardens, orchards, buildings, gatherings, conflicts, friendships, and changing ideas all became part of one evolving organism.</p>
+      <p>The story of Full Circle cannot be reduced to a single founder or a single plan. It belongs to the people who began it, the people who sustained it, the people who passed through, and the land itself.</p>
+      <nav class="story-index" aria-label="Story contents">
+        <a href="#bob">Bob Goddard</a>
+        <a href="#jaya">Jaya</a>
+        <a href="#community">Community</a>
+        <a href="#fire">Thomas Fire</a>
+        <a href="#my-life">My experience</a>
+        <a href="#design-study">2022 design study</a>
+        <a href="#lessons">Lessons</a>
+        <a href="#lineage">Continuing lineage</a>
+      </nav>
+    </div>
+    <div class="opening-collage" aria-label="Full Circle places and community life">
+      <figure class="journal-photo house-photo tilt-left">
+        <img src="images/story-atlas/main-house.webp" alt="The shaded entrance and porch of the main house at Full Circle Farm" data-lightbox>
+        <figcaption>The shared heart of the farm</figcaption>
+      </figure>
+      <figure class="journal-photo supper-photo tilt-right">
+        <img src="images/story-atlas/community-supper.webp" alt="Residents and friends sharing a long outdoor supper beneath the trees" data-lightbox>
+        <figcaption>Life gathered around the long table</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="story-section founder-section" id="bob" aria-labelledby="bob-title">
+    <div class="founder-copy prose longform">
+      <p class="kicker">Founder · vision and permission</p>
+      <h2 id="bob-title">Bob Goddard</h2>
+      <p><strong>Bob Goddard founded Full Circle Farm and gave the place its original center of gravity.</strong></p>
+      <p>His vision helped set decades of activity in motion: gardens, small dwellings, workshops, gatherings, ceremonies, experiments in community, and an openness to people searching for another way to live.</p>
+      <p>Bob was not a distant founder whose influence existed only in the past. His personality was part of the atmosphere of the place. He brought warmth, imagination, humor, ceremony, and a willingness to allow Full Circle to become something unconventional.</p>
+      <p>The farm reflected that spirit. It was handmade rather than polished, layered rather than planned all at once. Buildings, gardens, paths, and relationships accumulated over time. Some things worked beautifully. Others remained unfinished, changed direction, or were absorbed into the next chapter.</p>
+      <p>That incompleteness was part of Full Circle’s character. It was never a finished model placed behind glass. It was alive.</p>
+      <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=40" target="_blank" rel="noopener">Community origins, workbook p. 40</a></p>
+    </div>
+    <div class="bob-gallery">
+      <figure class="journal-photo bob-embrace">
+        <img src="images/story-atlas/bob-goddard-embrace.webp" alt="Bob Goddard smiling while embracing another white-bearded community member during a celebration" data-lightbox>
+        <figcaption>Bob during a moment of celebration and affection</figcaption>
+      </figure>
+      <figure class="journal-photo bob-truck-small">
+        <img src="images/story-atlas/bob-goddard-truck.webp" alt="Bob Goddard standing beside an orange vintage pickup truck at Full Circle Farm" data-lightbox>
+        <figcaption>Founder, steward, and one of the central figures in the life of the land</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="story-section jaya-section" id="jaya" aria-labelledby="jaya-title">
+    <div class="jaya-visuals">
+      <figure class="jaya-context-photo jaya-portrait-photo">
+        <img src="images/story-atlas/jaya-portrait.webp" alt="Portrait of Deanna Jaya Nakosteen outdoors at Full Circle Farm" data-lightbox>
+        <figcaption>Deanna Jaya Nakosteen</figcaption>
+      </figure>
+      <figure class="jaya-yellow-car-photo">
+        <img src="images/story-atlas/jaya-yellow-car.webp" alt="Jaya seated in the driver’s seat of her large yellow car beneath an oak tree" data-lightbox>
+        <figcaption>The yellow car used for the weekly farmers-market and grocery run</figcaption>
+      </figure>
+    </div>
+    <div class="jaya-copy prose longform">
+      <p class="kicker">Matriarch · continuity and care</p>
+      <h2 id="jaya-title">Jaya</h2>
+      <p>If Bob helped begin Full Circle, <strong>Jaya helped it endure</strong>.</p>
+      <p>For most of the community’s nearly forty-year history, Deanna Jaya Nakosteen carried much of its practical and social continuity. She became one of the central people holding the place together across changing generations of residents, visitors, projects, and personalities.</p>
+      <p>Her work was concrete and constant. Jaya ran the community food program. Each day, two residents cooked a generous vegetarian meal for everyone and then cleaned the kitchen. Behind that daily rhythm was a larger system that she coordinated: bulk food and household supplies delivered four times a year, big bags of rice and lentils, coconut oil, toilet paper, and an unusually deep inventory of herbs and spices.</p>
+      <p>Every Sunday she drove her large yellow car to the Ojai farmers market, often with one person assisting her, and returned with a carload of organic produce. She also stopped at Rainbow Bridge, the local organic market, to fill whatever gaps remained. She maintained this routine for years.</p>
+      <p>Jaya also ran the community’s biweekly general meetings. Food, meetings, purchasing, schedules and relationship were not separate tasks; together they formed the infrastructure of belonging.</p>
+      <p>Communities are often remembered through founders and dramatic events, but their survival usually depends upon repeated forms of care: maintaining relationships, preserving memory, helping new people find their place, feeding people well, and continuing when enthusiasm fades.</p>
+      <p>Any account that names Bob but leaves out Jaya would misunderstand how Full Circle survived as a community. Her long stewardship made her one of the most important people in the history of the place and one of its clearest living links between past and present.</p>
+      <aside class="jaya-book-note">
+        <img src="images/story-atlas/creating-community-cover.webp" alt="Cover of Creating Community Wherever You Are by Deanna Jaya Nakosteen" data-lightbox>
+        <div>
+          <span>Published in 2018</span>
+          <h3><cite>Creating Community Wherever You Are</cite></h3>
+          <p>Jaya’s book carries the lessons of more than thirty years in intentional community beyond Full Circle: shared food, communication, cooperation, belonging, and practical ways to create community wherever one lives.</p>
+        </div>
+      </aside>
+      <p class="source-centered"><a class="source-link light-source" href="documents/full-circle-paradise-workbook.pdf#page=102" target="_blank" rel="noopener">Social Permaculture Reflections, workbook p. 102</a> · <a class="source-link light-source" href="social.html#jaya">Jaya’s food and meeting systems</a></p>
+    </div>
+  </section>
+
+  <section class="story-section community-section paper-section" id="community" aria-labelledby="community-title">
+    <header class="section-heading left-heading story-heading">
+      <p class="kicker">A human ecosystem</p>
+      <h2 id="community-title">A Community in Motion</h2>
+    </header>
+    <div class="community-copy prose longform">
+      <p>Over the years, Full Circle attracted an extraordinary range of people.</p>
+      <p>Some arrived for a short visit. Others stayed for a season or became part of the community for years. Gardeners, builders, artists, seekers, travelers, teachers, craftspeople, and people simply needing a place to begin again all entered the life of the farm.</p>
+      <p>Daily life was created through ordinary acts:</p>
+      <p>shared meals beneath the trees, garden work, harvests, cooking, repairs, meetings, ceremonies, celebrations, difficult conversations, and the constant practical work of maintaining a place where many people lived together.</p>
+      <p>The community was never static. Its culture changed as people came and went. Authority, responsibility, and participation had to be negotiated repeatedly.</p>
+      <p>At different times, Full Circle explored more distributed forms of organization, including ideas drawn from <strong>sociocracy</strong> and <strong>Holacracy</strong>. Holacracy especially interested me because it offered a way to separate authority from personality. Instead of depending entirely on fixed titles or informal social power, responsibility could be placed in clearly defined roles that evolved as the organization changed.</p>
+      <p>These approaches were explored rather than perfected. Some people found them liberating; others found them unfamiliar or overly abstract. Full Circle moved through recurring cycles of centralized leadership, collective process, experimentation, and revision.</p>
+      <p>That tension was not separate from the permaculture story. It was part of the social ecology of the place.</p>
+      <p class="source-centered"><a class="source-link" href="social.html#governance">Continue into Social Permaculture</a></p>
+    </div>
+    <div class="community-story-mosaic">
+      <figure class="mosaic-supper">
+        <img src="images/story-atlas/community-supper.webp" alt="A long shared supper beneath the trees at Full Circle Farm" data-lightbox>
+        <figcaption>Shared meals beneath the trees</figcaption>
+      </figure>
+      <figure class="mosaic-circle">
+        <img src="images/story-atlas/meeting-circle.webp" alt="A community meeting circle inside the shared house" data-lightbox>
+        <figcaption>Meetings, listening, and the work of self-governance</figcaption>
+      </figure>
+      <figure class="mosaic-fire">
+        <img src="images/story-atlas/fire-ceremony.webp" alt="Community members singing and dancing around a nighttime ceremonial fire" data-lightbox>
+        <figcaption>Ceremony and celebration</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="story-section fire-story-section" id="fire" aria-labelledby="fire-title">
+    <div class="fire-image-wrap">
+      <figure class="journal-photo fire-photo-story">
+        <img src="images/story-atlas/thomas-fire.webp" alt="Robert Redecker and Shaun Walton standing in the burned landscape at Full Circle Paradise after the Thomas Fire" data-lightbox>
+        <figcaption>Robert and Shaun in the aftermath of the Thomas Fire</figcaption>
+      </figure>
+    </div>
+    <div class="fire-copy prose longform">
+      <p class="kicker">December 2017 · a dividing line</p>
+      <h2 id="fire-title">The Thomas Fire</h2>
+      <p>In December 2017, the <strong>Thomas Fire</strong> swept through Upper Ojai and became one of the defining events in Full Circle’s history.</p>
+      <p>During the fire, <strong>Shaun Walton and I worked to protect the main house</strong>. The experience reduced the life of the farm to its most immediate elements: fire, water, wind, shelter, tools, judgment, and the willingness of people to stand beside one another under extreme conditions.</p>
+      <p>The Thomas Fire changed the physical landscape, but it also revealed the strengths and vulnerabilities of the place. Buildings, vegetation, access, stored water, defensible space, and construction materials were no longer abstract design subjects. Their consequences were immediate.</p>
+      <p>The fuller account belongs in the Climate chapter of this archive. Within the larger story, however, the fire stands as a dividing line. Full Circle remained the same land, but it was no longer exactly the same place.</p>
+      <p class="source-centered"><a class="source-link" href="climate.html#fire">Read the full Thomas Fire chapter</a> · <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=54" target="_blank" rel="noopener">Workbook pp. 54–56</a></p>
+    </div>
+  </section>
+
+  <section class="story-section my-life-section paper-section" id="my-life" aria-labelledby="my-life-title">
+    <div class="my-life-copy prose longform">
+      <p class="kicker">Participation and observation</p>
+      <h2 id="my-life-title">My Life at Full Circle</h2>
+      <p>I came to Full Circle during a later chapter of its history.</p>
+      <p>I was not there at the beginning, and I did not experience every era of the community. My understanding came through participation: living with the land, working alongside others, listening to people who had known the place much longer, and gradually recognizing the layers of history embedded in its buildings and landscape.</p>
+      <p>Full Circle changed the way I understood permaculture.</p>
+      <p>Permaculture was no longer only a method for arranging water, plants, buildings, and energy. It became a way of seeing relationships: between people and land, history and design, freedom and responsibility, beauty and maintenance.</p>
+      <p>The farm offered daily evidence that ecological systems and social systems cannot truly be separated. A garden depends upon water, soil, labor, knowledge, cooperation, and continuity. A community depends upon many of the same things.</p>
+      <p>What made Full Circle important to me was not that it represented a completed utopia. It did not. Its value came from the fact that the experiment was real.</p>
+    </div>
+    <figure class="journal-photo harvest-photo-story tilt-right">
+      <img src="images/story-atlas/alpha-robert-harvest.webp" alt="Robert Redecker and Alpha Lo harvesting pomegranates at Full Circle Paradise in October 2021" data-lightbox>
+      <figcaption>Robert and Alpha harvesting pomegranates, October 2021</figcaption>
+    </figure>
+  </section>
+
+  <section class="story-section design-study-section" id="design-study" aria-labelledby="design-study-title">
+    <header class="section-heading story-heading">
+      <p class="kicker">The land becomes a document</p>
+      <h2 id="design-study-title">The 2022 Design Study</h2>
+    </header>
+    <div class="design-study-grid">
+      <div class="design-copy prose longform">
+        <p>In 2022, while completing the <strong>Quail Springs Online Permaculture Design Course</strong>, I chose Full Circle as the site for my final design project.</p>
+        <p>The resulting workbook became a detailed study of the property: its climate, watershed, soils, vegetation, buildings, energy systems, gardens, orchards, community structures, and possible futures.</p>
+        <p>I created maps, inventories, observations, calculations, sector studies, planting plans, and phased proposals. The work eventually grew into the 112-page document preserved in this website.</p>
+        <p>The workbook was never intended to impose a new master plan upon the land. Full Circle already possessed decades of accumulated knowledge. My task was to observe carefully, document what existed, understand how the systems related to one another, and imagine how the next layers might be added.</p>
+        <p>Teachers and friends helped shape that process. <strong>Alpha Lo</strong> was among the important influences and companions connected with this period of learning and design.</p>
+        <p>The workbook became both a permaculture proposal and an archive of the place as I knew it in 2022.</p>
+        <p class="source-centered"><a class="source-link" href="workbook.html">Read the Workbook Atlas</a> · <a class="source-link" href="design.html">Explore the Design Atlas</a></p>
+      </div>
+      <div class="design-images">
+        <figure class="journal-photo completion-photo tilt-left">
+          <img src="images/story-atlas/design-completion.webp" alt="Robert Redecker and Andrew Ranjbaran holding the completed Full Circle Paradise design map" data-lightbox>
+          <figcaption>The completed design with Andrew Ranjbaran</figcaption>
+        </figure>
+        <figure class="journal-photo final-map-photo tilt-right">
+          <img src="images/story-atlas/final-design.webp" alt="The final detailed permaculture design map for Full Circle Paradise" data-lightbox>
+          <figcaption>The final design brought many layers into one drawing</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-section lessons-section paper-section" id="lessons" aria-labelledby="lessons-title">
+    <div class="lessons-copy prose longform">
+      <p class="kicker">Neither utopia nor failure</p>
+      <h2 id="lessons-title">What Full Circle Taught Me</h2>
+      <p>Full Circle contained generosity and conflict, beauty and disorder, inspired ideas and unfinished projects.</p>
+      <p>That complexity is essential to the story.</p>
+      <p>It would be easy to romanticize the place and present it as a perfected ecological community. It would be equally misleading to focus only on its difficulties. Full Circle mattered because both were present.</p>
+      <p>It demonstrated what can happen when people give land, time, work, imagination, and relationship to a shared experiment. It also showed how difficult it is to maintain that experiment across decades.</p>
+      <p>The deepest lessons were not always found in the grand plans. They were often found in the repeated acts that allowed life to continue:</p>
+      <p>repairing something instead of discarding it, sharing food, watering trees, welcoming someone new, holding a meeting, resolving a disagreement, responding to fire, and remembering who had done the work before us.</p>
+    </div>
+    <aside class="lessons-note">
+      <span>Field note</span>
+      <blockquote>“The experiment was real.”</blockquote>
+      <p>Its unfinished edges were not separate from the lesson. They were part of it.</p>
+    </aside>
+  </section>
+
+  <section class="story-section lineage-section" id="lineage" aria-labelledby="lineage-title">
+    <div class="lineage-copy prose longform">
+      <p class="kicker">Memory carried forward</p>
+      <h2 id="lineage-title">A Continuing Lineage</h2>
+      <p>This website preserves Full Circle as a place, a design study, and a chapter of my own life.</p>
+      <p>It is not meant to freeze the community into a single version of its history. Full Circle changed constantly, and different people experienced it differently. This archive reflects what I observed, what others shared with me, and what could be recovered through photographs, maps, documents, and memory.</p>
+      <p>The lessons continue into my work at <strong>Boulder Gardens Sanctuary</strong> and into the developing vision of <strong>Fieldstation</strong>.</p>
+      <p>Boulder Gardens is not an attempt to reproduce Full Circle. The landscape, community, climate, and circumstances are different. But the lineage remains: ecological design joined with practical experimentation, social learning, shared knowledge, and careful documentation.</p>
+      <p>Full Circle taught me that permaculture is not only the design of land.</p>
+      <p>It is the patient work of creating relationships capable of carrying water, food, shelter, memory, knowledge, and responsibility across time.</p>
+    </div>
+    <div class="lineage-links" aria-label="Continue through the archive">
+      <a href="tour.html"><span>Walk the land</span>Site Tour</a>
+      <a href="social.html"><span>Meet the human ecosystem</span>Social Permaculture</a>
+      <a href="workbook.html"><span>Open the source record</span>Workbook</a>
+    </div>
+  </section>
+
+  <section class="fieldstation-gallery paper-section" data-fieldstation-gallery="story" aria-labelledby="story-gallery-title">
+    <header class="fieldstation-gallery__header">
+      <div>
+        <p class="kicker">Photographic archive</p>
+        <h2 id="story-gallery-title">Browse the life of Full Circle</h2>
+        <p>People, gatherings, turning points and the physical places that carried the community across decades.</p>
+      </div>
+      <button class="fieldstation-gallery__browse" type="button" data-gallery-open>Browse <span data-gallery-count>more</span> photographs</button>
+    </header>
+    <div class="fieldstation-gallery__grid" data-gallery-preview aria-live="polite"></div>
+    <p class="fieldstation-gallery__hint">Select any photograph to open the full-screen gallery. Use the arrow keys or the on-screen controls to continue.</p>
+  </section>
 </main>
-<nav class="chapter-nav" aria-label="Chapter navigation"><a class="previous" href="index.html"><span>Previous</span>Home</a><a class="next" href="tour.html"><span>Next</span>Site Tour</a></nav>
+
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  <a class="previous" href="index.html"><span>Previous</span>Home</a>
+  <a class="next" href="tour.html"><span>Next</span>Site Tour</a>
+</nav>
 <footer class="site-footer">
   <div><strong>Full Circle Paradise</strong><br><span>A permaculture design for Full Circle Farm</span></div>
   <div>Upper Ojai, California<br>Quail Springs PDC · Spring 2022</div>
   <a href="documents/full-circle-paradise-workbook.pdf">Read the original workbook</a>
 </footer>
 <div class="lightbox" hidden aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt=""><p></p></div>
-</body></html>
+</body>
+</html>

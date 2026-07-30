@@ -1,0 +1,507 @@
+/* Workbook Atlas additions.
+   Loaded after style.css so the established Naturalist Journal design remains intact. */
+
+[id] { scroll-margin-top: 6.5rem; }
+
+.workbook-atlas-page .paper-section {
+  padding: 5rem;
+}
+
+.workbook-hero {
+  grid-template-columns: minmax(360px, .92fr) minmax(330px, .62fr);
+  min-height: 670px;
+}
+
+.workbook-hero > div {
+  padding-right: 5rem;
+}
+
+.workbook-hero .lede {
+  max-width: 43rem;
+}
+
+.workbook-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 1.55rem;
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: .72rem 1.05rem;
+  border: 1px solid var(--forest);
+  color: var(--forest-dark);
+  background: rgba(248,241,223,.58);
+  font: 700 .72rem/1.2 var(--sans);
+  letter-spacing: .035em;
+  text-decoration: none;
+}
+
+.secondary-button:hover {
+  background: var(--forest);
+  color: #fff;
+}
+
+.workbook-cover {
+  align-self: center !important;
+  justify-self: center;
+  width: min(100%, 520px);
+  transform: rotate(.65deg);
+}
+
+.workbook-cover a { display: block; height: 100%; }
+
+.workbook-cover img {
+  min-height: 0 !important;
+  max-height: 590px;
+  object-fit: contain !important;
+  padding: 1.35rem;
+  background: #fbf8f1;
+  cursor: zoom-in;
+}
+
+.workbook-opening,
+.workbook-guide,
+.map-appendix,
+.workbook-credits {
+  background:
+    radial-gradient(rgba(105,78,38,.03) .7px, transparent .8px),
+    var(--paper-light);
+  background-size: 8px 8px, auto;
+}
+
+.workbook-jump-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .55rem;
+  max-width: 1050px;
+  margin: 0 auto 2.2rem;
+}
+
+.workbook-jump-nav a {
+  padding: .55rem .85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(248,241,223,.72);
+  color: var(--forest-dark);
+  font: 700 .7rem/1 var(--sans);
+  letter-spacing: .035em;
+  text-decoration: none;
+}
+
+.workbook-jump-nav a:hover {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: #fff;
+}
+
+.workbook-facts {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--forest);
+  border: 1px solid var(--forest-dark);
+  color: #fff;
+}
+
+.workbook-facts div {
+  padding: 1.45rem .8rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.13);
+}
+
+.workbook-facts div:last-child { border-right: 0; }
+
+.workbook-facts strong {
+  display: block;
+  font: 600 1.9rem/1 var(--display);
+}
+
+.workbook-facts span {
+  display: block;
+  margin-top: .42rem;
+  color: #d7ddce;
+  font: .62rem/1.2 var(--sans);
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.workbook-atlas-page .archive-note {
+  max-width: 930px;
+  margin: 1.6rem auto 0;
+  padding: 1rem 1.25rem;
+  background: rgba(248,241,223,.8);
+  border-left: 4px solid var(--terracotta);
+  color: var(--ink-soft);
+}
+
+.workbook-atlas-page .archive-note strong { color: var(--forest-dark); }
+
+.left-heading {
+  max-width: 920px;
+  margin: 0 0 2rem;
+  text-align: left;
+}
+
+.left-heading > p:last-child { margin-left: 0; }
+
+.workbook-reader {
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.reader-frame {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #3d4236;
+  border: 1px solid var(--forest-dark);
+  box-shadow: var(--shadow);
+}
+
+.reader-frame iframe {
+  display: block;
+  width: 100%;
+  height: min(78vh, 860px);
+  min-height: 680px;
+  border: 0;
+  background: #ddd;
+}
+
+.reader-fallback {
+  display: none;
+  padding: 1.5rem;
+  background: var(--paper-light);
+  text-align: center;
+}
+
+.part-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1.25rem;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.part-card {
+  position: relative;
+  padding: 2rem 2rem 1.7rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.part-card::after {
+  content: "";
+  position: absolute;
+  inset: .55rem;
+  border: 1px solid rgba(112,87,46,.13);
+  pointer-events: none;
+}
+
+.part-number {
+  position: relative;
+  z-index: 1;
+  color: var(--terracotta);
+  font: 700 .66rem/1 var(--sans);
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.part-card h3 {
+  position: relative;
+  z-index: 1;
+  margin-top: .8rem;
+  font-size: 1.8rem;
+}
+
+.part-card p,
+.part-card ul {
+  position: relative;
+  z-index: 1;
+}
+
+.part-card p {
+  color: var(--ink-soft);
+}
+
+.part-card ul {
+  margin: 1.2rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.part-card li + li { margin-top: .48rem; }
+
+.part-card li a {
+  display: inline-block;
+  font: 700 .7rem/1.35 var(--sans);
+  letter-spacing: .02em;
+  text-decoration: none;
+}
+
+.part-card li a::after {
+  content: " ↗";
+  color: var(--terracotta);
+}
+
+.workbook-highlights {
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.page-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 1.15rem;
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+.page-preview {
+  margin: 0;
+  padding: .72rem .72rem 1rem;
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-preview:nth-child(4n+1) { transform: rotate(-.18deg); }
+.page-preview:nth-child(4n+3) { transform: rotate(.16deg); }
+
+.page-preview a {
+  display: block;
+  overflow: hidden;
+  background: white;
+  border: 1px solid rgba(117,91,53,.35);
+}
+
+.page-preview img {
+  width: 100%;
+  aspect-ratio: 8.5 / 11;
+  object-fit: contain;
+  background: white;
+  cursor: zoom-in;
+  transition: transform .28s ease, filter .28s ease;
+}
+
+.page-preview:hover img {
+  transform: scale(1.015);
+  filter: contrast(1.02);
+}
+
+.page-preview figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: .8rem;
+  align-items: baseline;
+  margin: .82rem .15rem 0;
+  font-style: normal;
+}
+
+.page-preview figcaption strong {
+  color: var(--forest-dark);
+  font: 600 1.05rem/1.1 var(--display);
+}
+
+.page-preview figcaption span {
+  flex: none;
+  color: var(--terracotta);
+  font: 700 .6rem/1 var(--sans);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.appendix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1rem;
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+.appendix-grid figure {
+  position: relative;
+  margin: 0;
+  padding: .65rem .65rem 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.appendix-grid .appendix-feature {
+  grid-column: span 2;
+}
+
+.appendix-grid a {
+  display: block;
+  background: white;
+  overflow: hidden;
+}
+
+.appendix-grid img {
+  width: 100%;
+  aspect-ratio: 8.5 / 11;
+  object-fit: contain;
+  background: white;
+  cursor: zoom-in;
+  transition: transform .28s ease;
+}
+
+.appendix-grid figure:hover img { transform: scale(1.012); }
+
+.appendix-grid figcaption {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: .65rem;
+  align-items: baseline;
+  margin: .75rem .15rem 0;
+  font-style: normal;
+}
+
+.appendix-grid figcaption span {
+  color: var(--terracotta);
+  font: 700 .64rem/1 var(--sans);
+}
+
+.appendix-grid figcaption strong {
+  color: var(--forest-dark);
+  font: 600 1.12rem/1 var(--display);
+}
+
+.appendix-grid figcaption small {
+  color: var(--ink-soft);
+  font: 700 .6rem/1 var(--sans);
+  text-transform: uppercase;
+}
+
+.workbook-to-website {
+  background: var(--forest);
+  color: #eef0e8;
+}
+
+.workbook-to-website h2,
+.workbook-to-website .kicker { color: #fff; }
+
+.workbook-to-website .section-heading > p:last-child { color: #d5ddcd; }
+
+.chapter-source-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 1px;
+  max-width: 1160px;
+  margin: 0 auto;
+  background: rgba(255,255,255,.22);
+  border: 1px solid rgba(255,255,255,.22);
+}
+
+.chapter-source-grid a {
+  min-height: 150px;
+  padding: 1.4rem;
+  background: rgba(33,45,24,.82);
+  color: #fff;
+  text-decoration: none;
+  transition: background .22s ease, transform .22s ease;
+}
+
+.chapter-source-grid a:hover {
+  background: rgba(82,101,60,.95);
+  color: #fff;
+}
+
+.chapter-source-grid span {
+  display: block;
+  font: 600 1.45rem/1.05 var(--display);
+}
+
+.chapter-source-grid small {
+  display: block;
+  margin-top: .75rem;
+  color: #d4ddcb;
+  font: .72rem/1.45 var(--sans);
+}
+
+.workbook-credits {
+  display: grid;
+  grid-template-columns: minmax(0,1.2fr) minmax(300px,.62fr);
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.credits-copy h2 { max-width: 760px; }
+.credits-copy > p:not(.kicker):not(.archive-note) { max-width: 760px; }
+.credits-copy .archive-note { margin-left: 0; }
+
+.closing-actions { margin-top: 1.8rem; }
+
+.credits-page {
+  margin: 0;
+  padding: .8rem .8rem 1.4rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  transform: rotate(.45deg);
+}
+
+.credits-page a { display: block; }
+
+.credits-page img {
+  width: 100%;
+  max-height: 590px;
+  object-fit: contain;
+  background: white;
+  border: 1px solid rgba(117,91,53,.35);
+  cursor: zoom-in;
+}
+
+.credits-page figcaption { margin-top: .85rem; text-align: center; }
+
+@media (max-width: 1120px) {
+  .workbook-hero { grid-template-columns: .92fr .62fr; }
+  .workbook-hero > div { padding-right: 2.6rem; }
+  .page-gallery { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .chapter-source-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (max-width: 880px) {
+  .workbook-atlas-page .paper-section { padding: 4rem 2.1rem; }
+  .workbook-hero { grid-template-columns: 1fr; }
+  .workbook-hero > div { padding-right: 2.4rem; }
+  .workbook-cover { width: min(100%, 560px); }
+  .workbook-cover img { max-height: 690px; }
+  .workbook-facts { grid-template-columns: repeat(5, 1fr); }
+  .part-grid { grid-template-columns: 1fr; }
+  .page-gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .appendix-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .appendix-grid .appendix-feature { grid-column: span 1; }
+  .workbook-credits { grid-template-columns: 1fr; }
+  .credits-page { width: min(100%, 560px); margin-inline: auto; }
+}
+
+@media (max-width: 620px) {
+  .workbook-atlas-page .paper-section { padding: 3.2rem 1.25rem; }
+  .workbook-hero > div { padding: 3rem 1.2rem 2.3rem; }
+  .workbook-actions { flex-direction: column; align-items: stretch; }
+  .workbook-actions a { width: 100%; text-align: center; }
+  .workbook-facts { grid-template-columns: repeat(2, 1fr); }
+  .workbook-facts div { border-bottom: 1px solid rgba(255,255,255,.13); }
+  .workbook-facts div:nth-child(2n) { border-right: 0; }
+  .workbook-facts div:last-child { grid-column: 1 / 3; }
+  .reader-frame { padding: .4rem; }
+  .reader-frame iframe { height: 68vh; min-height: 520px; }
+  .page-gallery,
+  .appendix-grid,
+  .chapter-source-grid { grid-template-columns: 1fr; }
+  .page-preview:nth-child(n) { transform: none; }
+  .part-card { padding: 1.65rem 1.4rem; }
+  .appendix-grid .appendix-feature { grid-column: auto; }
+}

@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#334325">
-  <meta name="description" content="Gardens, orchards, animals, compost and soil fertility at Full Circle Farm.">
-  <title>Food &amp; Soil · Full Circle Paradise</title>
+  <meta name="description" content="A food and soil atlas for Full Circle Farm in Upper Ojai: gardens, orchards, clay soil, compost, chickens, bees, worms and the 2022 food-sovereignty design.">
+  <title>Food &amp; Soil Atlas · Full Circle Paradise</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="food-additions.css">
+  <link rel="stylesheet" href="gallery.css">
   <script src="site.js" defer></script>
+  <script src="gallery-data.js" defer></script>
+  <script src="gallery.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <a class="wordmark" href="index.html" aria-label="Full Circle Paradise home">
     <span>Full Circle Paradise</span>
@@ -32,30 +37,290 @@
   </nav>
 </header>
 
-<main id="main" class="chapter-page">
-<header class="chapter-hero"><div><p class="chapter-label">Chapter 05 · Food, animals and fertility</p><h1>Food & Soil</h1><p class="lede">The productive landscape becomes resilient when harvest, waste, animals and soil biology are designed as one continuous cycle.</p></div><figure><img src="images/p011.webp" alt="Productive raised garden beds"><figcaption>The daily garden is the farm’s most intensively managed landscape</figcaption></figure></header>
-<section class="cycle-diagram" aria-label="Food and fertility cycle"><div>Kitchen scraps</div><span>→</span><div>Chickens & worms</div><span>→</span><div>Compost</div><span>→</span><div>Soil</div><span>→</span><div>Garden & orchard</div></section>
-<section class="article-grid reverse-layout">
-  <article class="prose longform">
-    <h2>The garden as Zone 1</h2><p class="dropcap">The vegetable garden is visited every day, which makes it the correct place for crops requiring close attention. Its challenge is not location but organization: paths, tools, propagation space, irrigation and compost all need to support daily work rather than interrupt it.</p>
-    <h2>Perennial abundance</h2><p>Established citrus, persimmons, pomegranates, loquats and other fruit trees represent years of stored biological capital. Their care should focus on water efficiency, mulch, pruning, understory diversity and gradual succession where trees are declining.</p>
-    <h2>Animals as workers</h2><p>Chickens convert kitchen residues into eggs, manure and scratching behavior. Bees connect flowering plants across the property. Worms process selected food waste. Each system works best when its inputs are cleanly separated and easy to move.</p>
-    <aside class="margin-note"><strong>Immediate improvement</strong><br>Create one clear organic-waste station: chicken food, worm food, compost material and trash should never be confused.</aside>
-    <h2>Build soil, not dependency</h2><p>Woody prunings can be chipped for paths and fungal mulch. Finished compost belongs where crops are most demanding. Perennial zones can rely more heavily on leaf litter, chop-and-drop biomass and nitrogen-fixing support species.</p>
-  </article>
-  <aside class="visual-column photo-stack">
-    <figure><img src="images/p014.webp" alt="Chickens beneath shade cloth" data-lightbox><figcaption>Chickens transform scraps into eggs and fertility</figcaption></figure>
-    <figure><img src="images/p038.webp" alt="Worm composting system" data-lightbox><figcaption>Worms handle a smaller, carefully selected waste stream</figcaption></figure>
-    <figure><img src="images/p039.webp" alt="Compost materials in the garden" data-lightbox><figcaption>Compost needs clearer bays, recipes and movement</figcaption></figure>
-  </aside>
-</section>
-<section class="paper-section"><div class="botanical-list"><div><img src="images/p036.webp" alt="Pomegranate tree"><h3>Drought-tolerant fruit</h3><p>Pomegranate, persimmon, loquat, citrus, guava and carob diversify harvests.</p></div><div><img src="images/p037.webp" alt="Beehive"><h3>Pollinator habitat</h3><p>Flowers through the seasons support both managed bees and wild insects.</p></div><div><img src="images/p034.webp" alt="Tractor and chipper"><h3>Woody biomass</h3><p>The chipper turns a fire-management burden into mulch and soil cover.</p></div></div></section>
+<main id="main" class="chapter-page food-atlas-page">
+  <header class="chapter-hero food-hero">
+    <div>
+      <p class="chapter-label">Chapter 05 · Food &amp; soil atlas</p>
+      <h1>Food &amp; Soil</h1>
+      <p class="lede">A half-acre garden, two acres of orchard, forty chickens, bees, worms, kitchen scraps and heavy clay soil form one living fertility system.</p>
+    </div>
+    <figure>
+      <img src="images/people-first/full/food-garden-pair.webp" alt="Two residents smiling among raised beds, herbs and sunflowers" style="object-position:center 43%;">
+      <figcaption>Harvesting together in the main garden</figcaption>
+    </figure>
+  </header>
+
+  <section class="food-opening paper-section" id="overview" aria-labelledby="food-overview-title">
+    <header class="section-heading">
+      <p class="kicker">A working food landscape</p>
+      <h2 id="food-overview-title">Production was already woven through the farm</h2>
+      <p>The 2022 workbook did not begin with an empty site. Full Circle Farm already had mature orchards, eight raised beds, chickens, bees, worms, kitchen compost, household gardens and decades of accumulated knowledge. The design challenge was to connect those parts more clearly and make them easier to sustain.</p>
+    </header>
+
+    <nav class="food-atlas-nav" aria-label="Food and soil atlas contents">
+      <a href="#systems">Productive zones</a>
+      <a href="#community-kitchen">Community kitchen</a>
+      <a href="#soil">Soil tests</a>
+      <a href="#fertility">Fertility cycle</a>
+      <a href="#workers">Animals as workers</a>
+      <a href="#maps">Garden &amp; vegetation maps</a>
+      <a href="#sovereignty">Food sovereignty</a>
+    </nav>
+
+    <div class="food-facts" aria-label="Food and soil facts recorded in the workbook">
+      <div><strong>½ acre</strong><span>main garden</span></div>
+      <div><strong>2 acres</strong><span>orchards</span></div>
+      <div><strong>8</strong><span>raised beds</span></div>
+      <div><strong>~40</strong><span>chickens</span></div>
+      <div><strong>2½ dozen</strong><span>eggs per day</span></div>
+      <div><strong>330</strong><span>trees inventoried</span></div>
+    </div>
+
+    <aside class="archive-note food-archive-note">
+      <strong>Archive note.</strong> Measurements and counts reflect the 2022 workbook and are preserved as a historical snapshot. The full 43-entry tree inventory appears on <a href="design.html#inventory">The Design</a> page.
+      <a href="documents/full-circle-paradise-workbook.pdf#page=73" target="_blank" rel="noopener">Workbook pp. 73–78</a>
+    </aside>
+  </section>
+
+  <section class="food-section food-paper" id="systems" aria-labelledby="systems-title">
+    <header class="section-heading">
+      <p class="kicker">01 · The productive zones</p>
+      <h2 id="systems-title">Food at several distances from the kitchen</h2>
+      <p>Daily crops and animals belonged close to the center of activity. Mature tree crops could be visited less often, while each dwelling added smaller gardens of its own.</p>
+    </header>
+
+    <div class="productive-zone-grid">
+      <article>
+        <span>Zone 1</span>
+        <h3>Kitchen, scraps and daily attention</h3>
+        <p>Food preparation generated roughly two five-gallon buckets of organic material each day for a community of about twenty people. The design called for clearer separation between chicken food, worm food and compost material.</p>
+      </article>
+      <article>
+        <span>Zone 2</span>
+        <h3>Half-acre vegetable garden</h3>
+        <p>Eight raised beds, full sun, frequent irrigation, chickens nearby and daily visits made the garden the farm’s most intensive production area.</p>
+      </article>
+      <article>
+        <span>Zone 3</span>
+        <h3>Two acres of orchard</h3>
+        <p>Persimmons, citrus, loquats, pomegranates, mulberries, olives and other tree crops stored decades of biological investment and needed mulch, pruning and succession planning.</p>
+      </article>
+    </div>
+
+    <div class="harvest-layout">
+      <figure class="harvest-photo">
+        <img src="images/archive-v3/full/025-11bc5882-b4ec-42d4-ba9b-a10d07f29dd1.jpg" alt="People sorting a cart filled with pomegranates from the orchard">
+        <figcaption><strong>Perennial abundance</strong> Established fruit trees represented years of stored care, water and fertility.</figcaption>
+      </figure>
+      <div class="harvest-groups">
+        <article><h3>Tree fruit recorded</h3><p>Apricot, apple, fig, persimmon, pomegranate, loquat, mulberry, citrus, guava, peach, plum, nectarine, almond, olive and grape.</p></article>
+        <article><h3>Garden production</h3><p>Vegetables, herbs, flowers and household beds supplied fresh food while also demanding the most regular labor and irrigation.</p></article>
+        <article><h3>Preservation and storage</h3><p>The workbook records pickled vegetables, kombucha and bulk grains and legumes sufficient for several months.</p></article>
+      </div>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=50" target="_blank" rel="noopener">Food self-reliance and current systems, workbook pp. 50–51, 73–74</a></p>
+  </section>
+
+  <section class="food-section jaya-food-section" id="community-kitchen" aria-labelledby="community-kitchen-title">
+    <header class="section-heading">
+      <p class="kicker">02 · Food as community infrastructure</p>
+      <h2 id="community-kitchen-title">Jaya’s community food program</h2>
+      <p>The productive landscape did not end at the garden gate. Deanna Jaya Nakosteen coordinated the purchasing, cooking rhythm and pantry systems that turned ingredients into a dependable daily meal for the entire community.</p>
+    </header>
+    <div class="jaya-food-layout">
+      <figure class="jaya-food-car">
+        <img src="images/food-atlas/jaya-yellow-car.webp" alt="Jaya seated in the large yellow car used for the weekly food run" data-lightbox>
+        <figcaption><strong>The weekly supply line</strong> Jaya’s yellow car carried organic produce from the Ojai farmers market and Rainbow Bridge back to Full Circle.</figcaption>
+      </figure>
+      <div class="jaya-food-copy prose longform">
+        <p class="dropcap">Every day, two residents cooked a beautiful vegetarian meal for everyone and cleaned the kitchen afterward. Jaya ran the program and maintained the larger logistical structure behind it.</p>
+        <p>Bulk supplies arrived four times each year: big bags of rice and lentils, coconut oil, dry goods, toilet paper, and a remarkably extensive collection of herbs and spices. These purchases reduced cost, supported shared cooking and kept the household supplied between deliveries.</p>
+        <p>Every Sunday, often accompanied by one helper, Jaya drove to the farmers market and filled the car with organic produce. A stop at Rainbow Bridge, Ojai’s organic market, completed the week’s provisioning.</p>
+        <p>This was social permaculture expressed through food: shared labor, pooled resources, reliable nourishment, and one person’s long commitment to making the system work.</p>
+        <p><a class="source-link" href="social.html#jaya">Continue to Jaya and the social systems of Full Circle</a></p>
+      </div>
+    </div>
+    <div class="jaya-food-rhythm" aria-label="Community food program rhythm">
+      <div><strong>2 cooks</strong><span>prepared the daily meal</span></div>
+      <div><strong>1 shared table</strong><span>fed the community</span></div>
+      <div><strong>4 deliveries</strong><span>of bulk supplies each year</span></div>
+      <div><strong>Sunday</strong><span>farmers-market produce run</span></div>
+    </div>
+  </section>
+
+  <section class="food-section food-paper" id="soil" aria-labelledby="soil-title">
+    <header class="section-heading">
+      <p class="kicker">03 · Soil tests</p>
+      <h2 id="soil-title">Three garden samples told the same story: clay</h2>
+      <p>Samples were taken from the south, north and east ends of the garden. The workbook found similar heavy clay at all three sites, with relatively slow drainage but soil already enriched by years of mulch and fertility inputs.</p>
+    </header>
+
+    <div class="soil-layout">
+      <figure class="soil-test-photo">
+        <img src="images/food-atlas/soil-jar-tests.webp" alt="Three soil jar tests from the Full Circle Farm garden">
+        <figcaption><strong>Jar tests from three garden locations</strong> All three were classified as clay by both settling and texture-by-feel tests.</figcaption>
+      </figure>
+
+      <div class="soil-results">
+        <article><span>Site 1</span><strong>93% clay</strong><p>6% silt · 1% sand<br>25-minute drainage test</p></article>
+        <article><span>Site 2</span><strong>80% clay</strong><p>19% silt · 1% sand<br>30-minute drainage test</p></article>
+        <article><span>Site 3</span><strong>80% clay</strong><p>18% silt · 2% sand<br>15-minute drainage test</p></article>
+      </div>
+    </div>
+
+    <div class="soil-reading-grid">
+      <aside><strong>Constraint</strong><p>Dense clay can drain slowly, compact and become difficult to work at the wrong moisture level.</p></aside>
+      <aside><strong>Opportunity</strong><p>Clay holds water and nutrients well once structure, roots and organic matter create pathways through it.</p></aside>
+      <aside><strong>Local materials</strong><p>Kitchen compost, chipped branches, tree-company wood chips, crop residues, worm tea and cover crops were all available on site.</p></aside>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=75" target="_blank" rel="noopener">Soil tests, workbook pp. 75–78</a></p>
+  </section>
+
+  <section class="food-section food-paper" id="fertility" aria-labelledby="fertility-title">
+    <header class="section-heading">
+      <p class="kicker">04 · Fertility cycle</p>
+      <h2 id="fertility-title">Waste becomes food, and food becomes soil</h2>
+      <p>The strongest system was not any single compost pile. It was the relationship among shared meals, animals, woody biomass, garden residues and living soil.</p>
+    </header>
+
+    <div class="fertility-cycle" aria-label="Food and fertility cycle">
+      <div><span>01</span><strong>Kitchen scraps</strong><p>Two buckets daily from shared meals.</p></div>
+      <b aria-hidden="true">→</b>
+      <div><span>02</span><strong>Chickens &amp; worms</strong><p>Convert selected scraps into eggs, manure and castings.</p></div>
+      <b aria-hidden="true">→</b>
+      <div><span>03</span><strong>Compost &amp; chips</strong><p>Organic matter becomes mulch and soil amendment.</p></div>
+      <b aria-hidden="true">→</b>
+      <div><span>04</span><strong>Garden &amp; orchard</strong><p>Food and biomass return to the community.</p></div>
+    </div>
+
+    <div class="fertility-photo-grid">
+      <figure><img src="images/archive-v3/full/053-5b240b2c-6aca-4bf6-a7d8-d96bd3a1f1a7.jpg" alt="A resident cutting woody material during farm maintenance"><figcaption><strong>Woody biomass</strong> Three or four truckloads of chips were brought in each year, while the chipper converted prunings and fire-clearance material into mulch.</figcaption></figure>
+      <figure><img src="images/archive-v3/full/050-f9e53416-4ca1-4385-8511-0a0852537f51.jpg" alt="A smiling resident beside a tray of fresh multicolored eggs"><figcaption><strong>Chickens turn fertility into food</strong> Kitchen scraps, garden residues and daily care returned as eggs, manure and active soil-building work.</figcaption></figure>
+    </div>
+
+    <div class="seasonal-fertility">
+      <article><span>Spring</span><h3>Cover and awaken</h3><p>Plant cover crops, protect bare soil and support the season’s strongest growth.</p></article>
+      <article><span>Summer</span><h3>Shade and conserve</h3><p>Maintain deep mulch, reduce evaporation and place water where roots can use it.</p></article>
+      <article><span>Autumn</span><h3>Return the harvest</h3><p>Chop and drop crop residues, spread wood chips and prepare beds for cooler weather.</p></article>
+      <article><span>Winter</span><h3>Build structure</h3><p>Use rain and cooler conditions to establish roots, compost and long-term soil cover.</p></article>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=84" target="_blank" rel="noopener">Zone 1 fertility plan, workbook pp. 84–85</a></p>
+  </section>
+
+  <section class="food-section food-paper" id="workers" aria-labelledby="workers-title">
+    <header class="section-heading">
+      <p class="kicker">05 · Animals as workers</p>
+      <h2 id="workers-title">Eggs, pollination, scratching and decomposition</h2>
+      <p>Animals were not separate attractions. They performed jobs within the farm system—although every animal system also depended on daily care, feed, protection and good placement.</p>
+    </header>
+
+    <div class="worker-grid">
+      <article>
+        <figure><img src="images/archive-v3/full/031-510481774-10237717290619800-1303548906365231006-n.jpg" alt="A work party building a mobile chicken shelter"></figure>
+        <div><span>Chickens</span><h3>About forty birds</h3><p>The flock produced roughly two and a half dozen eggs per day, ate kitchen scraps and scratched organic material. The garden fence was essential because the same behavior that turns compost can destroy beds.</p></div>
+      </article>
+      <article>
+        <figure><img src="images/archive-v3/full/072-10212783119241099.jpg" alt="Two residents examining a frame from the beehive"></figure>
+        <div><span>Bees</span><h3>Pollination across the farm</h3><p>Managed bees provided honey and linked flowering plants across gardens, orchards and wild edges. Continuous bloom benefited both the hive and native pollinators.</p></div>
+      </article>
+      <article>
+        <figure><img src="images/food-atlas/worm-bin.webp" alt="Worm composting bin and buckets"></figure>
+        <div><span>Red wigglers</span><h3>A smaller, cleaner waste stream</h3><p>The worm bin processed selected scraps and produced worm tea used around orchard trees. It worked best when protected from heat and overloaded inputs.</p></div>
+      </article>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=37" target="_blank" rel="noopener">Bee, worm and compost systems, workbook pp. 37–39, 50–51</a></p>
+  </section>
+
+  <section class="food-section food-paper" id="maps" aria-labelledby="maps-title">
+    <header class="section-heading">
+      <p class="kicker">06 · Garden and vegetation design</p>
+      <h2 id="maps-title">From existing abundance to a more legible system</h2>
+      <p>The design preserved mature food trees while proposing clearer paths, shaded gathering areas, a mandala garden and a gradual shift away from invasive or water-demanding canopy species.</p>
+    </header>
+
+    <div class="food-map-grid">
+      <figure class="food-map">
+        <a href="images/food-atlas/zone-1-design-full.jpeg" target="_blank" rel="noopener" aria-label="Open the Zone 1 design map at full resolution">
+          <img src="images/food-atlas/zone-1-design-preview.webp" alt="Hand-drawn Zone 1 design map of the house, garden, animals and paths">
+        </a>
+        <figcaption><strong>Zone 1 design</strong> A detailed study of the most frequently used living and food-production area. <a href="images/food-atlas/zone-1-design-full.jpeg" target="_blank" rel="noopener">Open full resolution</a> <a href="documents/full-circle-paradise-workbook.pdf#page=82" target="_blank" rel="noopener">Workbook pp. 82–85</a></figcaption>
+      </figure>
+      <figure class="food-map">
+        <a href="images/food-atlas/final-vegetation-map-full.jpeg" target="_blank" rel="noopener" aria-label="Open the final vegetation map at full resolution">
+          <img src="images/food-atlas/final-vegetation-map-preview.webp" alt="Hand-drawn final vegetation map with trees, garden and succession plantings">
+        </a>
+        <figcaption><strong>Final vegetation map</strong> Existing food trees, succession choices and proposed support species across the site. <a href="images/food-atlas/final-vegetation-map-full.jpeg" target="_blank" rel="noopener">Open full resolution</a> <a href="documents/full-circle-paradise-workbook.pdf#page=93" target="_blank" rel="noopener">Workbook pp. 93–97</a></figcaption>
+      </figure>
+    </div>
+
+    <div class="design-moves">
+      <article><span>01</span><h3>Mandala garden</h3><p>Reshape the main garden around a six-pointed star and central shaded gazebo so that production and human comfort reinforce one another.</p></article>
+      <article><span>02</span><h3>Finish the fence</h3><p>Complete gates and chicken-wire boundaries to keep chickens, rabbits and other wildlife from undoing daily garden work.</p></article>
+      <article><span>03</span><h3>Plant succession</h3><p>Retain productive mature trees while gradually replacing invasive and high-water species with food, shade, native and nitrogen-support trees.</p></article>
+      <article><span>04</span><h3>Learning garden</h3><p>Over time, turn the productive landscape into a place where visitors and community members can learn regenerative gardening directly.</p></article>
+    </div>
+  </section>
+
+  <section class="food-section food-paper sovereignty-section" id="sovereignty" aria-labelledby="sovereignty-title">
+    <header class="section-heading">
+      <p class="kicker">07 · Food sovereignty</p>
+      <h2 id="sovereignty-title">“Be happy and garden.”</h2>
+      <p>The workbook’s ambition was larger than maximizing yield. It imagined a community that could feed itself more fully, share work and meals, preserve surplus, teach visitors and reduce dependence on fragile outside systems.</p>
+    </header>
+
+    <div class="sovereignty-layout">
+      <div class="sovereignty-now">
+        <span>Existing in 2022</span>
+        <h3>A strong base, not yet self-sufficient</h3>
+        <ul>
+          <li>A beautiful garden and mature orchards</li>
+          <li>Shared monthly food program for residents</li>
+          <li>Daily eggs, kitchen scraps and compost resources</li>
+          <li>Farmers-market and local-store dependence remained</li>
+          <li>Bulk grains and legumes stored for several months</li>
+        </ul>
+      </div>
+      <div class="sovereignty-next">
+        <span>Desired direction</span>
+        <h3>True food sovereignty</h3>
+        <ul>
+          <li>Expand the main garden and recruit more gardeners</li>
+          <li>Improve irrigation and compost separation</li>
+          <li>Sell selected produce at farmers markets</li>
+          <li>Develop a demonstration and learning garden</li>
+          <li>Donate surplus to a shelter or food bank</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="food-quote">“Our goals are to be a self-sufficient community with food, political, economic and sovereignty. Be happy and garden.” <span>— Full Circle Farm workbook, 2022</span></aside>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=50" target="_blank" rel="noopener">Food goals and mission, workbook pp. 50–51, 85, 87, 104–105</a></p>
+  </section>
+
+  <section class="fieldstation-gallery paper-section" data-fieldstation-gallery="food" aria-labelledby="food-gallery-title">
+    <header class="fieldstation-gallery__header">
+      <div>
+        <p class="kicker">Food archive</p>
+        <h2 id="food-gallery-title">Browse gardens, harvests and fertility</h2>
+        <p>A wider visual record of orchards, garden beds, animals, compost, soil, shared meals and the community food program.</p>
+      </div>
+      <button class="fieldstation-gallery__browse" type="button" data-gallery-open>Browse <span data-gallery-count>more</span> photographs</button>
+    </header>
+    <div class="fieldstation-gallery__grid" data-gallery-preview aria-live="polite"></div>
+    <p class="fieldstation-gallery__hint">Select any photograph to open the full-screen gallery. Use the arrow keys or the on-screen controls to continue.</p>
+  </section>
 </main>
-<nav class="chapter-nav" aria-label="Chapter navigation"><a class="previous" href="water.html"><span>Previous</span>Water</a><a class="next" href="buildings.html"><span>Next</span>Buildings & Energy</a></nav>
+
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  <a class="previous" href="water.html"><span>Previous</span>Water</a>
+  <a class="next" href="buildings.html"><span>Next</span>Buildings &amp; Energy</a>
+</nav>
+
 <footer class="site-footer">
   <div><strong>Full Circle Paradise</strong><br><span>A permaculture design for Full Circle Farm</span></div>
   <div>Upper Ojai, California<br>Quail Springs PDC · Spring 2022</div>
   <a href="documents/full-circle-paradise-workbook.pdf">Read the original workbook</a>
 </footer>
 <div class="lightbox" hidden aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt=""><p></p></div>
-</body></html>
+</body>
+</html>

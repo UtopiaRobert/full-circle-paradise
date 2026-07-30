@@ -4,11 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#334325">
-  <meta name="description" content="Sector, zone and microclimate analysis, final design layers and implementation plan for Full Circle Farm.">
-  <title>The Design · Full Circle Paradise</title>
+  <meta name="description" content="An interactive naturalist atlas of the 2022 Full Circle Farm permaculture design: maps, field photographs, water, soil, ecology, tree inventory and thirty workbook discoveries.">
+  <title>The Design Atlas · Full Circle Paradise</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="design-additions.css">
+  <link rel="stylesheet" href="gallery.css">
   <script src="site.js" defer></script>
+  <script src="gallery-data.js" defer></script>
+  <script src="gallery.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -33,32 +37,873 @@
 </header>
 
 <main id="main" class="chapter-page">
-<header class="chapter-hero"><div><p class="chapter-label">Chapter 07 · Patterns before details</p><h1>The Design</h1><p class="lede">The proposal preserves the mature site, repairs broken relationships and adds new elements only where they can perform several functions.</p></div><figure><img src="images/p110.webp" alt="Detailed hand-drawn final design map"><figcaption>The final whole-system design</figcaption></figure></header>
-<section class="analysis-gallery">
-  <figure><img src="images/p055.webp" alt="Sector analysis map" data-lightbox><figcaption><strong>Sectors</strong><br>Sun, fire, wind, road noise, wildlife and water arrive from different directions.</figcaption></figure>
-  <figure><img src="images/p058.webp" alt="Zone analysis map" data-lightbox><figcaption><strong>Zones</strong><br>Daily activity radiates from kitchens, bathrooms, gardens and work areas.</figcaption></figure>
-  <figure><img src="images/p060.webp" alt="Microclimate map" data-lightbox><figcaption><strong>Microclimates</strong><br>Shade, slope, vegetation and irrigation create distinct growing conditions.</figcaption></figure>
-</section>
-<section class="article-grid reverse-layout design-story">
-  <article class="prose longform">
-    <h2>Water first</h2><p class="dropcap">The design begins by connecting tanks, roofs, greywater, soil and perennial vegetation. Water is the organizing layer because every garden, habitat and human use depends upon it.</p>
-    <h2>Strengthen the center</h2><p>Zone 1 deserves attention before distant expansion. Better pathways, storage, compost sorting, shade and irrigation make everyday work easier and therefore more likely to continue.</p>
-    <h2>Use succession</h2><p>Large invasive or hazardous trees should not disappear in a single operation. Remove them in stages while establishing oak, sycamore, bamboo screens, fruit and support species that will inherit their functions.</p>
-    <h2>Protect the wild edge</h2><p>Lion Creek remains the least intensively managed area. Selective clearing can maintain safe flow and access, but the corridor’s primary role is ecological.</p>
-  </article>
-  <aside class="visual-column"><figure class="map-frame large"><img src="images/p108.webp" alt="Colored final permaculture design map" data-lightbox><figcaption>Final design: vegetation, pathways, water, activity zones and habitat</figcaption></figure></aside>
-</section>
-<section class="timeline paper-section">
-  <header class="section-heading"><p class="kicker">A five-year sequence</p><h2>Small steps that build capacity</h2></header>
-  <div class="timeline-grid"><article><span>Year 1</span><h3>Repair and clear</h3><p>Compost bays, pond work, invasive removal, community-room structure and mobile animal systems.</p></article><article><span>Year 2</span><h3>Connect systems</h3><p>Solar power, greywater branches, garden redesign, new shade trees and expanded animal integration.</p></article><article><span>Year 3</span><h3>Capture water</h3><p>Distributed rainwater systems, expanded learning garden, more habitat and a stronger governance model.</p></article><article><span>Year 4</span><h3>Open the landscape</h3><p>Lion Creek trail, restored ponds, garden gathering place and improved Persimmon Hill access.</p></article><article><span>Year 5</span><h3>Share outward</h3><p>Repair café, time bank, public events, shared work space and sister projects.</p></article></div>
-</section>
-<section class="closing-quote"><blockquote>“Use small and slow solutions.”</blockquote><p>The final plan is a direction, not a command. Observation continues after implementation begins.</p></section>
+  <header class="chapter-hero design-collaboration-hero">
+    <div>
+      <p class="chapter-label">Chapter 07 · The complete design atlas</p>
+      <h1>The Design</h1>
+      <p class="lede">A 2022 snapshot of a living community: thirty-eight years of accumulated structures, trees, habits and relationships reorganized through observation, mapping and small, slow change.</p>
+    </div>
+    <figure>
+      <img src="images/design-collaboration-map.webp" alt="Two collaborators holding the completed Full Circle Farm design map">
+      <figcaption>The completed design, presented at Full Circle Farm</figcaption>
+    </figure>
+  </header>
+
+  <section class="atlas-opening paper-section" id="overview" aria-labelledby="atlas-overview-title">
+    <header class="section-heading">
+      <p class="kicker">A field notebook, not merely a plan</p>
+      <h2 id="atlas-overview-title">Read the land in layers</h2>
+      <p>The workbook moves from place and people to climate, sectors, water, soil, ecology, vegetation, design and implementation. This page preserves that journey while keeping the original 112-page document available as the complete record.</p>
+    </header>
+
+    <nav class="atlas-nav" aria-label="Design atlas contents">
+      <a href="#process">Process</a>
+      <a href="#final-map">Final map</a>
+      <a href="#photo-atlas">Field photographs</a>
+      <a href="#maps">Map archive</a>
+      <a href="#climate-soil">Climate &amp; soil</a>
+      <a href="#water-system">Water system</a>
+      <a href="#field-notes">30 field notes</a>
+      <a href="#trees">Tree inventory</a>
+      <a href="#ethics">Ethics &amp; sequence</a>
+    </nav>
+
+    <div class="atlas-facts" aria-label="Full Circle Farm design facts">
+      <div><strong>5.5</strong><span>acres</span></div>
+      <div><strong>~20</strong><span>residents in 2022</span></div>
+      <div><strong>1,250'</strong><span>approx. elevation</span></div>
+      <div><strong>19"</strong><span>annual rain</span></div>
+      <div><strong>~330</strong><span>inventoried plants</span></div>
+      <div><strong>2.7M</strong><span>gal. rain on site/year</span></div>
+    </div>
+
+    <p class="archive-note"><strong>Historical record:</strong> this atlas describes Full Circle Farm as documented during the Quail Springs Permaculture Design Course in 2022. Conditions and community arrangements may have changed since then.</p>
+  </section>
+
+  <section class="design-process paper-section" id="process" aria-labelledby="process-title">
+    <header class="section-heading">
+      <p class="kicker">Patterns before details</p>
+      <h2 id="process-title">The design process</h2>
+      <p>The final map is not the beginning. It is the visible result of a cycle that remains active after implementation.</p>
+    </header>
+    <ol class="process-path">
+      <li><span>01</span><strong>Observe</strong><small>Walk, listen, photograph and notice what already works.</small></li>
+      <li><span>02</span><strong>Gather</strong><small>Survey people, climate, history, water, buildings, soil and ecology.</small></li>
+      <li><span>03</span><strong>Map</strong><small>Place fixed features, sectors, zones, flows and microclimates in relation.</small></li>
+      <li><span>04</span><strong>Imagine</strong><small>Test concepts, functions, redundancies and possible successions.</small></li>
+      <li><span>05</span><strong>Design</strong><small>Combine the strongest relationships into a whole-system proposal.</small></li>
+      <li><span>06</span><strong>Implement &amp; evaluate</strong><small>Use small steps, observe results and revise continuously.</small></li>
+    </ol>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=103" target="_blank" rel="noopener">Process described in the workbook, p. 103</a></p>
+  </section>
+
+  <section class="final-map-feature paper-section" id="final-map" aria-labelledby="whole-system-map">
+    <header class="section-heading">
+      <p class="kicker">The whole system</p>
+      <h2 id="whole-system-map">The final design map</h2>
+      <p class="section-intro">Select the drawing to open the original image extracted from the workbook at its maximum embedded resolution.</p>
+    </header>
+    <figure class="featured-map">
+      <a href="images/final-detailed-design-full.png" target="_blank" rel="noopener" aria-label="Open the final design map at full resolution">
+        <img src="images/final-detailed-design-preview.webp" alt="Detailed hand-drawn final design map for Full Circle Farm">
+      </a>
+      <figcaption>
+        Vegetation, pathways, water, activity zones, habitat and community spaces as one interdependent pattern.
+        <a href="images/final-detailed-design-full.png" target="_blank" rel="noopener">Open the 2048 × 1919 original</a>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="photo-atlas paper-section" id="photo-atlas" aria-labelledby="photo-atlas-title">
+    <header class="section-heading">
+      <p class="kicker">Before drawing, look closely</p>
+      <h2 id="photo-atlas-title">The place as it was encountered</h2>
+      <p>Fifteen photographs from the workbook preserve the existing systems the design had to respect, connect, repair or gradually transform.</p>
+    </header>
+    <div class="photo-atlas-grid">
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/main-house.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/main-house.webp" alt="Main house at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Main house</strong>The social center: cooking, meetings and shared daily life.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=10" target="_blank" rel="noopener">Workbook p. 10</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/garden-beds.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/garden-beds.webp" alt="Garden beds at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Garden beds</strong>A fenced production garden protected from animals.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=11" target="_blank" rel="noopener">Workbook p. 11</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/view-from-hill.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/view-from-hill.webp" alt="View from Persimmon Hill at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>View from Persimmon Hill</strong>The garden and southern landscape seen from the property&#x27;s high point.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=12" target="_blank" rel="noopener">Workbook p. 12</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/chickens.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/chickens.webp" alt="The laying flock at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>The laying flock</strong>The workbook records roughly 30 eggs a day from the layers.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=14" target="_blank" rel="noopener">Workbook p. 14</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/water-tank.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/water-tank.webp" alt="One of two 10,000-gallon tanks at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>One of two 10,000-gallon tanks</strong>Emergency storage on the north hill, valuable but difficult to manage safely.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=15" target="_blank" rel="noopener">Workbook p. 15</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/well-house.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/well-house.webp" alt="Solar-powered well house at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Solar-powered well house</strong>The main water source for the community.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=16" target="_blank" rel="noopener">Workbook p. 16</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/persimmon-hill.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/persimmon-hill.webp" alt="Persimmon Hill at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Persimmon Hill</strong>A breezier, drier microclimate about 25 feet above the farm center.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=17" target="_blank" rel="noopener">Workbook p. 17</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/lion-creek-edge.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/lion-creek-edge.webp" alt="Lion Creek edge at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Lion Creek edge</strong>The steep, dense and least-managed wild corridor.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=20" target="_blank" rel="noopener">Workbook p. 20</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/west-orchard.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/west-orchard.webp" alt="West orchard at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>West orchard</strong>Citrus, persimmon and pomegranate in a long-established productive landscape.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=22" target="_blank" rel="noopener">Workbook p. 22</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/earthdome.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/earthdome.webp" alt="Earthdome at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Earthdome</strong>The workbook notes that this earthen structure survived the Thomas Fire.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=26" target="_blank" rel="noopener">Workbook p. 26</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/community-room.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/community-room.webp" alt="Stage and community room at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Stage and community room</strong>A gathering space built up from an earlier dirt-floor structure.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=29" target="_blank" rel="noopener">Workbook p. 29</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/bathhouse.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/bathhouse.webp" alt="Laundry and bathhouse at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Laundry and bathhouse</strong>A major opportunity for redirecting greywater into planted basins.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=31" target="_blank" rel="noopener">Workbook p. 31</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/beehive.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/beehive.webp" alt="Beehive at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Beehive</strong>Honey production, pollination and community learning.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=37" target="_blank" rel="noopener">Workbook p. 37</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/worm-bin.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/worm-bin.webp" alt="Worm bin at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Worm bin</strong>Red wigglers turn organic matter into castings and compost tea.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=38" target="_blank" rel="noopener">Workbook p. 38</a>
+        </figcaption>
+      </figure>
+
+      <figure class="atlas-photo">
+        <a href="images/design-atlas/compost-pile.webp" target="_blank" rel="noopener">
+          <img src="images/design-atlas/compost-pile.webp" alt="Compost pile at Full Circle Farm" loading="lazy">
+        </a>
+        <figcaption><strong>Compost pile</strong>A raw material stream waiting to become a managed fertility system.
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=39" target="_blank" rel="noopener">Workbook p. 39</a>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="map-archive paper-section" id="maps" aria-labelledby="map-archive-title">
+    <header class="section-heading">
+      <p class="kicker">Observation → analysis → design</p>
+      <h2 id="map-archive-title">The complete map archive</h2>
+      <p class="section-intro">Every thumbnail opens its original high-resolution image in a new tab.</p>
+    </header>
+
+    <h3 class="map-group-title">Site context</h3>
+    <div class="complete-map-gallery">
+
+      <figure class="map-card">
+        <a href="images/aerial-north-up-full.png" target="_blank" rel="noopener" aria-label="Open North-up aerial view at full resolution">
+          <img src="images/aerial-north-up-preview.webp" alt="North-up aerial view" loading="lazy">
+        </a>
+        <figcaption><strong>North-up aerial view</strong><br>The property seen from above, with north at the top.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/aerial-oblique-full.png" target="_blank" rel="noopener" aria-label="Open Oblique aerial view at full resolution">
+          <img src="images/aerial-oblique-preview.webp" alt="Oblique aerial view" loading="lazy">
+        </a>
+        <figcaption><strong>Oblique aerial view</strong><br>A lower-angle aerial view showing the farm in its immediate landscape.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/aerial-west-full.png" target="_blank" rel="noopener" aria-label="Open Perspective from the west at full resolution">
+          <img src="images/aerial-west-preview.webp" alt="Perspective from the west" loading="lazy">
+        </a>
+        <figcaption><strong>Perspective from the west</strong><br>The farm seen from the west.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/topographic-region-full.png" target="_blank" rel="noopener" aria-label="Open Regional topographic setting at full resolution">
+          <img src="images/topographic-region-preview.webp" alt="Regional topographic setting" loading="lazy">
+        </a>
+        <figcaption><strong>Regional topographic setting</strong><br>Full Circle Farm in relation to the Upper Ojai valley and surrounding mountains.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/wide-aerial-context-full.png" target="_blank" rel="noopener" aria-label="Open Wide aerial context at full resolution">
+          <img src="images/wide-aerial-context-preview.webp" alt="Wide aerial context" loading="lazy">
+        </a>
+        <figcaption><strong>Wide aerial context</strong><br>A broad view of the valley, roads, farms and mountain edge.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/contour-map-full.png" target="_blank" rel="noopener" aria-label="Open Contour map at full resolution">
+          <img src="images/contour-map-preview.webp" alt="Contour map" loading="lazy">
+        </a>
+        <figcaption><strong>Contour map</strong><br>Elevation contours and the low drainage line associated with Lion Creek.</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="map-group-title">Permaculture design layers</h3>
+    <div class="complete-map-gallery">
+
+      <figure class="map-card">
+        <a href="images/base-map-full.png" target="_blank" rel="noopener" aria-label="Open Original base map at full resolution">
+          <img src="images/base-map-preview.webp" alt="Original base map" loading="lazy">
+        </a>
+        <figcaption><strong>Original base map</strong><br>Buildings, paths, orchards, gardens, water, animals and fixed features.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/sector-analysis-full.png" target="_blank" rel="noopener" aria-label="Open Sector analysis at full resolution">
+          <img src="images/sector-analysis-preview.webp" alt="Sector analysis" loading="lazy">
+        </a>
+        <figcaption><strong>Sector analysis</strong><br>Sun, fire, wind, road noise, wildlife and water entering the site.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/zones-analysis-full.jpeg" target="_blank" rel="noopener" aria-label="Open Existing zones at full resolution">
+          <img src="images/zones-analysis-preview.webp" alt="Existing zones" loading="lazy">
+        </a>
+        <figcaption><strong>Existing zones</strong><br>The original activity zones based on frequency of use.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/microclimate-map-full.png" target="_blank" rel="noopener" aria-label="Open Microclimates at full resolution">
+          <img src="images/microclimate-map-preview.webp" alt="Microclimates" loading="lazy">
+        </a>
+        <figcaption><strong>Microclimates</strong><br>Shade, garden humidity, exposed heat, elevation and the moist creek edge.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/water-flow-map-full.png" target="_blank" rel="noopener" aria-label="Open Site water flow at full resolution">
+          <img src="images/water-flow-map-preview.webp" alt="Site water flow" loading="lazy">
+        </a>
+        <figcaption><strong>Site water flow</strong><br>Slope, runoff, well water, city water, tanks and drainage.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/zone-1-design-full.jpeg" target="_blank" rel="noopener" aria-label="Open Zone 1 design at full resolution">
+          <img src="images/zone-1-design-preview.webp" alt="Zone 1 design" loading="lazy">
+        </a>
+        <figcaption><strong>Zone 1 design</strong><br>A closer design for the most frequently used living and working center.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/final-water-map-full.png" target="_blank" rel="noopener" aria-label="Open Final water design at full resolution">
+          <img src="images/final-water-map-preview.webp" alt="Final water design" loading="lazy">
+        </a>
+        <figcaption><strong>Final water design</strong><br>Connections among supply, storage, roofs, buildings, gardens, ponds and greywater.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/new-zones-pathways-full.png" target="_blank" rel="noopener" aria-label="Open New zones and pathways at full resolution">
+          <img src="images/new-zones-pathways-preview.webp" alt="New zones and pathways" loading="lazy">
+        </a>
+        <figcaption><strong>New zones and pathways</strong><br>Proposed activity areas, movement routes and gathering places.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/final-vegetation-map-full.jpeg" target="_blank" rel="noopener" aria-label="Open Final vegetation design at full resolution">
+          <img src="images/final-vegetation-map-preview.webp" alt="Final vegetation design" loading="lazy">
+        </a>
+        <figcaption><strong>Final vegetation design</strong><br>New trees, hedges, habitat and succession planting.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/final-zone-map-full.jpeg" target="_blank" rel="noopener" aria-label="Open Final zone layer at full resolution">
+          <img src="images/final-zone-map-preview.webp" alt="Final zone layer" loading="lazy">
+        </a>
+        <figcaption><strong>Final zone layer</strong><br>The final arrangement of activity zones across the property.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <a href="images/final-detailed-design-full.png" target="_blank" rel="noopener" aria-label="Open Final whole-system design at full resolution">
+          <img src="images/final-detailed-design-preview.webp" alt="Final whole-system design" loading="lazy">
+        </a>
+        <figcaption><strong>Final whole-system design</strong><br>Vegetation, pathways, water, activity zones, habitat and community spaces together.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="living-notebook paper-section" id="climate-soil" aria-labelledby="living-notebook-title">
+    <header class="section-heading">
+      <p class="kicker">The invisible layers</p>
+      <h2 id="living-notebook-title">Climate, microclimates and soil</h2>
+      <p>The broad climate sets limits; the local microclimates reveal where the useful exceptions occur.</p>
+    </header>
+
+    <div class="climate-metrics">
+      <div><strong>269</strong><span>sunny days/year</span></div>
+      <div><strong>9b</strong><span>USDA hardiness zone</span></div>
+      <div><strong>13.1</strong><span>freezing nights/year</span></div>
+      <div><strong>6"</strong><span>record 24-hour rain used</span></div>
+    </div>
+
+    <div class="microclimate-grid">
+      <article><span>01</span><h3>Farm center</h3><p>Deep tree shade around the main structures creates the coolest everyday human space.</p></article>
+      <article><span>02</span><h3>Vegetable garden</h3><p>Full sun combined with irrigation creates a warmer but more humid pocket.</p></article>
+      <article><span>03</span><h3>Persimmon Hill</h3><p>About 25 feet higher, with more breeze and less retained humidity.</p></article>
+      <article><span>04</span><h3>Northwest edge</h3><p>Exposed, sunny and comparatively dry beneath tall eucalyptus.</p></article>
+      <article><span>05</span><h3>Lion Creek</h3><p>A steep, shaded corridor that remains cooler and moister even when summer flow disappears.</p></article>
+    </div>
+
+    <div class="soil-lab">
+      <article class="soil-chart-card">
+        <header><p class="kicker">Jar tests</p><h3>Three versions of clay</h3></header>
+        <div class="soil-row"><strong>Site 1</strong><div class="soil-bar" aria-label="Site 1: 93 percent clay, 6 percent silt, 1 percent sand"><span class="clay" style="width:93%"></span><span class="silt" style="width:6%"></span><span class="sand" style="width:1%"></span></div><small>93% clay · 6% silt · 1% sand</small></div>
+        <div class="soil-row"><strong>Site 2</strong><div class="soil-bar" aria-label="Site 2: 80 percent clay, 19 percent silt, 1 percent sand"><span class="clay" style="width:80%"></span><span class="silt" style="width:19%"></span><span class="sand" style="width:1%"></span></div><small>80% clay · 19% silt · 1% sand</small></div>
+        <div class="soil-row"><strong>Site 3</strong><div class="soil-bar" aria-label="Site 3: 80 percent clay, 18 percent silt, 2 percent sand"><span class="clay" style="width:80%"></span><span class="silt" style="width:18%"></span><span class="sand" style="width:2%"></span></div><small>80% clay · 18% silt · 2% sand</small></div>
+        <div class="soil-legend"><span><i class="clay"></i>Clay</span><span><i class="silt"></i>Silt</span><span><i class="sand"></i>Sand</span></div>
+      </article>
+
+      <article class="percolation-card">
+        <header><p class="kicker">Percolation</p><h3>15–30 minutes</h3></header>
+        <div class="percolation-rings" aria-label="Percolation test times">
+          <div style="--ring:83%"><strong>25</strong><span>minutes<br>Site 1</span></div>
+          <div style="--ring:100%"><strong>30</strong><span>minutes<br>Site 2</span></div>
+          <div style="--ring:50%"><strong>15</strong><span>minutes<br>Site 3</span></div>
+        </div>
+        <p>The response was not to fight the soil with a single imported fix, but to keep adding compost, chipped wood, crop residue and carefully placed earthworks.</p>
+      </article>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=61" target="_blank" rel="noopener">Microclimates pp. 61–62</a> · <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=76" target="_blank" rel="noopener">Soil tests pp. 76–78</a></p>
+  </section>
+
+  <section class="water-notebook paper-section" id="water-system" aria-labelledby="water-system-title">
+    <header class="section-heading">
+      <p class="kicker">Catch, slow, spread, sink and reuse</p>
+      <h2 id="water-system-title">Water as the organizing layer</h2>
+      <p>The design turns several disconnected sources and waste streams into a network of planned redundancy.</p>
+    </header>
+    <div class="water-flow-diagram" aria-label="Conceptual water flow through Full Circle Farm">
+      <div class="flow-column">
+        <h3>Sources</h3>
+        <div class="flow-node"><strong>Solar well</strong><span>Primary supply</span></div>
+        <div class="flow-node"><strong>City line</strong><span>Backup supply</span></div>
+        <div class="flow-node"><strong>Rain</strong><span>Roofs and landscape</span></div>
+        <div class="flow-node"><strong>2 × 10,000 gal.</strong><span>Emergency storage</span></div>
+      </div>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <div class="flow-column">
+        <h3>Distribution</h3>
+        <div class="flow-node"><strong>Two-inch main</strong><span>House, dwellings and hoses</span></div>
+        <div class="flow-node"><strong>Roof tanks</strong><span>Proposed distributed storage</span></div>
+        <div class="flow-node"><strong>Branch drains</strong><span>Sinks, showers and laundry</span></div>
+        <div class="flow-node"><strong>Swales &amp; mulch</strong><span>Slow runoff and improve infiltration</span></div>
+      </div>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <div class="flow-column">
+        <h3>Useful destinations</h3>
+        <div class="flow-node"><strong>Garden &amp; orchards</strong><span>Food and perennial crops</span></div>
+        <div class="flow-node"><strong>Ponds</strong><span>Habitat, cooling and gathering</span></div>
+        <div class="flow-node"><strong>Shade canopy</strong><span>Lower evaporation and heat</span></div>
+        <div class="flow-node"><strong>Lion Creek</strong><span>Final drainage and wild corridor</span></div>
+      </div>
+    </div>
+    <div class="calculation-note">
+      <strong>A useful audit detail</strong>
+      <p>The workbook estimates about 2.7 million gallons of rain falling on the whole site annually. Its separate 3,740-gallon roof example appears to use six inches of rain rather than the stated annual total, so the atlas preserves it as a workbook example rather than treating it as a corrected annual yield.</p>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=64" target="_blank" rel="noopener">Water survey pp. 64–68</a> · <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=88" target="_blank" rel="noopener">Final water plan pp. 88–89</a></p>
+  </section>
+
+  <section class="plant-notebook paper-section" aria-labelledby="plant-notebook-title">
+    <header class="section-heading">
+      <p class="kicker">Useful plants in the regional notebook</p>
+      <h2 id="plant-notebook-title">Five species worth remembering</h2>
+      <p>The workbook's local plant survey connects ecological fit, cultural knowledge, habitat value and practical use.</p>
+    </header>
+    <div class="plant-profile-grid">
+      <article><span>Wet meadow</span><h3>Sweetgrass</h3><p>An aromatic perennial of moist ground. The workbook records Indigenous ceremonial, basketry and traditional herbal uses.</p></article>
+      <article><span>Shady woodland</span><h3>Hummingbird sage</h3><p>A fragrant California native with spring flower spikes, suited to shaded oak woodland and chaparral edges.</p></article>
+      <article><span>Coastal sage scrub</span><h3>White sage</h3><p>A culturally important Southern California species and a valuable food source for bees, butterflies and birds.</p></article>
+      <article><span>Moist drainage</span><h3>California mugwort</h3><p>A rhizomatous native of riparian places, noted for traditional ceremonial use, restoration and erosion control.</p></article>
+      <article><span>Pollinator perennial</span><h3>Yarrow</h3><p>A widespread flowering plant with a long record of traditional wound-related and household uses.</p></article>
+    </div>
+    <p class="traditional-use-note">Traditional uses are presented as part of the historical workbook record, not as medical advice. Harvesting culturally significant native plants should be ethical, legal and respectful.</p>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=70" target="_blank" rel="noopener">Local plant survey pp. 70–72</a></p>
+  </section>
+
+  <section class="field-notes-section paper-section" id="field-notes" aria-labelledby="field-notes-title">
+    <header class="section-heading">
+      <p class="kicker">Thirty discoveries from 112 pages</p>
+      <h2 id="field-notes-title">The workbook field notes</h2>
+      <p>Open any entry for the larger design lesson and a direct link to the original workbook page.</p>
+    </header>
+    <div class="field-note-groups">
+
+      <section class="note-group">
+        <h3>Place &amp; community</h3>
+        <div class="note-stack">
+          
+        <details class="field-note">
+          <summary><span class="note-number">01</span><span>A community born from rebuilding</span></summary>
+          <div class="field-note-body">
+            <p>The farm began after a fire destroyed the original house. People were invited to help rebuild in exchange for a place to live, creating the seed of a long-lived intentional community.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=40" target="_blank" rel="noopener">Workbook pp. 40</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">02</span><span>Five and a half acres, many ways of dwelling</span></summary>
+          <div class="field-note-body">
+            <p>The 2022 survey describes a main house, cabins, trailers, motorhomes, a tiny home, earth structures, a workshop, barn, garden shed and other small buildings supporting about twenty residents.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=40" target="_blank" rel="noopener">Workbook pp. 40</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">03</span><span>Zone 1 is the social heart</span></summary>
+          <div class="field-note-body">
+            <p>The house, workshop and bathhouse form the most frequently crossed part of the land. The design treats human movement and casual encounter as essential infrastructure.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=58" target="_blank" rel="noopener">Workbook pp. 58-60</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">04</span><span>Two kitchens, shared meals</span></summary>
+          <div class="field-note-body">
+            <p>An indoor vegetarian kitchen and an outdoor meat kitchen served communal cooking. The design also noticed where each kitchen&#x27;s water went and how those flows could become irrigation.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=83" target="_blank" rel="noopener">Workbook pp. 83</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">05</span><span>The vision is social as well as ecological</span></summary>
+          <div class="field-note-body">
+            <p>The project vision joins organic farming, self-governance, sovereignty, health, mutual care and education. The farm is conceived as both home and teaching place.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=53" target="_blank" rel="noopener">Workbook pp. 53, 87, 103</a>
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <section class="note-group">
+        <h3>Climate, land &amp; edges</h3>
+        <div class="note-stack">
+          
+        <details class="field-note">
+          <summary><span class="note-number">06</span><span>A valley site beneath a mountain watershed</span></summary>
+          <div class="field-note-body">
+            <p>The farm sits around 1,250 feet in Upper Ojai, with the Los Padres landscape rising dramatically to the north. That regional setting shapes fire, wind, water and temperature.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=9" target="_blank" rel="noopener">Workbook pp. 9</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">07</span><span>Mediterranean dryness with long sun seasons</span></summary>
+          <div class="field-note-body">
+            <p>The workbook records about 19 inches of annual rain, 269 sunny days, USDA zone 9b and roughly 13 freezing nights per year: enough warmth for diverse fruit, but with real frost and drought constraints.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=43" target="_blank" rel="noopener">Workbook pp. 43-47</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">08</span><span>Five distinct microclimates</span></summary>
+          <div class="field-note-body">
+            <p>The design identifies a shaded farm center, sunny humid garden, breezy Persimmon Hill, a hot dry northwest edge and the cool, wet banks of Lion Creek.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=61" target="_blank" rel="noopener">Workbook pp. 61-62</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">09</span><span>Fire is a design sector, not a background risk</span></summary>
+          <div class="field-note-body">
+            <p>The Thomas Fire burned several smaller structures in 2017. Dense brush, invasive trees and accumulated fuels make phased vegetation management a core safety strategy.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=55" target="_blank" rel="noopener">Workbook pp. 55-56</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">10</span><span>The boundary must do several jobs</span></summary>
+          <div class="field-note-body">
+            <p>The northern road and nearby neighbors create noise and privacy pressure. Cob walls, planted screens and flowering hedges are proposed as shelter, identity, habitat and enclosure.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=92" target="_blank" rel="noopener">Workbook pp. 92-94</a>
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <section class="note-group">
+        <h3>Water</h3>
+        <div class="note-stack">
+          
+        <details class="field-note">
+          <summary><span class="note-number">11</span><span>The well is the primary source</span></summary>
+          <div class="field-note-body">
+            <p>The water survey describes a roughly 160-foot well delivering about 20-30 gallons per minute through a two-inch line; the earlier photo caption calls it a 200-foot solar-powered well. The atlas preserves that internal discrepancy rather than choosing a false precision.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=64" target="_blank" rel="noopener">Workbook pp. 64, 67-68</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">12</span><span>Municipal water is planned redundancy</span></summary>
+          <div class="field-note-body">
+            <p>A high-pressure city line provides backup during summer demand or emergencies, though the community sought to minimize its cost and chlorinated supply.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=64" target="_blank" rel="noopener">Workbook pp. 64, 68, 88</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">13</span><span>Two large tanks hold emergency capacity</span></summary>
+          <div class="field-note-body">
+            <p>Two 10,000-gallon tanks sit on the hill. The workbook also records serious operational problems: accidental draining, no protective screens and water that was not treated for drinking.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=15" target="_blank" rel="noopener">Workbook pp. 15, 88-89</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">14</span><span>Rainfall is a vast but brief flow</span></summary>
+          <div class="field-note-body">
+            <p>Using the workbook&#x27;s site area and annual rainfall, about 2.7 million gallons fall on the property in an average year. A six-inch extreme event was estimated at more than 800,000 gallons.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=65" target="_blank" rel="noopener">Workbook pp. 65-66</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">15</span><span>Greywater should branch outward</span></summary>
+          <div class="field-note-body">
+            <p>Laundry, sinks, showers and the reverse-osmosis system already returned some water to the land. The design proposes branch drains and selector valves to distribute it deliberately among trees and beds.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=64" target="_blank" rel="noopener">Workbook pp. 64-65, 89</a>
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <section class="note-group">
+        <h3>Soil &amp; ecology</h3>
+        <div class="note-stack">
+          
+        <details class="field-note">
+          <summary><span class="note-number">16</span><span>The garden soil is overwhelmingly clay</span></summary>
+          <div class="field-note-body">
+            <p>Three jar tests recorded 80-93% clay. That explains slow infiltration, road pooling and the importance of mulch, organic matter and careful earth shaping.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=76" target="_blank" rel="noopener">Workbook pp. 76-78</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">17</span><span>Percolation varied, but all sites drained slowly</span></summary>
+          <div class="field-note-body">
+            <p>The three garden tests took 25, 30 and 15 minutes. The workbook saw the sites as broadly similar and identified more sand and continued organic amendments as opportunities.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=78" target="_blank" rel="noopener">Workbook pp. 78</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">18</span><span>Fertility is already produced on site</span></summary>
+          <div class="field-note-body">
+            <p>Kitchen scraps, chipped branches, fallen material and previous crops feed compost, mulch and chop-and-drop systems. The design&#x27;s task is to organize these flows rather than import every input.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=78" target="_blank" rel="noopener">Workbook pp. 78, 85</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">19</span><span>The farm participates in a real food web</span></summary>
+          <div class="field-note-body">
+            <p>Gophers and rabbits feed hawks and owls; coyotes and bobcats sometimes prey on chickens. The design must protect production without erasing the predators and habitat around it.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=69" target="_blank" rel="noopener">Workbook pp. 69</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">20</span><span>Chaparral succession offers a model</span></summary>
+          <div class="field-note-body">
+            <p>The workbook names mustard, horehound, fiddleneck, caterpillar phacelia and deerweed as pioneer plants, and places the site within the California chaparral biome.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=69" target="_blank" rel="noopener">Workbook pp. 69-70</a>
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <section class="note-group">
+        <h3>Food, animals &amp; vegetation</h3>
+        <div class="note-stack">
+          
+        <details class="field-note">
+          <summary><span class="note-number">21</span><span>The chickens produce a daily yield</span></summary>
+          <div class="field-note-body">
+            <p>The laying flock was recorded at about thirty eggs per day, making the coop a major food-producing element next to the garden.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=13" target="_blank" rel="noopener">Workbook pp. 13-14</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">22</span><span>Twenty residents create a powerful compost stream</span></summary>
+          <div class="field-note-body">
+            <p>The kitchen was estimated to produce two five-gallon buckets of compostable material each day. Proper bays could convert that steady flow into soil fertility and animal feed.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=85" target="_blank" rel="noopener">Workbook pp. 85</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">23</span><span>The existing canopy is stored capital</span></summary>
+          <div class="field-note-body">
+            <p>Approximately 330 inventoried plants provide shade, fruit, habitat and climate moderation. The design respects that inheritance even while identifying difficult species.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=73" target="_blank" rel="noopener">Workbook pp. 73-74</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">24</span><span>Succession must replace functions before removing trees</span></summary>
+          <div class="field-note-body">
+            <p>Arundo, tree-of-heaven, eucalyptus and chinaberry were targeted for phased reduction, while bamboo, sycamore, oak and a mixed useful canopy establish replacement shade, screening and habitat.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=93" target="_blank" rel="noopener">Workbook pp. 93-97</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">25</span><span>New species were chosen for local performance</span></summary>
+          <div class="field-note-body">
+            <p>The proposal favors Mexicola avocado for frost tolerance, Ceanothus for pollinators and screening, black locust for rapid growth and posts, plus alder, carob, fig, oak and sycamore.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=94" target="_blank" rel="noopener">Workbook pp. 94-97</a>
+          </div>
+        </details>
+        </div>
+      </section>
+
+      <section class="note-group">
+        <h3>Design &amp; social permaculture</h3>
+        <div class="note-stack">
+          
+        <details class="field-note">
+          <summary><span class="note-number">26</span><span>The ponds become a social landscape</span></summary>
+          <div class="field-note-body">
+            <p>The unfinished pond excavations are envisioned as shaded water bodies with trees, fish and cob seating - water storage, habitat, cooling and gathering in one place.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=89" target="_blank" rel="noopener">Workbook pp. 89, 92</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">27</span><span>The garden becomes a mandala</span></summary>
+          <div class="field-note-body">
+            <p>A six-pointed garden with a central gazebo reorganizes production around paths, shade, education and beauty rather than treating food growing as a purely utilitarian rectangle.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=92" target="_blank" rel="noopener">Workbook pp. 92</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">28</span><span>A path reveals the wild edge without domesticating it</span></summary>
+          <div class="field-note-body">
+            <p>A selective trail to Lion Creek would let residents experience the cool riparian corridor while keeping most of it dense and ecologically primary.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=92" target="_blank" rel="noopener">Workbook pp. 92, 101</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">29</span><span>Governance is part of the site design</span></summary>
+          <div class="field-note-body">
+            <p>Weekly community meetings, conflict mediation, heart-sharing circles and experiments with sociocracy and holacracy show that relationships require design, maintenance and feedback just as water systems do.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=102" target="_blank" rel="noopener">Workbook pp. 102</a>
+          </div>
+        </details>
+        <details class="field-note">
+          <summary><span class="note-number">30</span><span>Redundancy and replication complete the pattern</span></summary>
+          <div class="field-note-body">
+            <p>Multiple water sources, shared tools, compost-chicken-garden loops, repair culture and food storage create resilience. The five-year plan ultimately extends outward through education, a repair café, a time bank and sister farms.</p>
+            <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=101" target="_blank" rel="noopener">Workbook pp. 101, 104</a>
+          </div>
+        </details>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="tree-inventory paper-section" id="trees" aria-labelledby="tree-inventory-title">
+    <header class="section-heading">
+      <p class="kicker">A mature planted landscape</p>
+      <h2 id="tree-inventory-title">Approximately 330 trees</h2>
+      <p class="section-intro">The 2022 workbook records 43 named entries. Some are trees; others are large shrubs, vines or perennial plantings counted within the landscape inventory.</p>
+    </header>
+
+    <div class="tree-summary">
+      <div><strong>43</strong><span>listed kinds</span></div>
+      <div><strong>~330</strong><span>recorded plants</span></div>
+      <div><strong>30</strong><span>Tree-of-heaven</span></div>
+      <div><strong>30</strong><span>Chinaberry</span></div>
+      <div><strong>23</strong><span>Oak</span></div>
+      <div><strong>25</strong><span>Pine</span></div>
+    </div>
+
+    <details class="inventory-details">
+      <summary>Open the complete 43-entry plant inventory</summary>
+      <ol class="tree-count-list" aria-label="Current plant inventory with quantities">
+        <li><span>Almond</span><strong>3</strong></li>
+        <li><span>Apple</span><strong>3</strong></li>
+        <li><span>Apricot</span><strong>16</strong></li>
+        <li><span>Bamboo</span><strong>1</strong></li>
+        <li><span>Black locust</span><strong>6</strong></li>
+        <li><span>Black walnut</span><strong>8</strong></li>
+        <li><span>Cedar</span><strong>1</strong></li>
+        <li><span>Chinaberry</span><strong>30</strong></li>
+        <li><span>Cypress</span><strong>1</strong></li>
+        <li><span>Elderberry</span><strong>10</strong></li>
+        <li><span>Eucalyptus</span><strong>12</strong></li>
+        <li><span>Fake cherry</span><strong>4</strong></li>
+        <li><span>Fig</span><strong>2</strong></li>
+        <li><span>Goji berry</span><strong>2</strong></li>
+        <li><span>Grape</span><strong>3</strong></li>
+        <li><span>Ivy</span><strong>1</strong></li>
+        <li><span>Jasmine</span><strong>3</strong></li>
+        <li><span>Lemon</span><strong>5</strong></li>
+        <li><span>Loquat</span><strong>15</strong></li>
+        <li><span>Money tree</span><strong>1</strong></li>
+        <li><span>Mulberry</span><strong>7</strong></li>
+        <li><span>Nectarine</span><strong>1</strong></li>
+        <li><span>Oak</span><strong>23</strong></li>
+        <li><span>Oleander</span><strong>1</strong></li>
+        <li><span>Olive</span><strong>14</strong></li>
+        <li><span>Orange</span><strong>7</strong></li>
+        <li><span>Palm tree</span><strong>1</strong></li>
+        <li><span>Peach</span><strong>1</strong></li>
+        <li><span>Pepper tree</span><strong>21</strong></li>
+        <li><span>Date persimmon</span><strong>1</strong></li>
+        <li><span>Fuyu persimmon</span><strong>5</strong></li>
+        <li><span>Hachiya persimmon</span><strong>10</strong></li>
+        <li><span>Pine</span><strong>25</strong></li>
+        <li><span>Pineapple guava</span><strong>10</strong></li>
+        <li><span>Plum</span><strong>5</strong></li>
+        <li><span>Pomegranate</span><strong>7</strong></li>
+        <li><span>Poplar</span><strong>1</strong></li>
+        <li><span>Redwood</span><strong>10</strong></li>
+        <li><span>Rosemary</span><strong>3</strong></li>
+        <li><span>Rose tree</span><strong>3</strong></li>
+        <li><span>Tea tree</span><strong>1</strong></li>
+        <li><span>Tree-of-heaven / Ailanthus</span><strong>30</strong></li>
+        <li><span>Willow</span><strong>10</strong></li>
+      </ol>
+      <p class="inventory-total-note">Accuracy note: the workbook states “Total number of trees 330,” while the individually listed quantities add to 324. The atlas therefore uses “approximately 330.”</p>
+    </details>
+
+    <div class="inventory-notes">
+      <article>
+        <h3>The gift of the canopy</h3>
+        <p>The established trees create shade, food, wildlife habitat and a cooler human environment. Persimmon, citrus, pomegranate, loquat, olive, apricot and other trees represent decades of stored biological capital.</p>
+      </article>
+      <article>
+        <h3>The management burden</h3>
+        <p>Dense growth also means continual pruning, leaf fall and fire-fuel management. Tree-of-heaven, Chinaberry, giant eucalyptus and invasive creek plants require gradual succession rather than sudden removal.</p>
+      </article>
+    </div>
+
+    <div class="succession-plan">
+      <header>
+        <p class="kicker">The next canopy</p>
+        <h3>Replace functions before removing trees</h3>
+      </header>
+      <div class="succession-grid">
+        <p><strong>Arundo → bamboo</strong><br>Exchange an invasive screen for managed, useful plantings.</p>
+        <p><strong>Eucalyptus → sycamore</strong><br>Establish tall native canopy before phasing out mature trees.</p>
+        <p><strong>Tree-of-heaven → mixed canopy</strong><br>Replace a single aggressive species with oak, support trees and food plants.</p>
+        <p><strong>Road edge → Ceanothus</strong><br>Create a flowering privacy screen for butterflies and bees.</p>
+        <p><strong>Food trees</strong><br>Add Mexicola avocado, fig, carob and other climate-suited perennial crops.</p>
+        <p><strong>Wet areas</strong><br>Use alder, sycamore and riparian vegetation where water supports them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ethics-sequence paper-section" id="ethics" aria-labelledby="ethics-title">
+    <header class="section-heading">
+      <p class="kicker">The test of the design</p>
+      <h2 id="ethics-title">Earth Care, People Care, Fair Share</h2>
+      <p>The proposal is not complete unless the ecological, human and distributive relationships reinforce one another.</p>
+    </header>
+    <div class="ethics-cards">
+      <article><span>Earth Care</span><h3>Keep water and fertility in motion</h3><p>Drought-aware planting, native succession, greywater, rain capture, swales, mulch and perennial systems reduce extraction while rebuilding the land.</p></article>
+      <article><span>People Care</span><h3>Design for mutual support</h3><p>Shared meals, social spaces, mediation, accessible paths and decentralized responsibility make community care visible in the physical plan.</p></article>
+      <article><span>Fair Share</span><h3>Circulate tools, food and surplus</h3><p>Workshops, vehicles, gardens, cooking, repair knowledge and harvests are treated as shared capacity rather than isolated private assets.</p></article>
+    </div>
+
+    <header class="section-heading sequence-heading">
+      <p class="kicker">A five-year sequence</p>
+      <h2>Small steps that build capacity</h2>
+    </header>
+    <div class="timeline-grid">
+      <article><span>Year 1</span><h3>Repair and clear</h3><p>Compost bays, pond work, invasive removal, community-room structure and mobile animal systems.</p></article>
+      <article><span>Year 2</span><h3>Connect systems</h3><p>Solar power, greywater branches, garden redesign, shade trees and expanded animal integration.</p></article>
+      <article><span>Year 3</span><h3>Capture &amp; teach</h3><p>Rainwater systems, additional compost, more habitat and a public learning garden.</p></article>
+      <article><span>Year 4</span><h3>Reveal the landscape</h3><p>Lion Creek trail, restored ponds, a garden gathering place and better Persimmon Hill access.</p></article>
+      <article><span>Year 5</span><h3>Share outward</h3><p>Repair café, time bank, public events, work space and sister Full Circle projects.</p></article>
+    </div>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=101" target="_blank" rel="noopener">Five-year plan p. 101</a> · <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=104" target="_blank" rel="noopener">Ethics and whole-system relationships pp. 103–104</a></p>
+  </section>
+
+  <section class="closing-quote">
+    <blockquote>“The final plan is a direction, not a command.”</blockquote>
+    <p>Implementation begins another round of observation. The design remains alive only while it can learn.</p>
+  </section>
+
+  <section class="fieldstation-gallery paper-section" data-fieldstation-gallery="design" aria-labelledby="design-gallery-title">
+    <header class="fieldstation-gallery__header">
+      <div>
+        <p class="kicker">Design archive</p>
+        <h2 id="design-gallery-title">Browse maps, observations and site systems</h2>
+        <p>Move through the drawings, inventories, field photographs and layered maps behind the final permaculture design.</p>
+      </div>
+      <button class="fieldstation-gallery__browse" type="button" data-gallery-open>Browse <span data-gallery-count>more</span> photographs</button>
+    </header>
+    <div class="fieldstation-gallery__grid" data-gallery-preview aria-live="polite"></div>
+    <p class="fieldstation-gallery__hint">Select any photograph to open the full-screen gallery. Use the arrow keys or the on-screen controls to continue.</p>
+  </section>
 </main>
-<nav class="chapter-nav" aria-label="Chapter navigation"><a class="previous" href="social.html"><span>Previous</span>Social Permaculture</a><a class="next" href="workbook.html"><span>Next</span>Workbook</a></nav>
+
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  <a class="previous" href="social.html"><span>Previous</span>Social Permaculture</a>
+  <a class="next" href="workbook.html"><span>Next</span>Workbook</a>
+</nav>
+
 <footer class="site-footer">
   <div><strong>Full Circle Paradise</strong><br><span>A permaculture design for Full Circle Farm</span></div>
   <div>Upper Ojai, California<br>Quail Springs PDC · Spring 2022</div>
   <a href="documents/full-circle-paradise-workbook.pdf">Read the original workbook</a>
 </footer>
+
 <div class="lightbox" hidden aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt=""><p></p></div>
-</body></html>
+</body>
+</html>

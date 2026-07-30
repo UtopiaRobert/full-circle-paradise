@@ -4,11 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#334325">
-  <meta name="description" content="An illustrated walk through the gardens, orchards, cabins, workshops and wild edges of Full Circle Farm.">
-  <title>Site Tour · Full Circle Paradise</title>
+  <meta name="description" content="An archival walking tour of Full Circle Farm in Upper Ojai: its house, gardens, orchards, workshops, dwellings, water systems and wild Lion Creek edge as documented in 2022.">
+  <title>Site Tour Atlas · Full Circle Paradise</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tour-additions.css">
+  <link rel="stylesheet" href="gallery.css">
   <script src="site.js" defer></script>
+  <script src="gallery-data.js" defer></script>
+  <script src="gallery.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -32,27 +36,323 @@
   </nav>
 </header>
 
-<main id="main" class="chapter-page">
-<header class="chapter-hero compact"><div><p class="chapter-label">Chapter 02 · Thirty years of layers</p><h1>Site Tour</h1><p class="lede">The property is a mosaic of productive landscapes, dwellings, workshops, natural buildings and semi-wild edges.</p></div><figure><img src="images/p013.webp" alt="Garden and chicken systems at Full Circle Farm"><figcaption>Garden, orchard and animal systems overlap</figcaption></figure></header>
-<section class="tour-grid">
-  <figure class="tour-stop wide"><img src="images/p011.webp" alt="Fenced vegetable garden with raised beds" data-lightbox><figcaption><span>01</span><div><h2>The garden</h2><p>A fenced growing area close enough to the community core for daily attention.</p></div></figcaption></figure>
-  <figure class="tour-stop"><img src="images/p022.webp" alt="Established fruit trees in the west orchard" data-lightbox><figcaption><span>02</span><div><h2>West orchard</h2><p>Citrus, persimmon and other mature fruit trees.</p></div></figcaption></figure>
-  <figure class="tour-stop"><img src="images/p014.webp" alt="Chickens under a shaded enclosure" data-lightbox><figcaption><span>03</span><div><h2>Chicken system</h2><p>Eggs, manure, soil disturbance and food-scrap processing.</p></div></figcaption></figure>
-  <figure class="tour-stop"><img src="images/p023.webp" alt="Garden work shed and greenhouse area" data-lightbox><figcaption><span>04</span><div><h2>Garden shed</h2><p>A practical work area beside a greenhouse needing seasonal adaptation.</p></div></figcaption></figure>
-  <figure class="tour-stop wide"><img src="images/p025.webp" alt="Small wooden cabin beneath trees" data-lightbox><figcaption><span>05</span><div><h2>Cabins and small dwellings</h2><p>Simple homes tucked into the shade, each with its own relationship to paths and shared facilities.</p></div></figcaption></figure>
-  <figure class="tour-stop"><img src="images/p026.webp" alt="Small natural earth dome" data-lightbox><figcaption><span>06</span><div><h2>Earth dome</h2><p>A compact natural building that demonstrated remarkable fire resilience.</p></div></figcaption></figure>
-  <figure class="tour-stop"><img src="images/p030.webp" alt="Interior of the shared workshop" data-lightbox><figcaption><span>07</span><div><h2>Workshop</h2><p>Shared tools and repair capacity multiply what the community can accomplish.</p></div></figcaption></figure>
-  <figure class="tour-stop"><img src="images/p031.webp" alt="Shared laundry and bathhouse" data-lightbox><figcaption><span>08</span><div><h2>Laundry and bathhouse</h2><p>Shared sanitation infrastructure with an opportunity for greywater reuse.</p></div></figcaption></figure>
-  <figure class="tour-stop"><img src="images/p034.webp" alt="Green farm tractor" data-lightbox><figcaption><span>09</span><div><h2>Tractor and tools</h2><p>A loader, backhoe and chipper create unusual implementation capacity.</p></div></figcaption></figure>
-  <figure class="tour-stop"><img src="images/p037.webp" alt="Beehive beside orchard vegetation" data-lightbox><figcaption><span>10</span><div><h2>Bees</h2><p>Pollination, honey and a direct relationship with flowering cycles.</p></div></figcaption></figure>
-  <figure class="tour-stop wide"><img src="images/p019.webp" alt="Dense vegetation along Lion Creek" data-lightbox><figcaption><span>11</span><div><h2>Lion Creek and Zone 5</h2><p>The steep, dense southern edge is habitat, watershed and a place for observation rather than constant intervention.</p></div></figcaption></figure>
-</section>
+<main id="main" class="chapter-page tour-atlas-page">
+  <header class="chapter-hero tour-hero">
+    <div>
+      <p class="chapter-label">Chapter 02 · Thirty years of layers</p>
+      <h1>Site<br>Tour</h1>
+      <p class="lede">A slow walk through Full Circle as it appeared in 2022: from the west orchard and main house to the gardens, workshops, small dwellings, Persimmon Hill and the wild edge of Lion Creek.</p>
+    </div>
+    <figure>
+      <img src="images/people-first/full/tour-farm-entrance.webp" alt="A smiling Full Circle resident beside the roadside farm sign and avocado stand" style="object-position:center 36%;">
+      <figcaption>Arriving at Full Circle from the tree-lined road</figcaption>
+    </figure>
+  </header>
+
+  <section class="tour-opening paper-section" id="orientation" aria-labelledby="orientation-title">
+    <header class="section-heading">
+      <p class="kicker">Orientation</p>
+      <h2 id="orientation-title">One property, many overlapping systems</h2>
+      <p>Full Circle occupied 5.5 acres between Ojai–Santa Paula Road and Lion Creek. The site rose roughly twenty-five feet toward Persimmon Hill in the north, while its southern edge dropped into a dense creek corridor. Homes, paths, orchards, gardens, tools, water and community spaces accumulated over decades rather than arriving as a single master-planned landscape.</p>
+    </header>
+
+    <nav class="tour-atlas-nav" aria-label="Site tour contents">
+      <a href="#map">Route map</a>
+      <a href="#west">West approach</a>
+      <a href="#house">Main house</a>
+      <a href="#garden">Garden</a>
+      <a href="#work">Work areas</a>
+      <a href="#homes">Small dwellings</a>
+      <a href="#hill">Persimmon Hill</a>
+      <a href="#living-systems">Living systems</a>
+      <a href="#creek">Lion Creek</a>
+    </nav>
+
+    <div class="tour-facts" aria-label="Site facts recorded in the workbook">
+      <div><strong>5.5 acres</strong><span>design site</span></div>
+      <div><strong>~20</strong><span>residents in 2022</span></div>
+      <div><strong>25 ft</strong><span>approximate rise to the hill</span></div>
+      <div><strong>10 stops</strong><span>in this archival walk</span></div>
+      <div><strong>38 years</strong><span>of community history recorded</span></div>
+    </div>
+
+    <aside class="archive-note">
+      <strong>An archival tour, not a visitor guide.</strong> Conditions, residents and uses described here reflect Robert Redecker’s spring 2022 permaculture workbook. The page preserves what the place looked like and how its systems related at that moment.
+      <a href="documents/full-circle-paradise-workbook.pdf#page=6" target="_blank" rel="noopener">Workbook site survey, pp. 6–40</a>
+    </aside>
+  </section>
+
+  <section class="tour-map-section" id="map" aria-labelledby="map-title">
+    <div class="map-copy">
+      <p class="kicker">The hand-drawn route</p>
+      <h2 id="map-title">Walk the base map</h2>
+      <p>The original base map is not a surveyor’s plan. It is a working memory of the property: roads and paths in black, living spaces in brown, community spaces in pink, water in blue, chickens in yellow, garden areas in green and the orchard ground in earth tones.</p>
+      <p>The tour begins near the western approach, loops through the community core, climbs toward the hill and water systems, then finishes at the southern wild edge.</p>
+      <a class="map-download-link" href="images/tour-atlas/base-map-full.png" target="_blank" rel="noopener">Open the full-resolution base map ↗</a>
+      <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=41" target="_blank" rel="noopener">Original base map, workbook p. 41</a>
+    </div>
+    <figure class="route-map">
+      <a href="images/tour-atlas/base-map-full.png" target="_blank" rel="noopener">
+        <img src="images/tour-atlas/base-map-preview.webp" alt="Hand-drawn base map of Full Circle Farm showing the orchard, dwellings, garden, community spaces, water tanks and Lion Creek">
+      </a>
+      <figcaption>The 2022 base map — north points toward Persimmon Hill</figcaption>
+    </figure>
+    <ol class="route-key" aria-label="Tour stops">
+      <li><a href="#west"><span>01</span>West orchard &amp; arrival</a></li>
+      <li><a href="#house"><span>02</span>Main house</a></li>
+      <li><a href="#garden"><span>03</span>Garden beds</a></li>
+      <li><a href="#garden"><span>04</span>Chickens &amp; garden shed</a></li>
+      <li><a href="#work"><span>05</span>Community room &amp; workshop</a></li>
+      <li><a href="#work"><span>06</span>Bathhouse &amp; laundry</a></li>
+      <li><a href="#homes"><span>07</span>Cabins &amp; earthdome</a></li>
+      <li><a href="#hill"><span>08</span>Persimmon Hill &amp; tanks</a></li>
+      <li><a href="#living-systems"><span>09</span>Well, bees &amp; compost</a></li>
+      <li><a href="#creek"><span>10</span>Lion Creek &amp; Zone 5</a></li>
+    </ol>
+  </section>
+
+  <section class="walk-section paper-section" aria-label="The walking tour">
+    <article class="tour-chapter" id="west">
+      <div class="tour-copy">
+        <p class="stop-number">Stop 01</p>
+        <p class="kicker">The west approach</p>
+        <h2>Orchard before architecture</h2>
+        <p>Arriving from the road, the west side reads first as orchard. Mature orange, lemon, persimmon and pomegranate trees soften the boundary and place food production at the entrance to the property. The driveway threads between planted ground, motorhomes and small structures before turning toward the community core.</p>
+        <p>This approach reveals a central character of Full Circle: productive plants, homes and circulation are interwoven rather than separated into tidy districts.</p>
+        <div class="chapter-links">
+          <a href="food.html">Explore Food &amp; Soil</a>
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=23" target="_blank" rel="noopener">West Orchard, workbook p. 23</a>
+        </div>
+      </div>
+      <figure class="tour-photo landscape">
+        <img src="images/archive-v3/full/051-img-20211030-100753243-hdr.jpg" alt="Two people harvesting fruit from the established west orchard" data-lightbox>
+        <figcaption>Harvesting fruit in the front orchard</figcaption>
+      </figure>
+    </article>
+
+    <article class="tour-chapter reverse" id="house">
+      <div class="tour-copy">
+        <p class="stop-number">Stop 02</p>
+        <p class="kicker">Zone 1</p>
+        <h2>The main house</h2>
+        <p>The main house was both residence and commons. Four people lived there in 2022, while cooking, meetings and informal community life brought many more through its rooms and shaded outdoor edges. Its importance came less from size than from frequency: it was the place people returned to every day.</p>
+        <p>Seen as a permaculture zone, the house anchors the highest-attention area. The garden, bathhouse, workshop and gathering places all sit within a short walk of this social center.</p>
+        <div class="chapter-links">
+          <a href="social.html">Enter Social Permaculture</a>
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=10" target="_blank" rel="noopener">Main House, workbook p. 10</a>
+        </div>
+      </div>
+      <div class="paired-photos">
+        <figure class="tour-photo">
+          <img src="images/tour-atlas/main-house.webp" alt="Exterior path and porch of the main house" data-lightbox>
+          <figcaption>The shaded house entrance</figcaption>
+        </figure>
+        <figure class="tour-photo">
+          <img src="images/tour-atlas/meeting-circle-lodge.webp" alt="Residents seated in a circle inside the main house" data-lightbox>
+          <figcaption>A meeting circle inside the shared house</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tour-chapter" id="garden">
+      <div class="tour-copy">
+        <p class="stop-number">Stops 03–04</p>
+        <p class="kicker">The productive center</p>
+        <h2>Garden, chickens and the daily round</h2>
+        <p>The fenced garden occupied roughly an acre toward the eastern center of the property. Raised beds, paths and perennial edges created a place that demanded daily observation. The fence held back rabbits and other animals; the proximity to homes and community spaces kept watering, harvest and small repairs visible.</p>
+        <p>Beside the garden, chickens converted food scraps into eggs, manure and disturbed soil. A shaded garden shed held tools and potted plants, while a nearby greenhouse was acknowledged as too hot during summer — an example of the site teaching through use.</p>
+        <div class="chapter-links">
+          <a href="food.html">See the Food &amp; Soil Atlas</a>
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=11" target="_blank" rel="noopener">Garden and chicken system, workbook pp. 11–14</a>
+        </div>
+      </div>
+      <div class="tour-mosaic garden-mosaic">
+        <figure class="tour-photo wide-photo">
+          <img src="images/archive-v3/full/009-32802211-10216590132814059-8487492518114492416-n.jpg" alt="Residents standing together among the productive garden beds" data-lightbox>
+          <figcaption>The garden as a place of shared work</figcaption>
+        </figure>
+        <figure class="tour-photo">
+          <img src="images/archive-v3/full/031-510481774-10237717290619800-1303548906365231006-n.jpg" alt="A work party inside a newly framed mobile chicken shelter" data-lightbox>
+          <figcaption>Building shelter for the laying flock</figcaption>
+        </figure>
+        <figure class="tour-photo">
+          <img src="images/tour-atlas/garden-shed.webp" alt="Garden shed with tools and a small greenhouse area" data-lightbox>
+          <figcaption>The practical garden work edge</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tour-chapter reverse" id="work">
+      <div class="tour-copy">
+        <p class="stop-number">Stops 05–06</p>
+        <p class="kicker">Shared infrastructure</p>
+        <h2>Where work becomes community capacity</h2>
+        <p>The community room and stage grew from a dirt-floor space into a frequently used gathering place beside the workshop. Next door, shared tools made repair and construction possible without every resident owning a separate set of equipment.</p>
+        <p>The bathhouse and laundry concentrated another kind of shared infrastructure. Its shower water flowed toward an arundo patch in 2022, while the workbook proposed a more deliberate branched-drain greywater system. These ordinary buildings reveal how community is supported by the spaces that hold maintenance, sanitation and repair.</p>
+        <div class="chapter-links">
+          <a href="buildings.html">Explore Buildings &amp; Energy</a>
+          <a href="water.html">Follow the greywater story</a>
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=29" target="_blank" rel="noopener">Community room through bathhouse, workbook pp. 29–32</a>
+        </div>
+      </div>
+      <div class="tour-mosaic work-mosaic">
+        <figure class="tour-photo wide-photo">
+          <img src="images/archive-v3/full/010-35328311-10212606023530337-2234397061468389376-n.jpg" alt="Residents and friends gathered inside the shared house" data-lightbox>
+          <figcaption>Community made visible in the shared interior</figcaption>
+        </figure>
+        <figure class="tour-photo">
+          <img src="images/archive-v3/full/052-cf7134b7-2566-4a47-a11f-e56f414b2b28.jpg" alt="Three community builders beside a handmade earthen oven" data-lightbox>
+          <figcaption>Building together with shared tools</figcaption>
+        </figure>
+        <figure class="tour-photo">
+          <img src="images/tour-atlas/bathhouse.webp" alt="Shared laundry and bathhouse building" data-lightbox>
+          <figcaption>Laundry, bathing and greywater opportunity</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tour-chapter" id="homes">
+      <div class="tour-copy">
+        <p class="stop-number">Stop 07</p>
+        <p class="kicker">A village of small dwellings</p>
+        <h2>Cabins, trailers, domes and improvised homes</h2>
+        <p>Full Circle was never a single-house property. Cabins, trailers, motorhomes, a converted cargo-trailer tiny home, tents, a geodesic dome and an earthbag shelter formed a dispersed village beneath the trees.</p>
+        <p>Each dwelling had a different relationship to shade, paths and shared facilities. The small earthdome carried an additional lesson: its thick earthen shell survived the Thomas Fire, demonstrating resilience through material and form.</p>
+        <div class="chapter-links">
+          <a href="buildings.html">Read the Buildings &amp; Energy Atlas</a>
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=24" target="_blank" rel="noopener">Tiny home, cabins and earthdome, workbook pp. 24–28</a>
+        </div>
+      </div>
+      <div class="paired-photos homes-pair">
+        <figure class="tour-photo">
+          <img src="images/tour-atlas/cabin.webp" alt="A small wooden cabin beneath mature trees" data-lightbox>
+          <figcaption>A studio cabin tucked into the shade</figcaption>
+        </figure>
+        <figure class="tour-photo">
+          <img src="images/tour-atlas/earthdome.webp" alt="Small earthen dome building with a rounded doorway" data-lightbox>
+          <figcaption>The fire-resilient earthdome</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tour-chapter reverse" id="hill">
+      <div class="tour-copy">
+        <p class="stop-number">Stop 08</p>
+        <p class="kicker">The high point</p>
+        <h2>Persimmon Hill and stored water</h2>
+        <p>The property rises toward Persimmon Hill along the north side. Black locust, eucalyptus and approximately twenty persimmon trees occupied this higher ground. From the top, the garden and southern landscape become legible as one system.</p>
+        <p>Two large galvanized water tanks stood on the hill. In 2022 they were underused and difficult to fill without waste, but their elevation suggested gravity-fed possibilities explored later in the design work.</p>
+        <div class="chapter-links">
+          <a href="water.html">Climb into the Water Atlas</a>
+          <a href="design.html">See the proposed design</a>
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=12" target="_blank" rel="noopener">Hill view, tanks and Persimmon Hill, workbook pp. 12, 15 &amp; 17</a>
+        </div>
+      </div>
+      <div class="paired-photos hill-pair">
+        <figure class="tour-photo portrait-photo">
+          <img src="images/tour-atlas/view-from-hill.webp" alt="View south from Persimmon Hill across the orchard and garden" data-lightbox>
+          <figcaption>Looking south from the hill</figcaption>
+        </figure>
+        <figure class="tour-photo portrait-photo">
+          <img src="images/archive-v3/full/063-10210509798089491.jpg" alt="Community members moving a large wooden water vessel through the farm" data-lightbox>
+          <figcaption>Water, weight and shared effort</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tour-chapter" id="living-systems">
+      <div class="tour-copy">
+        <p class="stop-number">Stop 09</p>
+        <p class="kicker">Water, pollination and decomposition</p>
+        <h2>The quiet systems that keep the place alive</h2>
+        <p>A solar-powered well supplied the property’s primary water, with municipal water available as backup. Nearby and throughout the orchards, bees connected flowering cycles to fruit production. Worm bins turned organic material into castings and compost tea, while larger compost piles held both fertility and unfinished potential.</p>
+        <p>These systems are easy to pass without noticing, yet they form the hidden metabolism of the site: lift water, move pollen, digest waste, return nutrients.</p>
+        <div class="chapter-links">
+          <a href="water.html">Water systems</a>
+          <a href="food.html">Soil and fertility systems</a>
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=16" target="_blank" rel="noopener">Well, beehive, worms and compost, workbook pp. 16 &amp; 37–39</a>
+        </div>
+      </div>
+      <div class="tour-mosaic metabolism-mosaic">
+        <figure class="tour-photo wide-photo">
+          <img src="images/tour-atlas/well-house.webp" alt="Small solar-powered well house beside the driveway" data-lightbox>
+          <figcaption>The solar-powered well house</figcaption>
+        </figure>
+        <figure class="tour-photo">
+          <img src="images/archive-v3/full/072-10212783119241099.jpg" alt="A beekeeper showing a full hive frame to another resident" data-lightbox>
+          <figcaption>Learning together from the hive</figcaption>
+        </figure>
+        <figure class="tour-photo">
+          <img src="images/tour-atlas/worm-bin.webp" alt="Covered worm bin with buckets for compost tea" data-lightbox>
+          <figcaption>Red wigglers and compost tea</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="tour-chapter reverse creek-chapter" id="creek">
+      <div class="tour-copy">
+        <p class="stop-number">Stop 10</p>
+        <p class="kicker">Zone 5</p>
+        <h2>Lion Creek and the place left mostly alone</h2>
+        <p>At the southern boundary the land drops roughly twenty feet into Lion Creek. Dense brush and steep ground made much of this corridor difficult to enter. Bobcats, raccoons, possums and other wildlife moved through an area where human activity was intentionally light.</p>
+        <p>The creek edge is not empty space. It is habitat, drainage, fire history and a reminder that observation can be a form of stewardship. The walking tour ends here because the path itself becomes uncertain.</p>
+        <div class="chapter-links">
+          <a href="climate.html">Enter Climate &amp; Ecology</a>
+          <a href="water.html">Follow the watershed</a>
+          <a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=19" target="_blank" rel="noopener">Zone 5 and Lion Creek, workbook pp. 19–21</a>
+        </div>
+      </div>
+      <figure class="tour-photo creek-photo">
+        <img src="images/tour-atlas/lion-creek-edge.webp" alt="Dense sloping vegetation at the edge of Lion Creek" data-lightbox>
+        <figcaption>The southern creek corridor: habitat, watershed and wild edge</figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <section class="systems-crossroads" aria-labelledby="crossroads-title">
+    <header class="section-heading light-heading">
+      <p class="kicker">Continue the walk</p>
+      <h2 id="crossroads-title">Every stop opens into a deeper atlas</h2>
+      <p>The tour gives the spatial story. The remaining chapters follow individual systems through the same landscape.</p>
+    </header>
+    <div class="crossroads-grid">
+      <a href="climate.html"><span>03</span><strong>Climate &amp; Ecology</strong><small>Sun, wind, fire, plants and habitat</small></a>
+      <a href="water.html"><span>04</span><strong>Water</strong><small>Well, tanks, rainfall, greywater and creek</small></a>
+      <a href="food.html"><span>05</span><strong>Food &amp; Soil</strong><small>Gardens, orchard, animals and fertility</small></a>
+      <a href="buildings.html"><span>06</span><strong>Buildings &amp; Energy</strong><small>Homes, workshops, natural building and power</small></a>
+      <a href="social.html"><span>07</span><strong>Social Permaculture</strong><small>Meals, meetings, friendship and governance</small></a>
+      <a href="design.html"><span>08</span><strong>The Design</strong><small>Maps, analysis and the proposed future</small></a>
+    </div>
+  </section>
+
+  <section class="tour-closing">
+    <blockquote>“The site is not a collection of separate objects. It is a set of relationships discovered by walking.”</blockquote>
+    <p>Full Circle Paradise · field notes from the 2022 design process</p>
+  </section>
+
+  <section class="fieldstation-gallery paper-section" data-fieldstation-gallery="tour" aria-labelledby="tour-gallery-title">
+    <header class="fieldstation-gallery__header">
+      <div>
+        <p class="kicker">More from the walk</p>
+        <h2 id="tour-gallery-title">Browse the property photograph by photograph</h2>
+        <p>Open the larger visual record of paths, dwellings, gardens, water systems, work areas and the wild edge.</p>
+      </div>
+      <button class="fieldstation-gallery__browse" type="button" data-gallery-open>Browse <span data-gallery-count>more</span> photographs</button>
+    </header>
+    <div class="fieldstation-gallery__grid" data-gallery-preview aria-live="polite"></div>
+    <p class="fieldstation-gallery__hint">Select any photograph to open the full-screen gallery. Use the arrow keys or the on-screen controls to continue.</p>
+  </section>
 </main>
-<nav class="chapter-nav" aria-label="Chapter navigation"><a class="previous" href="story.html"><span>Previous</span>The Farm</a><a class="next" href="climate.html"><span>Next</span>Climate & Ecology</a></nav>
+
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  <a class="previous" href="story.html"><span>Previous</span>The Farm</a>
+  <a class="next" href="climate.html"><span>Next</span>Climate &amp; Ecology</a>
+</nav>
 <footer class="site-footer">
   <div><strong>Full Circle Paradise</strong><br><span>A permaculture design for Full Circle Farm</span></div>
   <div>Upper Ojai, California<br>Quail Springs PDC · Spring 2022</div>
   <a href="documents/full-circle-paradise-workbook.pdf">Read the original workbook</a>
 </footer>
 <div class="lightbox" hidden aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt=""><p></p></div>
-</body></html>
+</body>
+</html>

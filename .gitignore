@@ -1,0 +1,6 @@
+
+# Local working backups
+backups/
+*-before-*.html
+__pycache__/
+*.pyc

@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#334325">
-  <meta name="description" content="Climate patterns, ecological context, microclimates and habitat at Full Circle Farm.">
-  <title>Climate &amp; Ecology · Full Circle Paradise</title>
+  <meta name="description" content="A climate and ecology atlas for Full Circle Farm in Upper Ojai: seasonal rain, frost, fire, sectors, microclimates, wildlife and useful plants documented in the 2022 permaculture workbook.">
+  <title>Climate &amp; Ecology Atlas · Full Circle Paradise</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="climate-additions.css">
+  <link rel="stylesheet" href="gallery.css">
   <script src="site.js" defer></script>
+  <script src="gallery-data.js" defer></script>
+  <script src="gallery.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <a class="wordmark" href="index.html" aria-label="Full Circle Paradise home">
     <span>Full Circle Paradise</span>
@@ -32,29 +37,416 @@
   </nav>
 </header>
 
-<main id="main" class="chapter-page">
-<header class="chapter-hero"><div><p class="chapter-label">Chapter 03 · Read the energies entering the site</p><h1>Climate & Ecology</h1><p class="lede">A long dry summer, a short wet winter, wildfire, frost pockets and mountain winds shape every design decision.</p></div><figure><img src="images/p017.webp" alt="Dry summer landscape and mature trees at Full Circle Farm"><figcaption>Summer dryness is the dominant annual pattern</figcaption></figure></header>
-<section class="climate-strip"><div><strong>9b</strong><span>USDA zone</span></div><div><strong>~19 in</strong><span>average annual rain</span></div><div><strong>217 days</strong><span>frost-free season</span></div><div><strong>269 days</strong><span>sunshine annually</span></div></section>
-<section class="article-grid reverse-layout">
-  <article class="prose longform">
-    <h2>Mediterranean rhythm</h2><p class="dropcap">Most rain arrives in winter and early spring. Summer is reliably dry, so every productive system depends on stored soil moisture, irrigation, shade or drought-adapted vegetation.</p>
-    <p>The farm sits close enough to the mountains for local conditions to depart from broad Ojai averages. Cold air settles in low areas, while the raised northeastern end receives more breeze. Buildings and mature trees create a surprisingly varied patchwork of shade and heat.</p>
-    <h2>Five useful microclimates</h2>
-    <ol class="numbered-notes"><li><strong>Farm center:</strong> dense canopy and structures produce the coolest everyday living spaces.</li><li><strong>Vegetable garden:</strong> high solar exposure, with irrigation raising local humidity.</li><li><strong>Persimmon Hill:</strong> slightly elevated, breezier and comparatively dry.</li><li><strong>Hot and dry edges:</strong> exposed areas suited to tough, low-water species.</li><li><strong>Lion Creek banks:</strong> the wettest and least managed ecological edge.</li></ol>
-    <h2>Ecology as infrastructure</h2><p>Mature shade trees, pollinators, creek vegetation and the soil food web perform work that machinery would otherwise have to provide. Some species also create problems: invasive trees, fuel accumulation and aggressive creek plants require persistent management.</p>
-  </article>
-  <aside class="visual-column">
-    <figure class="map-frame"><img src="images/p060.webp" alt="Hand-drawn microclimate map" data-lightbox><figcaption>Microclimate map: shade, garden humidity, exposed heat and creek moisture</figcaption></figure>
-    <figure class="polaroid tilt-left"><img src="images/p036.webp" alt="Ladder beside a pomegranate tree" data-lightbox><figcaption>Drought-tolerant fruit already thriving on the site</figcaption></figure>
-  </aside>
-</section>
-<section class="paper-section ecology-note"><header class="section-heading"><p class="kicker">Design response</p><h2>Shade is a water strategy</h2></header><div class="three-columns"><p>Preserve the best existing canopy around homes and gathering spaces.</p><p>Replace hazardous or invasive trees gradually rather than removing all shade at once.</p><p>Use layered plantings, mulch and wind protection to reduce irrigation demand.</p></div></section>
+<main id="main" class="chapter-page climate-atlas-page">
+  <header class="chapter-hero climate-hero">
+    <div>
+      <p class="chapter-label">Chapter 03 · Climate &amp; ecology atlas</p>
+      <h1>Climate &amp; Ecology</h1>
+      <p class="lede">A long dry summer, concentrated winter rain, frost, wildfire, mature shade and a deeply varied creek corridor shape every decision at Full Circle Farm.</p>
+    </div>
+    <figure>
+      <img src="images/people-first/full/climate-thomas-fire.webp" alt="Robert Redecker and Shaun Walton after defending the main house during the Thomas Fire" style="object-position:center 43%;">
+      <figcaption>Robert and Shaun after the Thomas Fire</figcaption>
+    </figure>
+  </header>
+
+  <section class="climate-opening paper-section" id="overview" aria-labelledby="climate-overview-title">
+    <header class="section-heading">
+      <p class="kicker">A 2022 reading of the land</p>
+      <h2 id="climate-overview-title">Climate is regional; experience is local</h2>
+      <p>The workbook begins with Ojai climate-station averages, then corrects that broad picture through observations made on the farm itself: cool shaded paths, a breezy hill, hot orchard edges, humid garden beds and a creek channel that feels almost tropical in winter.</p>
+    </header>
+
+    <nav class="climate-atlas-nav" aria-label="Climate atlas contents">
+      <a href="#rhythm">Seasonal rhythm</a>
+      <a href="#temperature">Heat &amp; frost</a>
+      <a href="#sectors">Sector map</a>
+      <a href="#microclimates">Five microclimates</a>
+      <a href="#fire">Fire &amp; resilience</a>
+      <a href="#ecology">Food web &amp; birds</a>
+      <a href="#plants">Useful plants</a>
+      <a href="#alpha">Climate Water Project</a>
+    </nav>
+
+    <div class="climate-facts" aria-label="Climate facts recorded in the 2022 workbook">
+      <div><strong>9b</strong><span>USDA zone</span></div>
+      <div><strong>18.9–20&quot;</strong><span>annual rain figures</span></div>
+      <div><strong>217</strong><span>frost-free days</span></div>
+      <div><strong>269</strong><span>sunny days</span></div>
+      <div><strong>36.3</strong><span>days above 90°F</span></div>
+      <div><strong>~1,250'</strong><span>site elevation</span></div>
+    </div>
+
+    <aside class="archive-note climate-archive-note">
+      <strong>How to read these numbers.</strong> The workbook used the nearest Ojai station, listed at 744–745 feet, while the farm itself was estimated at roughly 1,250 feet. It also records both 18.9–19 inches and a rounded 20-inch rainfall schedule. This page preserves those differences rather than pretending they are identical measurements.
+      <a href="documents/full-circle-paradise-workbook.pdf#page=42" target="_blank" rel="noopener">Workbook pp. 42–47</a>
+    </aside>
+  </section>
+
+  <section class="climate-section climate-paper" id="rhythm" aria-labelledby="rhythm-title">
+    <header class="section-heading">
+      <p class="kicker">01 · The Mediterranean year</p>
+      <h2 id="rhythm-title">Rain arrives in a short season</h2>
+      <p>The workbook's rounded monthly schedule shows nearly all precipitation falling between autumn and spring. June through August are recorded as rainless, making stored soil moisture, mulch, shade and irrigation central to summer survival.</p>
+    </header>
+
+    <div class="rainfall-layout">
+      <div class="rainfall-chart" role="img" aria-label="Workbook monthly rainfall schedule in inches: January 3, February 3, March 2, April 2, May 1, June 0, July 0, August 0, September 1, October 2, November 3, December 3">
+        <div class="rain-month"><span class="rain-bar" style="--rain: 3"></span><strong>3&quot;</strong><small>Jan</small></div>
+        <div class="rain-month"><span class="rain-bar" style="--rain: 3"></span><strong>3&quot;</strong><small>Feb</small></div>
+        <div class="rain-month"><span class="rain-bar" style="--rain: 2"></span><strong>2&quot;</strong><small>Mar</small></div>
+        <div class="rain-month"><span class="rain-bar" style="--rain: 2"></span><strong>2&quot;</strong><small>Apr</small></div>
+        <div class="rain-month"><span class="rain-bar" style="--rain: 1"></span><strong>1&quot;</strong><small>May</small></div>
+        <div class="rain-month dry"><span class="rain-bar" style="--rain: 0"></span><strong>0</strong><small>Jun</small></div>
+        <div class="rain-month dry"><span class="rain-bar" style="--rain: 0"></span><strong>0</strong><small>Jul</small></div>
+        <div class="rain-month dry"><span class="rain-bar" style="--rain: 0"></span><strong>0</strong><small>Aug</small></div>
+        <div class="rain-month"><span class="rain-bar" style="--rain: 1"></span><strong>1&quot;</strong><small>Sep</small></div>
+        <div class="rain-month"><span class="rain-bar" style="--rain: 2"></span><strong>2&quot;</strong><small>Oct</small></div>
+        <div class="rain-month"><span class="rain-bar" style="--rain: 3"></span><strong>3&quot;</strong><small>Nov</small></div>
+        <div class="rain-month"><span class="rain-bar" style="--rain: 3"></span><strong>3&quot;</strong><small>Dec</small></div>
+      </div>
+
+      <div class="season-notes">
+        <article>
+          <span>Winter</span>
+          <h3>Recharge</h3>
+          <p>Rain, creek flow and cool temperatures replenish soil and expose drainage problems.</p>
+        </article>
+        <article>
+          <span>Spring</span>
+          <h3>Growth</h3>
+          <p>Soil moisture and warming days support the strongest burst of annual growth.</p>
+        </article>
+        <article>
+          <span>Summer</span>
+          <h3>Conservation</h3>
+          <p>Shade, mulch, deep roots and carefully directed irrigation carry the landscape through heat.</p>
+        </article>
+        <article>
+          <span>Autumn</span>
+          <h3>Preparation</h3>
+          <p>Fire danger can remain high before the first dependable storms return.</p>
+        </article>
+      </div>
+    </div>
+
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=65" target="_blank" rel="noopener">Monthly rainfall schedule, workbook p. 65</a></p>
+  </section>
+
+  <section class="climate-section climate-paper temperature-section" id="temperature" aria-labelledby="temperature-title">
+    <header class="section-heading">
+      <p class="kicker">02 · Heat, cold and the growing season</p>
+      <h2 id="temperature-title">A long season with sharp edges</h2>
+      <p>Ojai's averages suggest a generous growing season, but the workbook also records freezing nights, dozens of days above 90°F and extraordinary heat. The design response is not to chase one ideal temperature; it is to create refuge at both extremes.</p>
+    </header>
+
+    <div class="temperature-grid">
+      <article class="temperature-card warm">
+        <span>Summer</span>
+        <strong>85.5–86.8°F</strong>
+        <p>Average July/August high reported in the workbook.</p>
+      </article>
+      <article class="temperature-card hot">
+        <span>Very hot days</span>
+        <strong>36.3 days</strong>
+        <p>Annual days above 90°F in the referenced Ojai climate summary.</p>
+      </article>
+      <article class="temperature-card cool">
+        <span>Winter</span>
+        <strong>39.3–40.1°F</strong>
+        <p>Average December/January nighttime low.</p>
+      </article>
+      <article class="temperature-card frost">
+        <span>Freezing nights</span>
+        <strong>13.1 days</strong>
+        <p>Annual nights below 32°F in the regional summary.</p>
+      </article>
+    </div>
+
+    <div class="frost-window" aria-label="Average frost window and growing season">
+      <div class="frost-marker spring"><strong>Apr 3</strong><span>average last spring frost</span></div>
+      <div class="growing-line"><span>217-day frost-free season</span></div>
+      <div class="frost-marker autumn"><strong>Nov 7</strong><span>average first fall frost</span></div>
+    </div>
+
+    <div class="extreme-note-grid">
+      <aside><strong>118°F</strong><span>Record high listed for 2020</span></aside>
+      <aside><strong>29°F</strong><span>Record low listed for 2017</span></aside>
+      <aside><strong>25–30°F</strong><span>USDA Zone 9b minimum range</span></aside>
+    </div>
+
+    <aside class="design-reading-note">
+      <strong>Design reading:</strong> regional averages are useful for planning, but planting decisions should follow the actual frost pockets, shade lines, wind exposure and soil moisture observed on the farm.
+    </aside>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=42" target="_blank" rel="noopener">Climate survey, workbook pp. 42–47</a></p>
+  </section>
+
+  <section class="climate-section climate-paper" id="sectors" aria-labelledby="sectors-title">
+    <header class="section-heading">
+      <p class="kicker">03 · Energies entering the site</p>
+      <h2 id="sectors-title">The sector analysis</h2>
+      <p>Sectors are influences that cannot be controlled at their source—wind, fire, sun, floodwater, noise, wildlife and views—but can be opened, redirected, softened or blocked as they cross the property.</p>
+    </header>
+
+    <div class="sector-layout">
+      <figure class="atlas-map climate-map-feature">
+        <a href="images/climate-atlas/sector-analysis-full.png" target="_blank" rel="noopener" aria-label="Open the sector analysis map at full resolution">
+          <img src="images/climate-atlas/sector-analysis-preview.webp" alt="Hand-drawn sector analysis map showing wind, fire, sun, tree cover, noise and Lion Creek">
+        </a>
+        <figcaption>
+          <strong>Sector analysis map</strong>
+          The drawing identifies westerly wind, eastern Santa Ana wind, fire-prone creek vegetation, extensive canopy, road noise and the southern creek edge.
+          <a href="images/climate-atlas/sector-analysis-full.png" target="_blank" rel="noopener">Open full resolution</a>
+          <a href="documents/full-circle-paradise-workbook.pdf#page=55" target="_blank" rel="noopener">Workbook pp. 55–56</a>
+        </figcaption>
+      </figure>
+
+      <div class="sector-cards">
+        <article><span aria-hidden="true">↔</span><h3>Wind</h3><p>The farm was described as a wind dead zone. Ordinary wind usually arrived from the west; dry Santa Ana wind arrived from the east during fire season.</p></article>
+        <article><span aria-hidden="true">♨</span><h3>Fire</h3><p>Overgrown vegetation, especially along Lion Creek, was the most urgent natural hazard recorded in the workbook.</p></article>
+        <article><span aria-hidden="true">☀</span><h3>Sun &amp; shade</h3><p>Approximately half the property was described as tree-covered. Shade was treated as essential infrastructure for daily life.</p></article>
+        <article><span aria-hidden="true">≈</span><h3>Floodwater</h3><p>Lion Creek rose several feet in winter storms and had occasionally approached the house, then drained quickly.</p></article>
+        <article><span aria-hidden="true">◖</span><h3>Noise &amp; privacy</h3><p>Road traffic, weekend motorcycles, neighboring activity and barking dogs shaped the property's social edges.</p></article>
+        <article><span aria-hidden="true">⌁</span><h3>Wildlife</h3><p>The creek corridor linked the farm to coyotes, birds and other wildlife moving from the surrounding landscape.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="climate-section climate-paper" id="microclimates" aria-labelledby="microclimates-title">
+    <header class="section-heading">
+      <p class="kicker">04 · Five climates within 5.5 acres</p>
+      <h2 id="microclimates-title">The farm is not one place</h2>
+      <p>Averages disappear at walking speed. Twenty-five feet of elevation, a wall of trees, regular sprinklers or a steep creek bank are enough to create different planting conditions within a few minutes' walk.</p>
+    </header>
+
+    <figure class="atlas-map microclimate-map-feature">
+      <a href="images/climate-atlas/microclimate-map-full.png" target="_blank" rel="noopener" aria-label="Open the microclimate map at full resolution">
+        <img src="images/climate-atlas/microclimate-map-preview.webp" alt="Hand-drawn map of five Full Circle Farm microclimates">
+      </a>
+      <figcaption>
+        <strong>Microclimate map</strong>
+        Shade, garden humidity, breezy Persimmon Hill, hot dry orchard edge and the wet Lion Creek banks.
+        <a href="images/climate-atlas/microclimate-map-full.png" target="_blank" rel="noopener">Open full resolution</a>
+        <a href="documents/full-circle-paradise-workbook.pdf#page=60" target="_blank" rel="noopener">Workbook pp. 60–62</a>
+      </figcaption>
+    </figure>
+
+    <div class="microclimate-grid">
+      <article class="microclimate-card shade-card">
+        <figure><img src="images/archive-v3/full/048-ef83bfd8-8793-4852-beed-efefd8d3f915.jpg" alt="A smiling resident planting a young tree beside the dome"></figure>
+        <div><span>01 · Shady &amp; cool</span><h3>Farm Center</h3><p>Dense structures and a canopy of chinaberry, tree-of-heaven, evergreens, loquat and redwood create the coolest everyday living area. The workbook especially notes the shade cast by loquats.</p></div>
+      </article>
+
+      <article class="microclimate-card garden-card">
+        <figure><img src="images/archive-v3/full/041-a5e0200c-112e-4e85-93c9-bac98ce9b6eb.jpg" alt="People working in the sunny vegetable garden"></figure>
+        <div><span>02 · Hot &amp; humid</span><h3>Vegetable Garden</h3><p>Full sun raises heat, while frequent irrigation increases local humidity. Sunflowers were singled out as particularly successful here.</p></div>
+      </article>
+
+      <article class="microclimate-card hill-card">
+        <figure><img src="images/archive-v3/full/036-766927d8-ca20-40fa-accd-a2288ad4a3d1.jpg" alt="Robert holding an autumn persimmon harvest beneath golden leaves"></figure>
+        <div><span>03 · Breezy &amp; cool</span><h3>Persimmon Hill</h3><p>About 25 feet higher than the center, the hill receives more breeze. It is cooler but drier, with large eucalyptus trees competing for water.</p></div>
+      </article>
+
+      <article class="microclimate-card dry-card">
+        <figure><img src="images/archive-v3/full/025-11bc5882-b4ec-42d4-ba9b-a10d07f29dd1.jpg" alt="People sorting a cart full of pomegranates beneath the orchard trees"></figure>
+        <div><span>04 · Hot &amp; dry</span><h3>Northwest Orchard Edge</h3><p>The least-developed end of the west orchard remains exposed to year-round sun despite tall eucalyptus overhead. Tough, low-water species are the natural fit.</p></div>
+      </article>
+
+      <article class="microclimate-card creek-card">
+        <figure><img src="images/climate-atlas/lion-creek-edge.webp" alt="Dense green vegetation along the Lion Creek edge"></figure>
+        <div><span>05 · Cool &amp; wet</span><h3>Lion Creek Banks</h3><p>Steep banks descend roughly 25 feet into the wettest, shadiest part of the property. Winter brought flowing water, damp air and frogs; even after summer drying, cool air continued to settle there.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="climate-section climate-paper" id="fire" aria-labelledby="fire-title">
+    <header class="section-heading">
+      <p class="kicker">05 · Living with fire</p>
+      <h2 id="fire-title">Resilience begins before ignition</h2>
+      <p>The workbook names wildfire as the region's most likely natural disaster. It records that the 2017 Thomas Fire burned several buildings and dwellings at Full Circle Farm while missing the main house, workshop and barn.</p>
+    </header>
+
+    <div class="fire-layout">
+      <div class="fire-principles">
+        <article><span>01</span><h3>Clear continuously</h3><p>Brush management was an annual requirement, not a one-time project. A new chipper was intended to turn cut material into a useful resource.</p></article>
+        <article><span>02</span><h3>Protect valuable shade</h3><p>Fire clearance must be selective. Removing every mature tree would sacrifice cooling, habitat and quality of life.</p></article>
+        <article><span>03</span><h3>Reduce dry fuel</h3><p>Unmanaged creek-edge growth, deadwood and summer-dry grasses were the most obvious fuel concerns.</p></article>
+        <article><span>04</span><h3>Keep access legible</h3><p>The workbook notes one principal entrance and a rear fire exit through a neighbor's property—important constraints during an emergency.</p></article>
+        <article><span>05</span><h3>Plant for recovery</h3><p>Fire-resistant and regionally adapted plants can help rebuild living cover without recreating dense, unmanaged fuel.</p></article>
+        <article><span>06</span><h3>Observe after disturbance</h3><p>Fire is also an ecological reset. Pioneer plants reveal how open soil begins to cover and heal itself.</p></article>
+      </div>
+
+      <figure class="fire-photo">
+        <img src="images/climate-atlas/cabin-in-trees.webp" alt="Small wooden cabin surrounded by mature trees at Full Circle Farm">
+        <figcaption><strong>Structures within a living canopy</strong> The resilience challenge is to maintain defensible space without erasing the shade and habitat that make the farm habitable.</figcaption>
+      </figure>
+    </div>
+
+    <aside class="historical-fire-note"><strong>Historical record:</strong> this section summarizes the farm's 2022 workbook observations. It is not a current fire-safety inspection or an emergency plan.</aside>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=54" target="_blank" rel="noopener">Regional challenges and sector analysis, workbook pp. 54–56</a></p>
+  </section>
+
+  <section class="climate-section climate-paper" id="ecology" aria-labelledby="ecology-title">
+    <header class="section-heading">
+      <p class="kicker">06 · Chaparral relationships</p>
+      <h2 id="ecology-title">Ecology is a network of appetite and refuge</h2>
+      <p>The workbook identifies the surrounding ecological pattern as California chaparral and records a small but vivid food web operating across gardens, orchards, chicken areas and the creek corridor.</p>
+    </header>
+
+    <div class="food-web" aria-label="Local food web described in the workbook">
+      <div class="food-node prey"><span>Gophers</span><span>Rabbits</span><span>Squirrels</span><span>Mice</span></div>
+      <div class="food-arrow" aria-hidden="true">→</div>
+      <div class="food-node predators"><span>Hawks</span><span>Owls</span><span>Bobcats</span><span>Coyotes</span></div>
+      <p>Predators help regulate small mammals; coyotes and bobcats sometimes also take chickens.</p>
+    </div>
+
+    <div class="ecology-layout">
+      <div class="bird-list">
+        <h3>Five birds named in the survey</h3>
+        <ul>
+          <li><span aria-hidden="true">01</span>Red-tailed hawk</li>
+          <li><span aria-hidden="true">02</span>Owl</li>
+          <li><span aria-hidden="true">03</span>Hummingbird</li>
+          <li><span aria-hidden="true">04</span>House finch</li>
+          <li><span aria-hidden="true">05</span>Thrasher</li>
+        </ul>
+      </div>
+
+      <figure class="ecology-photo">
+        <img src="images/archive-v3/full/072-10212783119241099.jpg" alt="Two residents learning together from a full hive frame">
+        <figcaption><strong>Pollinators as farm infrastructure</strong> Habitat, bloom succession and reduced disturbance support the insects on which gardens and orchards depend.</figcaption>
+      </figure>
+
+      <div class="pioneer-list">
+        <h3>Pioneer plants recorded nearby</h3>
+        <ul>
+          <li>Mustard</li>
+          <li>Horehound</li>
+          <li>Fiddleneck</li>
+          <li>Caterpillar phacelia</li>
+          <li>Deerweed</li>
+        </ul>
+        <p>These early-succession plants occupy open or disturbed ground. Some are useful indicators; some require control. Together they reveal how exposed soil begins to reorganize.</p>
+      </div>
+    </div>
+
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=68" target="_blank" rel="noopener">Local ecology survey, workbook pp. 68–70</a></p>
+  </section>
+
+  <section class="climate-section climate-paper" id="plants" aria-labelledby="plants-title">
+    <header class="section-heading">
+      <p class="kicker">07 · Useful and culturally significant plants</p>
+      <h2 id="plants-title">Five plants from the local survey</h2>
+      <p>The workbook's plant survey connects habitat with traditional, ceremonial and practical uses. These notes are preserved here as part of the historical design record.</p>
+    </header>
+
+    <div class="useful-plant-grid">
+      <article>
+        <span class="plant-habitat">Moist meadows &amp; wetlands</span>
+        <h3>Sweetgrass</h3>
+        <p>An aromatic perennial spreading by rhizomes. The workbook notes Indigenous ceremonial, medicinal and basket-making traditions.</p>
+      </article>
+      <article>
+        <span class="plant-habitat">Shady slopes &amp; oak woodland</span>
+        <h3>Hummingbird Sage</h3>
+        <p>A fragrant California sage with rose-lilac spring flowers, well suited to woodland and coastal-sage conditions.</p>
+      </article>
+      <article>
+        <span class="plant-habitat">Coastal sage scrub</span>
+        <h3>White Sage</h3>
+        <p>A deeply significant Southern California native supporting bees, butterflies, birds and cultural traditions; wild populations face multiple pressures.</p>
+      </article>
+      <article>
+        <span class="plant-habitat">Drainages &amp; damp ground</span>
+        <h3>California Mugwort</h3>
+        <p>An aromatic rhizomatous native associated with moist sites, restoration, erosion control and ceremonial use.</p>
+      </article>
+      <article>
+        <span class="plant-habitat">Grassland &amp; open forest</span>
+        <h3>Yarrow</h3>
+        <p>A widespread flowering perennial and butterfly-garden plant with a long history of traditional wound-related use.</p>
+      </article>
+    </div>
+
+    <div class="plant-context-grid">
+      <aside><strong>Also recorded</strong><p>Clover, mallow, purslane, nettles and mullein.</p></aside>
+      <aside><strong>Wild food</strong><p>Acorns were named as a historically important seasonal food.</p></aside>
+      <aside><strong>Personal note</strong><p>Robert recorded ceremonial use of white sage, sweetgrass and mugwort, and using yarrow on a wound.</p></aside>
+    </div>
+
+    <aside class="plant-caution"><strong>Archive, not medical instruction.</strong> Traditional or personal uses are reported from the workbook. Plant identification, ethical harvesting, cultural context and medical safety require qualified guidance.</aside>
+    <p class="source-centered"><a class="source-link" href="documents/full-circle-paradise-workbook.pdf#page=70" target="_blank" rel="noopener">Local plant survey, workbook pp. 70–72</a></p>
+  </section>
+
+  <section class="climate-section climate-paper" id="alpha" aria-labelledby="alpha-title">
+    <header class="section-heading">
+      <p class="kicker">08 · A friendship and a wider inquiry</p>
+      <h2 id="alpha-title">From one landscape to the water cycle</h2>
+      <p>Alpha Lo lived at Full Circle Paradise and later created the Climate Water Project. His work extends a question that appears throughout this design: how do living landscapes slow, hold, cycle and return water?</p>
+    </header>
+
+    <div class="alpha-climate-layout">
+      <figure>
+        <img src="images/climate-atlas/alpha-robert-full-circle-2021.webp" alt="Robert Redecker and Alpha Lo harvesting pomegranates at Full Circle Paradise in October 2021">
+        <figcaption><strong>Robert and Alpha harvesting pomegranates</strong> Full Circle Paradise, October 2021.</figcaption>
+      </figure>
+      <div class="alpha-reading">
+        <p>For readers who want to continue beyond the farm-scale atlas, the Climate Water Project explores water cycles, ecology, land restoration and climate through essays and long-form conversations.</p>
+        <div class="reading-links">
+          <a href="https://climatewaterproject.substack.com/" target="_blank" rel="noopener"><strong>Climate Water Project</strong><span>Essays and newsletter →</span></a>
+          <a href="https://climatewaterproject.substack.com/p/slow-water" target="_blank" rel="noopener"><strong>Slow Water</strong><span>A useful starting essay →</span></a>
+          <a href="https://podcasts.apple.com/us/podcast/climate-water-project/id1651730827" target="_blank" rel="noopener"><strong>Climate Water Project Podcast</strong><span>Long-form interviews →</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="climate-section climate-paper climate-response" id="response" aria-labelledby="response-title">
+    <header class="section-heading">
+      <p class="kicker">09 · Design response</p>
+      <h2 id="response-title">Work with the pattern already present</h2>
+      <p>The climate atlas does not point to one heroic intervention. It points to a web of modest responses that reinforce one another.</p>
+    </header>
+
+    <ol class="response-path">
+      <li><span>Preserve</span><strong>Mature shade</strong><p>Keep the canopy that protects homes and shared pathways, while gradually addressing hazardous trees.</p></li>
+      <li><span>Slow</span><strong>Winter water</strong><p>Use mulch, roots, swales and repaired drainage to turn concentrated storms into stored soil moisture.</p></li>
+      <li><span>Adapt</span><strong>Plant placement</strong><p>Match species to the five observed microclimates instead of treating the whole farm as one exposure.</p></li>
+      <li><span>Reduce</span><strong>Fire fuel</strong><p>Maintain access and defensible space while converting brush and woody waste into useful material where appropriate.</p></li>
+      <li><span>Connect</span><strong>Habitat</strong><p>Support birds, predators and pollinators through layered vegetation and refuge near productive areas.</p></li>
+      <li><span>Observe</span><strong>Change over time</strong><p>Return to the maps after drought, fire, storms and management changes; revise the design from what the land reveals.</p></li>
+    </ol>
+  </section>
+
+  <section class="fieldstation-gallery paper-section" data-fieldstation-gallery="climate" aria-labelledby="climate-gallery-title">
+    <header class="fieldstation-gallery__header">
+      <div>
+        <p class="kicker">Field photographs</p>
+        <h2 id="climate-gallery-title">Browse climate and ecology</h2>
+        <p>Seasonal conditions, shade, fire, habitat, gardens, trees and the many microclimates found across the farm.</p>
+      </div>
+      <button class="fieldstation-gallery__browse" type="button" data-gallery-open>Browse <span data-gallery-count>more</span> photographs</button>
+    </header>
+    <div class="fieldstation-gallery__grid" data-gallery-preview aria-live="polite"></div>
+    <p class="fieldstation-gallery__hint">Select any photograph to open the full-screen gallery. Use the arrow keys or the on-screen controls to continue.</p>
+  </section>
 </main>
-<nav class="chapter-nav" aria-label="Chapter navigation"><a class="previous" href="tour.html"><span>Previous</span>Site Tour</a><a class="next" href="water.html"><span>Next</span>Water</a></nav>
+
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  <a class="previous" href="tour.html"><span>Previous</span>Site Tour</a>
+  <a class="next" href="water.html"><span>Next</span>Water</a>
+</nav>
+
 <footer class="site-footer">
   <div><strong>Full Circle Paradise</strong><br><span>A permaculture design for Full Circle Farm</span></div>
   <div>Upper Ojai, California<br>Quail Springs PDC · Spring 2022</div>
   <a href="documents/full-circle-paradise-workbook.pdf">Read the original workbook</a>
 </footer>
-<div class="lightbox" hidden aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt=""><p></p></div>
-</body></html>
+
+<div class="lightbox" hidden aria-hidden="true">
+  <button type="button" aria-label="Close image">×</button>
+  <img alt="">
+  <p></p>
+</div>
+</body>
+</html>

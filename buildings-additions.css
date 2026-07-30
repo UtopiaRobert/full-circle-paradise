@@ -1,0 +1,490 @@
+/* =========================================================
+   BUILDINGS & ENERGY ATLAS
+   Page-scoped additions for buildings.html
+   ========================================================= */
+
+.buildings-atlas-page {
+  --building-clay: #9b6f4e;
+  --building-clay-soft: #ead8c4;
+  --building-wood: #806a45;
+  --building-solar: #b58a45;
+  --building-steel: #687777;
+  --building-plaster: #d6c5a0;
+  --building-green: #66764d;
+}
+
+.buildings-hero > div {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(181, 138, 69, .12), transparent 25%),
+    linear-gradient(135deg, rgba(255,255,255,.27), transparent 43%),
+    var(--paper-light);
+}
+
+.buildings-hero h1::after {
+  content: "shelter · repair · gathering · energy";
+  display: block;
+  margin-top: .75rem;
+  color: var(--moss);
+  font: .83rem/1.4 var(--hand);
+  letter-spacing: .03em;
+}
+
+.buildings-hero figure img {
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  object-fit: cover;
+  object-position: center 54%;
+}
+
+.buildings-opening,
+.buildings-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.buildings-opening::before,
+.buildings-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 8% 13%, rgba(106, 91, 55, .045) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 82% 77%, rgba(106, 91, 55, .035) 0 1px, transparent 1.4px);
+  background-size: 10px 10px, 14px 14px;
+}
+
+.buildings-paper {
+  padding: 5rem clamp(1.4rem, 5vw, 5rem);
+  border-top: 1px solid var(--line-soft);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.13), transparent 19%),
+    var(--paper-light);
+}
+
+.buildings-paper:nth-of-type(even) {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.14), transparent 20%),
+    rgba(238, 225, 194, .58);
+}
+
+.buildings-opening .section-heading,
+.buildings-section .section-heading {
+  max-width: 870px;
+  margin-inline: auto;
+}
+
+.buildings-atlas-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .55rem;
+  max-width: 980px;
+  margin: 2.2rem auto 2.8rem;
+}
+
+.buildings-atlas-nav a {
+  padding: .48rem .8rem;
+  border: 1px solid rgba(79, 91, 55, .28);
+  border-radius: 999px;
+  background: rgba(255,255,255,.27);
+  color: var(--forest-dark);
+  text-decoration: none;
+  font: .72rem/1.2 var(--sans);
+}
+
+.buildings-atlas-nav a:hover {
+  border-color: var(--terracotta);
+  background: rgba(255,255,255,.55);
+}
+
+.buildings-facts {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  max-width: 1120px;
+  margin: 0 auto 2rem;
+  border-block: 1px solid var(--line);
+}
+
+.buildings-facts > div {
+  min-width: 0;
+  padding: 1.25rem .65rem 1.15rem;
+  text-align: center;
+  border-left: 1px solid var(--line-soft);
+}
+
+.buildings-facts > div:first-child { border-left: 0; }
+.buildings-facts strong {
+  display: block;
+  color: var(--forest-dark);
+  font: 600 clamp(1.3rem, 2.2vw, 2rem)/1 var(--display);
+}
+.buildings-facts span {
+  display: block;
+  margin-top: .45rem;
+  color: var(--ink-soft);
+  font: .62rem/1.3 var(--sans);
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+.buildings-archive-note { max-width: 940px; margin: 0 auto; }
+.buildings-archive-note a { display: inline-block; margin-left: .35rem; }
+
+/* Village */
+.dwelling-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 1170px;
+  margin: 3rem auto 1.5rem;
+}
+
+.dwelling-card {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  border-top: 4px solid var(--building-clay);
+  background: rgba(255,255,255,.29);
+}
+
+.dwelling-card.wide {
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(240px, .85fr);
+}
+
+.dwelling-card:nth-child(2) { border-top-color: var(--building-steel); }
+.dwelling-card:nth-child(3) { border-top-color: var(--building-green); }
+.dwelling-card:nth-child(4) { border-top-color: var(--building-solar); }
+.dwelling-card:nth-child(5) { border-top-color: var(--building-wood); }
+.dwelling-card figure { margin: 0; min-height: 235px; }
+.dwelling-card figure img { width: 100%; height: 100%; min-height: 235px; object-fit: cover; }
+.dwelling-card.wide figure img { min-height: 330px; }
+.dwelling-card div { padding: 1.2rem; }
+.dwelling-card div > span,
+.shared-grid div > span,
+.materials-notes article > span,
+.energy-cards article > span,
+.tools-note > span,
+.closing-principles article > span {
+  color: var(--terracotta);
+  font: .64rem/1.2 var(--sans);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.dwelling-card h3 { margin: .2rem 0 .45rem; font-size: 1.35rem; }
+.dwelling-card p { margin: 0; line-height: 1.48; font-size: .92rem; }
+
+.village-reading-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  max-width: 1030px;
+  margin: 0 auto;
+}
+.village-reading-grid aside {
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--building-green);
+  background: rgba(255,255,255,.26);
+}
+.village-reading-grid aside:nth-child(2) { border-left-color: var(--building-clay); }
+.village-reading-grid aside:nth-child(3) { border-left-color: var(--building-solar); }
+.village-reading-grid strong { font: 600 1.1rem/1.2 var(--display); }
+.village-reading-grid p { margin: .3rem 0 0; font-size: .9rem; line-height: 1.48; }
+
+/* Shared */
+.shared-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 1160px;
+  margin: 3rem auto 1rem;
+}
+.shared-grid article {
+  display: grid;
+  grid-template-columns: minmax(190px, 42%) minmax(0, 58%);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+}
+.shared-grid figure { margin: 0; min-height: 260px; }
+.shared-grid img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; }
+.shared-grid div { padding: 1.2rem; }
+.shared-grid h3 { margin: .2rem 0 .4rem; font-size: 1.35rem; }
+.shared-grid p { margin: 0; font-size: .92rem; line-height: 1.48; }
+
+.tools-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, .85fr) minmax(210px, .55fr) minmax(280px, .8fr);
+  gap: 1rem;
+  max-width: 1160px;
+  margin: 1rem auto 0;
+  align-items: stretch;
+}
+.tools-layout figure,
+.earthdome-feature,
+.solar-feature,
+.buildings-map,
+.barn-layout > figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.27);
+}
+.tools-layout figure { display: flex; flex-direction: column; }
+.tools-layout figure img { width: 100%; height: 270px; object-fit: cover; }
+.tools-layout figure:nth-child(2) img { object-position: center 58%; }
+.tools-layout figcaption,
+.earthdome-feature figcaption,
+.solar-feature figcaption,
+.buildings-map figcaption,
+.barn-layout figcaption {
+  padding: .9rem 1rem 1.05rem;
+  border-top: 1px solid var(--line-soft);
+  background: rgba(248, 241, 223, .82);
+  line-height: 1.45;
+  font-size: .9rem;
+}
+.tools-layout figcaption strong,
+.earthdome-feature figcaption strong,
+.solar-feature figcaption strong,
+.buildings-map figcaption strong,
+.barn-layout figcaption strong { display: block; font: 600 1.08rem/1.2 var(--display); }
+.tools-note {
+  padding: 1.3rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+}
+.tools-note h3 { margin: .25rem 0 .5rem; font-size: 1.4rem; }
+.tools-note p { margin: 0; line-height: 1.52; }
+
+/* Materials */
+.materials-layout {
+  display: grid;
+  grid-template-columns: minmax(330px, .85fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  max-width: 1120px;
+  margin: 3rem auto 0;
+  align-items: start;
+}
+.earthdome-feature img { width: 100%; min-height: 500px; height: 100%; object-fit: cover; }
+.materials-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .9rem;
+}
+.materials-notes article {
+  padding: 1.15rem;
+  border-top: 4px solid var(--building-clay);
+  border-inline: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.27);
+}
+.materials-notes article:nth-child(2) { border-top-color: var(--building-green); }
+.materials-notes article:nth-child(3) { border-top-color: var(--building-solar); }
+.materials-notes article:nth-child(4) { border-top-color: var(--building-steel); }
+.materials-notes h3 { margin: .3rem 0 .4rem; font-size: 1.28rem; }
+.materials-notes p { margin: 0; font-size: .91rem; line-height: 1.48; }
+.materials-caution,
+.solar-archive-note {
+  max-width: 930px;
+  margin: 1.5rem auto;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--building-clay);
+  background: rgba(155,111,78,.08);
+}
+.solar-archive-note { border-left-color: var(--building-solar); background: rgba(181,138,69,.09); }
+
+/* Energy */
+.energy-path {
+  display: flex;
+  align-items: stretch;
+  gap: .6rem;
+  max-width: 1160px;
+  margin: 3rem auto 2rem;
+}
+.energy-path > div {
+  flex: 1;
+  min-width: 0;
+  padding: 1.1rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.29);
+}
+.energy-path > div > span {
+  color: var(--terracotta);
+  font: .7rem/1 var(--sans);
+}
+.energy-path strong { display: block; margin: .25rem 0 .35rem; font: 600 1.25rem/1.15 var(--display); }
+.energy-path p { margin: 0; font-size: .87rem; line-height: 1.43; }
+.energy-path b { align-self: center; color: var(--building-solar); font: 1.6rem/1 var(--display); }
+
+.energy-layout {
+  display: grid;
+  grid-template-columns: minmax(330px, .88fr) minmax(0, 1.12fr);
+  gap: 1.5rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.solar-feature { display: flex; flex-direction: column; }
+.solar-feature img { width: 100%; height: 100%; min-height: 430px; object-fit: cover; }
+.energy-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.energy-cards article {
+  padding: 1.15rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.27);
+}
+.energy-cards h3 { margin: .25rem 0 .4rem; font-size: 1.28rem; }
+.energy-cards p { margin: 0; font-size: .91rem; line-height: 1.48; }
+
+/* Zone 1 */
+.zone-one-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(350px, .88fr);
+  gap: 2rem;
+  max-width: 1170px;
+  margin: 3rem auto 0;
+  align-items: start;
+}
+.buildings-map > a { display: block; padding: .8rem; background: rgba(229,214,177,.4); }
+.buildings-map img { width: 100%; max-height: 780px; object-fit: contain; background: #eee4ce; }
+.buildings-map figcaption a { display: inline-block; margin: .4rem .7rem 0 0; font: .66rem/1.2 var(--sans); }
+.zone-one-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.zone-one-cards article {
+  position: relative;
+  min-width: 0;
+  padding: 1.05rem 1rem 1rem 3.1rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+}
+.zone-one-cards article > span {
+  position: absolute;
+  left: .9rem;
+  top: 1rem;
+  color: var(--building-clay);
+  font: 600 .95rem/1 var(--display);
+}
+.zone-one-cards h3 { margin: 0 0 .3rem; font-size: 1.18rem; }
+.zone-one-cards p { margin: 0; font-size: .87rem; line-height: 1.45; }
+
+/* Phasing */
+.building-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 1130px;
+  margin: 3rem auto 2rem;
+  padding: 0;
+  list-style: none;
+}
+.building-timeline li {
+  min-width: 0;
+  padding: 1.2rem;
+  border: 1px solid var(--line-soft);
+  background: rgba(255,255,255,.28);
+}
+.building-timeline li > span {
+  display: block;
+  color: var(--terracotta);
+  font: .64rem/1.2 var(--sans);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.building-timeline strong { display: block; margin: .25rem 0 .4rem; font: 600 1.3rem/1.16 var(--display); }
+.building-timeline p { margin: 0; line-height: 1.48; font-size: .91rem; }
+
+.barn-layout {
+  display: grid;
+  grid-template-columns: minmax(330px, .9fr) minmax(0, 1.1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.barn-layout > figure { display: flex; flex-direction: column; }
+.barn-layout > figure img { width: 100%; height: 100%; min-height: 390px; object-fit: cover; }
+.closing-principles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.closing-principles article {
+  padding: 1.15rem;
+  border-left: 4px solid var(--building-green);
+  background: rgba(255,255,255,.27);
+}
+.closing-principles article:nth-child(2) { border-left-color: var(--building-solar); }
+.closing-principles article:nth-child(3) { border-left-color: var(--building-clay); }
+.closing-principles article:nth-child(4) { border-left-color: var(--building-steel); }
+.closing-principles p { margin: .3rem 0 0; font-size: .93rem; line-height: 1.48; }
+
+.source-centered { text-align: center; margin: 1.8rem auto 0; }
+.source-centered .source-link { font: .7rem/1.2 var(--sans); }
+
+@media (max-width: 1050px) {
+  .buildings-facts { grid-template-columns: repeat(3, 1fr); }
+  .buildings-facts > div:nth-child(4) { border-left: 0; }
+  .buildings-facts > div:nth-child(-n+3) { border-bottom: 1px solid var(--line-soft); }
+  .dwelling-card { grid-column: span 6; }
+  .dwelling-card.wide { grid-column: span 12; }
+  .tools-layout { grid-template-columns: repeat(2, 1fr); }
+  .tools-note { grid-column: 1 / -1; }
+  .materials-layout,
+  .energy-layout,
+  .zone-one-layout,
+  .barn-layout { grid-template-columns: 1fr; }
+  .earthdome-feature { max-width: 700px; margin-inline: auto; }
+  .earthdome-feature img { min-height: 420px; }
+  .solar-feature { max-width: 760px; margin-inline: auto; }
+}
+
+@media (max-width: 820px) {
+  .buildings-paper { padding-block: 4rem; }
+  .shared-grid { grid-template-columns: 1fr; }
+  .materials-notes { grid-template-columns: repeat(2, 1fr); }
+  .energy-path { flex-wrap: wrap; }
+  .energy-path > div { flex: 1 1 calc(50% - 1.2rem); }
+  .energy-path b { transform: rotate(90deg); padding: .2rem; }
+  .building-timeline { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 650px) {
+  .buildings-hero h1::after { font-size: .72rem; }
+  .buildings-hero figure img { min-height: 340px; }
+  .buildings-atlas-nav { justify-content: flex-start; }
+  .buildings-facts { grid-template-columns: repeat(2, 1fr); }
+  .buildings-facts > div:nth-child(n) { border-left: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+  .buildings-facts > div:nth-child(odd) { border-left: 0; }
+  .buildings-facts > div:nth-last-child(-n+2) { border-bottom: 0; }
+  .dwelling-grid { grid-template-columns: 1fr; }
+  .dwelling-card,
+  .dwelling-card.wide { grid-column: 1; display: flex; }
+  .dwelling-card.wide figure img { min-height: 250px; }
+  .village-reading-grid,
+  .tools-layout,
+  .materials-notes,
+  .energy-cards,
+  .zone-one-cards,
+  .building-timeline,
+  .closing-principles { grid-template-columns: 1fr; }
+  .shared-grid article { grid-template-columns: 1fr; }
+  .shared-grid figure img { height: 270px; }
+  .tools-note { grid-column: 1; }
+  .energy-path { display: grid; grid-template-columns: 1fr; }
+  .energy-path > div { min-width: 0; }
+  .energy-path b { justify-self: center; transform: rotate(90deg); }
+  .solar-feature img { min-height: 330px; }
+  .earthdome-feature img { min-height: 330px; }
+  .barn-layout > figure img { min-height: 310px; }
+}
+
+@media (max-width: 430px) {
+  .buildings-paper { padding-inline: 1.05rem; }
+  .dwelling-card div,
+  .shared-grid div { padding: 1rem; }
+  .buildings-map > a { padding: .4rem; }
+  .buildings-map figcaption { padding-inline: .85rem; }
+}

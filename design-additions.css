@@ -1,0 +1,970 @@
+/* Expanded Design Atlas additions.
+   Loaded after style.css so the rest of the site remains unchanged. */
+
+[id] { scroll-margin-top: 6.5rem; }
+
+.section-intro {
+  max-width: 58rem;
+  margin: .4rem auto 2rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.design-collaboration-hero figure img {
+  object-position: center;
+  object-fit: contain;
+  background: #e9ddc2;
+}
+
+.atlas-opening,
+.design-process,
+.final-map-feature,
+.photo-atlas,
+.map-archive,
+.living-notebook,
+.water-notebook,
+.plant-notebook,
+.field-notes-section,
+.tree-inventory,
+.ethics-sequence {
+  padding: 5rem;
+}
+
+.photo-atlas,
+.water-notebook,
+.field-notes-section,
+.ethics-sequence {
+  background:
+    radial-gradient(rgba(105, 78, 38, .028) .7px, transparent .8px),
+    var(--paper-light);
+  background-size: 8px 8px, auto;
+}
+
+/* Atlas opening */
+
+.atlas-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .55rem;
+  max-width: 1120px;
+  margin: 0 auto 2.2rem;
+}
+
+.atlas-nav a {
+  padding: .55rem .85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(248,241,223,.72);
+  color: var(--forest-dark);
+  font: 700 .7rem/1 var(--sans);
+  letter-spacing: .035em;
+  text-decoration: none;
+}
+
+.atlas-nav a:hover {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: #fff;
+}
+
+.atlas-facts {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 1120px;
+  margin: 0 auto;
+  background: var(--forest);
+  border: 1px solid var(--forest-dark);
+  color: #fff;
+}
+
+.atlas-facts div {
+  padding: 1.35rem .7rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.13);
+}
+
+.atlas-facts div:last-child { border-right: 0; }
+
+.atlas-facts strong {
+  display: block;
+  font: 600 1.72rem/1 var(--display);
+}
+
+.atlas-facts span {
+  display: block;
+  margin-top: .42rem;
+  color: #d7ddce;
+  font: .62rem/1.2 var(--sans);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.archive-note,
+.calculation-note,
+.traditional-use-note,
+.inventory-total-note {
+  max-width: 920px;
+  margin: 1.6rem auto 0;
+  padding: 1rem 1.25rem;
+  background: rgba(248,241,223,.76);
+  border-left: 4px solid var(--terracotta);
+  color: var(--ink-soft);
+}
+
+.archive-note strong,
+.calculation-note strong { color: var(--forest-dark); }
+
+/* Design process */
+
+.process-path {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+  list-style: none;
+}
+
+.process-path li {
+  position: relative;
+  min-height: 230px;
+  padding: 1.55rem 1.25rem;
+  background: var(--paper-light);
+}
+
+.process-path li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  z-index: 2;
+  right: -.68rem;
+  top: 50%;
+  width: 1.35rem;
+  height: 1.35rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--terracotta);
+  font: 700 .75rem var(--sans);
+  transform: translateY(-50%);
+}
+
+.process-path span {
+  display: block;
+  color: var(--terracotta);
+  font: 700 .65rem/1 var(--sans);
+  letter-spacing: .12em;
+}
+
+.process-path strong {
+  display: block;
+  margin: 1.15rem 0 .7rem;
+  color: var(--forest-dark);
+  font: 600 1.55rem/1 var(--display);
+}
+
+.process-path small {
+  display: block;
+  color: var(--ink-soft);
+  font: .88rem/1.5 var(--hand);
+}
+
+.source-centered {
+  margin: 1.5rem auto 0;
+  text-align: center;
+}
+
+.source-link {
+  display: inline-block;
+  color: var(--terracotta);
+  font: 700 .66rem/1.25 var(--sans);
+  letter-spacing: .035em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.source-link:hover { color: var(--forest-dark); }
+
+/* Final map */
+
+.featured-map {
+  max-width: 1120px;
+  margin: 2.4rem auto 0;
+  padding: 1rem 1rem 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.featured-map a { display: block; }
+
+.featured-map img {
+  width: 100%;
+  max-height: none;
+  object-fit: contain;
+  background: white;
+  cursor: zoom-in;
+  border: 8px solid #fbf8f1;
+  outline: 1px solid rgba(183,162,123,.75);
+}
+
+.featured-map figcaption {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.featured-map figcaption a {
+  display: inline-block;
+  margin-left: .35rem;
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+/* Photo atlas */
+
+.photo-atlas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1.2rem;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.atlas-photo {
+  margin: 0;
+  padding: .72rem .72rem 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.atlas-photo:nth-child(3n+1) { transform: rotate(-.22deg); }
+.atlas-photo:nth-child(3n+2) { transform: rotate(.18deg); }
+
+.atlas-photo a:first-child { display: block; overflow: hidden; }
+
+.atlas-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  cursor: zoom-in;
+  border: 1px solid rgba(117,91,53,.42);
+  filter: saturate(.88) contrast(.97) sepia(.015);
+  transition: transform .3s ease, filter .3s ease;
+}
+
+.atlas-photo:hover img {
+  transform: scale(1.025);
+  filter: saturate(.98) contrast(1);
+}
+
+.atlas-photo figcaption {
+  margin: .75rem .25rem 0;
+  line-height: 1.45;
+}
+
+.atlas-photo figcaption strong {
+  display: block;
+  margin-bottom: .2rem;
+  color: var(--forest-dark);
+  font: 600 1.22rem/1.1 var(--display);
+}
+
+.atlas-photo .source-link {
+  display: block;
+  width: max-content;
+  margin-top: .55rem;
+}
+
+/* Map archive */
+
+.map-group-title {
+  max-width: 1180px;
+  margin: 3rem auto 1.2rem;
+  padding-bottom: .55rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--hand);
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.complete-map-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.3rem;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.map-card {
+  margin: 0;
+  padding: .8rem .8rem 1.1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.map-card a {
+  display: block;
+  background: white;
+}
+
+.map-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: white;
+  cursor: zoom-in;
+  border: 6px solid #fbf8f1;
+}
+
+.map-card figcaption {
+  margin-top: .8rem;
+  line-height: 1.45;
+}
+
+.map-card figcaption strong {
+  font-family: var(--display);
+  font-size: 1.15rem;
+}
+
+/* Climate, microclimate and soil */
+
+.climate-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1040px;
+  margin: 0 auto 2rem;
+  background: var(--forest);
+  color: white;
+  border: 1px solid var(--forest-dark);
+}
+
+.climate-metrics div {
+  padding: 1.25rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.13);
+}
+
+.climate-metrics div:last-child { border-right: 0; }
+
+.climate-metrics strong {
+  display: block;
+  font: 600 1.8rem/1 var(--display);
+}
+
+.climate-metrics span {
+  color: #d7ddce;
+  font: .64rem/1.2 var(--sans);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.microclimate-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  max-width: 1160px;
+  margin: 0 auto 2.5rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.microclimate-grid article {
+  min-height: 240px;
+  padding: 1.45rem;
+  background: var(--paper-light);
+}
+
+.microclimate-grid span {
+  color: var(--terracotta);
+  font: 700 .65rem var(--sans);
+}
+
+.microclimate-grid h3 {
+  margin-top: .8rem;
+  font-size: 1.45rem;
+}
+
+.microclimate-grid p {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  font-size: .9rem;
+}
+
+.soil-lab {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 1.4rem;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.soil-chart-card,
+.percolation-card {
+  padding: 2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.soil-chart-card header,
+.percolation-card header { text-align: center; }
+
+.soil-chart-card h3,
+.percolation-card h3 { font-size: 2rem; }
+
+.soil-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: .45rem .8rem;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.soil-row > strong {
+  font: 700 .72rem var(--sans);
+  text-transform: uppercase;
+}
+
+.soil-row small {
+  grid-column: 2;
+  color: var(--ink-soft);
+  font: .67rem var(--sans);
+}
+
+.soil-bar {
+  display: flex;
+  height: 25px;
+  overflow: hidden;
+  border: 1px solid rgba(71,57,34,.28);
+  background: #fff;
+}
+
+.soil-bar span { display: block; height: 100%; }
+.clay { background: #9a6648; }
+.silt { background: #ae884e; }
+.sand { background: #d7c79d; }
+
+.soil-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.35rem;
+  color: var(--ink-soft);
+  font: .67rem var(--sans);
+}
+
+.soil-legend span { display: flex; align-items: center; gap: .35rem; }
+
+.soil-legend i {
+  display: block;
+  width: 13px;
+  height: 13px;
+  border: 1px solid rgba(71,57,34,.25);
+}
+
+.percolation-rings {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.percolation-rings > div {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, var(--paper) 53%, transparent 54%),
+    conic-gradient(var(--forest) var(--ring), var(--paper-deep) 0);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.percolation-rings strong {
+  position: absolute;
+  top: 27px;
+  font: 600 1.75rem/1 var(--display);
+}
+
+.percolation-rings span {
+  position: absolute;
+  top: 57px;
+  color: var(--ink-soft);
+  font: .58rem/1.15 var(--sans);
+  text-transform: uppercase;
+}
+
+.percolation-card > p {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+}
+
+/* Water */
+
+.water-flow-diagram {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.flow-column {
+  display: grid;
+  gap: .7rem;
+}
+
+.flow-column h3 {
+  margin-bottom: .2rem;
+  text-align: center;
+  font-size: 1.55rem;
+}
+
+.flow-node {
+  padding: 1rem 1.1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 7px 14px rgba(45,37,22,.07);
+}
+
+.flow-node strong {
+  display: block;
+  color: var(--forest-dark);
+  font: 600 1.18rem/1.05 var(--display);
+}
+
+.flow-node span {
+  display: block;
+  margin-top: .28rem;
+  color: var(--ink-soft);
+  font-size: .78rem;
+}
+
+.flow-arrow {
+  color: var(--terracotta);
+  font: 600 2rem var(--display);
+}
+
+.calculation-note {
+  margin-top: 2rem;
+  max-width: 1040px;
+}
+
+.calculation-note p { margin: .35rem 0 0; }
+
+/* Plant notebook */
+
+.plant-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  max-width: 1160px;
+  margin: 0 auto;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.plant-profile-grid article {
+  min-height: 260px;
+  padding: 1.45rem;
+  background: var(--paper-light);
+}
+
+.plant-profile-grid span {
+  color: var(--terracotta);
+  font: 700 .62rem var(--sans);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.plant-profile-grid h3 {
+  margin-top: .8rem;
+  font-size: 1.5rem;
+}
+
+.plant-profile-grid p {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  font-size: .88rem;
+}
+
+.traditional-use-note {
+  max-width: 1040px;
+  font-size: .88rem;
+}
+
+/* Thirty field notes */
+
+.field-note-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 2rem;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.note-group h3 {
+  margin-bottom: .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--line);
+  font: 400 1.6rem var(--hand);
+}
+
+.note-stack {
+  display: grid;
+  gap: .65rem;
+}
+
+.field-note {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 5px 11px rgba(55,43,24,.07);
+}
+
+.field-note summary {
+  display: grid;
+  grid-template-columns: 2.3rem 1fr auto;
+  gap: .75rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  color: var(--forest-dark);
+  cursor: pointer;
+  font: 600 1.1rem/1.15 var(--display);
+  list-style: none;
+}
+
+.field-note summary::-webkit-details-marker { display: none; }
+
+.field-note summary::after {
+  content: "+";
+  color: var(--terracotta);
+  font: 700 1.25rem var(--sans);
+}
+
+.field-note[open] summary::after { content: "−"; }
+
+.field-note[open] summary {
+  border-bottom: 1px solid var(--line);
+  background: rgba(248,241,223,.55);
+}
+
+.note-number {
+  color: var(--terracotta);
+  font: 700 .66rem var(--sans);
+  letter-spacing: .08em;
+}
+
+.field-note-body {
+  padding: 1rem 1.15rem 1.2rem 4.15rem;
+}
+
+.field-note-body p {
+  margin: 0 0 .7rem;
+  color: var(--ink-soft);
+  font-size: .9rem;
+}
+
+/* Tree inventory */
+
+.tree-summary {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 1120px;
+  margin: 2rem auto;
+  border: 1px solid var(--line);
+  background: var(--forest);
+  color: white;
+}
+
+.tree-summary div {
+  padding: 1.15rem .75rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.13);
+}
+
+.tree-summary div:last-child { border-right: 0; }
+
+.tree-summary strong {
+  display: block;
+  font: 600 1.7rem/1 var(--display);
+}
+
+.tree-summary span {
+  display: block;
+  margin-top: .4rem;
+  color: #d7ddce;
+  font: .63rem/1.2 var(--sans);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.inventory-details {
+  max-width: 1120px;
+  margin: 0 auto 2.4rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.inventory-details > summary {
+  padding: 1rem 1.2rem;
+  color: var(--forest-dark);
+  cursor: pointer;
+  font: 600 1.2rem var(--display);
+}
+
+.inventory-details[open] > summary { border-bottom: 1px solid var(--line); }
+
+.tree-count-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 1.4rem;
+  max-width: 1060px;
+  margin: 1.4rem auto;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.tree-count-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .65rem .25rem;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.tree-count-list strong {
+  min-width: 2rem;
+  color: var(--terracotta);
+  font-family: var(--sans);
+  text-align: right;
+}
+
+.inventory-total-note {
+  margin: 1.2rem auto 1.5rem;
+  max-width: 980px;
+  font-size: .82rem;
+}
+
+.inventory-notes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  max-width: 1120px;
+  margin: 0 auto 3rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.inventory-notes article {
+  padding: 2rem;
+  background: var(--paper);
+}
+
+.succession-plan {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.succession-plan > header { text-align: center; }
+.succession-plan h3 { font-size: 2rem; }
+
+.succession-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 1.5rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.succession-grid p {
+  margin: 0;
+  padding: 1.4rem;
+  background: var(--paper-light);
+}
+
+/* Ethics and implementation */
+
+.ethics-cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1px;
+  max-width: 1120px;
+  margin: 0 auto;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.ethics-cards article {
+  min-height: 300px;
+  padding: 1.8rem;
+  background: var(--paper);
+}
+
+.ethics-cards span {
+  color: var(--terracotta);
+  font: 700 .67rem var(--sans);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.ethics-cards h3 {
+  margin-top: 1rem;
+  font-size: 1.65rem;
+}
+
+.ethics-cards p {
+  color: var(--ink-soft);
+  margin-bottom: 0;
+}
+
+.sequence-heading { margin-top: 4rem; }
+
+/* Responsive */
+
+@media (max-width: 1180px) {
+  .atlas-opening,
+  .design-process,
+  .final-map-feature,
+  .photo-atlas,
+  .map-archive,
+  .living-notebook,
+  .water-notebook,
+  .plant-notebook,
+  .field-notes-section,
+  .tree-inventory,
+  .ethics-sequence {
+    padding: 4rem 2.2rem;
+  }
+
+  .atlas-facts { grid-template-columns: repeat(3,1fr); }
+  .atlas-facts div:nth-child(3n) { border-right: 0; }
+  .atlas-facts div:nth-child(-n+3) { border-bottom: 1px solid rgba(255,255,255,.13); }
+
+  .process-path { grid-template-columns: repeat(3,1fr); }
+  .process-path li:nth-child(3)::after { display: none; }
+  .process-path li { min-height: 205px; }
+
+  .photo-atlas-grid,
+  .complete-map-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); }
+
+  .microclimate-grid { grid-template-columns: repeat(3,1fr); }
+  .plant-profile-grid { grid-template-columns: repeat(3,1fr); }
+
+  .tree-summary { grid-template-columns: repeat(3,1fr); }
+  .tree-summary div:nth-child(3n) { border-right: 0; }
+  .tree-summary div:nth-child(-n+3) { border-bottom: 1px solid rgba(255,255,255,.13); }
+
+  .tree-count-list { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .timeline-grid { grid-template-columns: repeat(3,1fr); }
+}
+
+@media (max-width: 850px) {
+  .process-path { grid-template-columns: repeat(2,1fr); }
+  .process-path li:nth-child(3)::after { display: grid; }
+  .process-path li:nth-child(even)::after { display: none; }
+
+  .climate-metrics { grid-template-columns: repeat(2,1fr); }
+  .climate-metrics div:nth-child(2) { border-right: 0; }
+  .climate-metrics div:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.13); }
+
+  .microclimate-grid,
+  .plant-profile-grid { grid-template-columns: repeat(2,1fr); }
+
+  .soil-lab { grid-template-columns: 1fr; }
+  .water-flow-diagram { grid-template-columns: 1fr; }
+  .flow-arrow { transform: rotate(90deg); text-align: center; }
+
+  .field-note-groups { grid-template-columns: 1fr; }
+  .ethics-cards { grid-template-columns: 1fr; }
+  .ethics-cards article { min-height: auto; }
+  .succession-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 620px) {
+  .atlas-opening,
+  .design-process,
+  .final-map-feature,
+  .photo-atlas,
+  .map-archive,
+  .living-notebook,
+  .water-notebook,
+  .plant-notebook,
+  .field-notes-section,
+  .tree-inventory,
+  .ethics-sequence {
+    padding: 3rem 1.15rem;
+  }
+
+  .atlas-nav { justify-content: flex-start; }
+
+  .atlas-facts { grid-template-columns: repeat(2,1fr); }
+  .atlas-facts div,
+  .atlas-facts div:nth-child(3n) { border-right: 1px solid rgba(255,255,255,.13); }
+  .atlas-facts div:nth-child(even) { border-right: 0; }
+  .atlas-facts div:nth-child(-n+4) { border-bottom: 1px solid rgba(255,255,255,.13); }
+
+  .process-path,
+  .photo-atlas-grid,
+  .complete-map-gallery,
+  .microclimate-grid,
+  .plant-profile-grid,
+  .tree-count-list,
+  .inventory-notes,
+  .succession-grid,
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-path li { min-height: auto; }
+  .process-path li::after { display: none !important; }
+
+  .atlas-photo { transform: none !important; }
+  .featured-map { padding: .6rem .6rem 1rem; }
+
+  .microclimate-grid article,
+  .plant-profile-grid article { min-height: auto; }
+
+  .percolation-rings {
+    flex-wrap: wrap;
+    gap: .65rem;
+  }
+
+  .percolation-rings > div {
+    width: 96px;
+    height: 96px;
+  }
+
+  .percolation-rings strong { top: 21px; }
+  .percolation-rings span { top: 50px; }
+
+  .field-note summary {
+    grid-template-columns: 1.9rem 1fr auto;
+    padding: .9rem;
+  }
+
+  .field-note-body { padding: .9rem 1rem 1rem 3.55rem; }
+
+  .tree-summary { grid-template-columns: repeat(2,1fr); }
+  .tree-summary div,
+  .tree-summary div:nth-child(3n) { border-right: 1px solid rgba(255,255,255,.13); }
+  .tree-summary div:nth-child(even) { border-right: 0; }
+  .tree-summary div:nth-child(-n+4) { border-bottom: 1px solid rgba(255,255,255,.13); }
+}
