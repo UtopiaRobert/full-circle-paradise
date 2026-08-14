@@ -1,0 +1,128 @@
+
+.photo-archive-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+.photo-archive-heading {
+  max-width: 780px;
+  margin-bottom: 2rem;
+}
+
+.photo-archive-heading .kicker {
+  margin-bottom: .35rem;
+}
+
+.photo-archive-heading h1 {
+  margin: 0 0 .55rem;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: .95;
+}
+
+.photo-archive-heading .lede {
+  max-width: 720px;
+}
+
+.photo-archive-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(76, 73, 45, .25);
+  border-bottom: 1px solid rgba(76, 73, 45, .25);
+}
+
+.photo-archive-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.photo-archive-filter {
+  appearance: none;
+  border: 1px solid #7a7046;
+  background: transparent;
+  color: #334325;
+  padding: .48rem .72rem;
+  font: inherit;
+  font-size: .78rem;
+  cursor: pointer;
+}
+
+.photo-archive-filter:hover,
+.photo-archive-filter.active {
+  color: #fff;
+  background: #334325;
+  border-color: #334325;
+}
+
+.photo-archive-count {
+  white-space: nowrap;
+  color: #6e6b4e;
+  font-size: .8rem;
+  padding-top: .45rem;
+}
+
+.photo-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.photo-archive-card {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: #eee5c7;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+}
+
+.photo-archive-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .18s ease;
+}
+
+.photo-archive-card:hover img,
+.photo-archive-card:focus-visible img {
+  transform: scale(1.025);
+}
+
+.photo-archive-note {
+  margin-top: 1.5rem;
+  color: #777255;
+  font-size: .8rem;
+}
+
+@media (max-width: 950px) {
+  .photo-archive-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .photo-archive-page {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .photo-archive-toolbar {
+    display: block;
+  }
+
+  .photo-archive-count {
+    margin-top: .8rem;
+  }
+
+  .photo-archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+}

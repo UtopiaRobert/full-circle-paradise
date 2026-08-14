@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#334325">
+
+  <meta name="description"
+        content="The photographic archive of Full Circle Paradise in Upper Ojai, California.">
+
+  <title>Photo Archive · Full Circle Paradise</title>
+
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="photo-archive.css">
+
+  <script src="site.js" defer></script>
+  <script src="photo-archive-data.js" defer></script>
+  <script src="photo-archive.js" defer></script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+
+  <a class="wordmark"
+     href="index.html"
+     aria-label="Full Circle Paradise home">
+
+    <span>Full Circle Paradise</span>
+    <small>Upper Ojai · California · 2022</small>
+
+  </a>
+
+  <button class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav">
+    Menu
+  </button>
+
+  <nav class="primary-nav"
+       id="primary-nav"
+       aria-label="Primary navigation">
+
+    <a href="index.html">Home</a>
+    <a href="story.html">The Farm</a>
+    <a href="tour.html">Site Tour</a>
+    <a href="climate.html">Climate &amp; Ecology</a>
+    <a href="water.html">Water</a>
+    <a href="food.html">Food &amp; Soil</a>
+    <a href="buildings.html">Buildings &amp; Energy</a>
+    <a href="social.html">Social Permaculture</a>
+    <a href="design.html">The Design</a>
+
+    <a href="photos.html"
+       class="active"
+       aria-current="page">
+      Photo Archive
+    </a>
+
+    <a href="workbook.html">Workbook</a>
+
+  </nav>
+</header>
+
+<main id="main" class="photo-archive-page">
+
+  <header class="photo-archive-heading">
+
+    <p class="kicker">Photographic record</p>
+
+    <h1>Photo Archive</h1>
+
+    <p class="lede">
+      People, gardens, animals, buildings, water systems,
+      gatherings and everyday life at Full Circle Paradise.
+      Each photograph appears only once in the archive,
+      while the filters reveal the different parts of the
+      story it belongs to.
+    </p>
+
+  </header>
+
+  <div class="photo-archive-toolbar">
+
+    <div class="photo-archive-filters"
+         data-photo-archive-filters
+         aria-label="Filter photographs">
+    </div>
+
+    <div class="photo-archive-count"
+         data-photo-archive-count>
+    </div>
+
+  </div>
+
+  <div class="photo-archive-grid"
+       data-photo-archive-grid>
+  </div>
+
+  <p class="photo-archive-note">
+    Select a photograph to open it full screen.
+    Use the left and right arrow keys to move through the archive.
+  </p>
+
+</main>
+
+<footer class="site-footer">
+
+  <div>
+    <strong>Full Circle Paradise</strong><br>
+    <span>A permaculture design for Full Circle Farm</span>
+  </div>
+
+  <div>
+    Upper Ojai, California<br>
+    Quail Springs PDC · Spring 2022
+  </div>
+
+  <a href="documents/full-circle-paradise-workbook.pdf">
+    Read the original workbook
+  </a>
+
+</footer>
+
+<div class="lightbox"
+     hidden
+     aria-hidden="true">
+  <button type="button" aria-label="Close image">×</button>
+  <img alt="">
+  <p></p>
+</div>
+
+</body>
+</html>
