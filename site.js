@@ -2,6 +2,15 @@
 (() => {
   const button = document.querySelector('.menu-button');
   const nav = document.querySelector('.primary-nav');
+
+  if (nav && !nav.querySelector('.personal-home-link')) {
+    const personal = document.createElement('a');
+    personal.href = 'https://utopiarobert.github.io/';
+    personal.textContent = 'Robert';
+    personal.className = 'personal-home-link';
+    personal.setAttribute('aria-label', 'Robert Redecker personal journal');
+    nav.prepend(personal);
+  }
   if (button && nav) {
     button.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
