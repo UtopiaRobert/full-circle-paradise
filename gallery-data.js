@@ -118,7 +118,7 @@ window.FIELDSTATION_GALLERIES = {
     {
       "src": "images/story-atlas/alpha-robert-harvest.webp",
       "thumb": "images/story-atlas/alpha-robert-harvest.webp",
-      "alt": "Alpha Lo and Robert Redecker during a harvest",
+      "alt": "Alpha and Robert Redecker during a harvest",
       "caption": "Friendship carried beyond the farm"
     },
     {
@@ -515,7 +515,7 @@ window.FIELDSTATION_GALLERIES = {
     {
       "src": "images/climate-atlas/alpha-robert-full-circle-2021.webp",
       "thumb": "images/climate-atlas/alpha-robert-full-circle-2021.webp",
-      "alt": "Alpha Lo and Robert at Full Circle Farm",
+      "alt": "Alpha and Robert at Full Circle Farm",
       "caption": "Field observation and friendship"
     }
   ],
@@ -613,7 +613,7 @@ window.FIELDSTATION_GALLERIES = {
     {
       "src": "images/water-atlas/alpha-robert-full-circle-2021.webp",
       "thumb": "images/water-atlas/alpha-robert-full-circle-2021.webp",
-      "alt": "Alpha Lo and Robert at Full Circle Farm",
+      "alt": "Alpha and Robert at Full Circle Farm",
       "caption": "Observation informed the design"
     }
   ],
@@ -1483,7 +1483,7 @@ window.FIELDSTATION_GALLERIES = {
     {
       "src": "images/social-atlas/alpha-robert-harvest-2021.webp",
       "thumb": "images/social-atlas/alpha-robert-harvest-2021.webp",
-      "alt": "Alpha Lo and Robert during a harvest",
+      "alt": "Alpha and Robert during a harvest",
       "caption": "A friendship rooted in the land"
     },
     {

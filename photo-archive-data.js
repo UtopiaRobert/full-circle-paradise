@@ -70,7 +70,7 @@ window.PHOTO_ARCHIVE = [
   {
     "src": "images/climate-atlas/alpha-robert-full-circle-2021.webp",
     "thumb": "images/climate-atlas/alpha-robert-full-circle-2021.webp",
-    "alt": "Alpha Lo and Robert at Full Circle Farm",
+    "alt": "Alpha and Robert at Full Circle Farm",
     "caption": "Field observation and friendship",
     "categories": [
       "People & Community",
